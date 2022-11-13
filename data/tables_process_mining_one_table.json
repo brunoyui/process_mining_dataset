@@ -1,0 +1,92 @@
+[
+   {
+    "column_names": [
+       [
+          -1,
+          "*"
+       ],
+       [
+          0,
+          "idevent"
+       ],
+       [
+          0,
+          "idcase"
+       ],
+       [
+          0,
+          "activity"
+       ],
+       [
+          0,
+          "resource"
+       ],
+       [
+          0,
+          "startdatetime"
+       ],
+       [
+          0,
+          "enddatetime"
+       ],
+       [
+          0,
+          "costevent"
+       ]
+    ],
+    "column_names_original": [
+       [
+          -1,
+          "*"
+       ],
+       [
+          0,
+          "idevent"
+       ],
+       [
+          0,
+          "idcase"
+       ],
+       [
+          0,
+          "activity"
+       ],
+       [
+          0,
+          "resource"
+       ],
+       [
+          0,
+          "startdatetime"
+       ],
+       [
+          0,
+          "enddatetime"
+       ],
+       [
+          0,
+          "costevent"
+       ]
+    ],
+    "column_types": [
+       "number",
+       "text",
+       "text",
+       "text",
+       "text",
+       "text",
+       "number"
+    ],
+    "db_id": "process_mining",
+    "foreign_keys": [],
+    "primary_keys": [
+       1
+    ],
+    "table_names": [
+       "log"
+    ],
+    "table_names_original": [
+        "log"
+    ]
+   }
+]

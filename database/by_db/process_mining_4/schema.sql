@@ -1,0 +1,246 @@
+PRAGMA foreign_keys = ON;
+
+--
+-- Name: log1; Type: TABLE
+--
+
+CREATE TABLE "log4" (
+    "idevent" int,
+    "idcase" TEXT,
+    "activity" TEXT,
+    "resource" TEXT,
+    "startdatetime" NUMERIC,
+    "enddatetime" NUMERIC,
+    "costevent" numeric,
+    PRIMARY KEY ("idevent")
+);
+
+--
+-- Data for Name: log4_excerpt16; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO log4 VALUES (682, '1-364285768', 'In Progress', 'Frederic', '2010-03-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (683, '1-364285768', 'In Progress', 'Frederic', '2010-03-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (684, '1-364285768', 'Awaiting Assignment', 'Frederic', '2010-03-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (685, '1-364285768', 'In Progress', 'Anne Claire', '2010-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (686, '1-364285768', 'Awaiting Assignment', 'Anne Claire', '2010-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (687, '1-364285768', 'In Progress', 'Anne Claire', '2010-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (688, '1-364285768', 'Resolved', 'Anne Claire', '2010-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (689, '1-364285768', 'Awaiting Assignment', 'Anne Claire', '2010-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (690, '1-364285768', 'In Progress', 'Eric', '2010-04-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (691, '1-364285768', 'Awaiting Assignment', 'Eric', '2010-04-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (692, '1-364285768', 'In Progress', 'Anne Claire', '2010-04-20 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (693, '1-364285768', 'Assigned', 'Anne Claire', '2010-04-20 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (694, '1-364285768', 'In Progress', 'Sarah', '2012-04-11 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (695, '1-364285768', 'Assigned', 'Sarah', '2012-04-11 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (696, '1-364285768', 'In Progress', 'Loic', '2012-05-03 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (697, '1-364285768', 'Resolved', 'Loic', '2012-05-03 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (698, '1-364285768', 'Closed', 'Siebel', '2012-05-11 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (699, '1-467153946', 'In Progress', 'Adam', '2011-01-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (700, '1-467153946', 'In Progress', 'Adam', '2011-01-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (701, '1-467153946', 'Awaiting Assignment', 'Adam', '2011-01-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (702, '1-467153946', 'In Progress', 'Denny', '2011-01-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (703, '1-467153946', 'Wait - User', 'Denny', '2011-01-31 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (704, '1-467153946', 'Awaiting Assignment', 'Denny', '2011-02-03 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (705, '1-467153946', 'In Progress', 'Paul', '2011-02-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (706, '1-467153946', 'Wait - Implementation', 'Paul', '2011-02-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (707, '1-467153946', 'In Progress', 'Åse', '2011-03-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (708, '1-467153946', 'Wait - Implementation', 'Åse', '2011-03-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (709, '1-467153946', 'In Progress', 'Joseph', '2011-03-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (710, '1-467153946', 'Assigned', 'Joseph', '2011-03-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (711, '1-467153946', 'In Progress', 'Björn T', '2011-03-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (712, '1-467153946', 'Wait - User', 'Björn T', '2011-03-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (713, '1-467153946', 'Wait', 'Björn T', '2011-03-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (714, '1-467153946', 'Assigned', 'Björn T', '2011-03-14 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (715, '1-467153946', 'In Progress', 'Åse', '2011-03-14 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (716, '1-467153946', 'Wait', 'Åse', '2011-03-14 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (717, '1-467153946', 'In Progress', 'Suliman', '2011-04-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (718, '1-467153946', 'Awaiting Assignment', 'Suliman', '2011-04-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (719, '1-467153946', 'In Progress', 'Denny', '2011-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (720, '1-467153946', 'Assigned', 'Denny', '2011-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (721, '1-467153946', 'In Progress', 'Jon', '2011-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (722, '1-467153946', 'Wait - User', 'Jon', '2011-04-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (723, '1-467153946', 'In Progress', 'Jon', '2011-04-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (724, '1-467153946', 'Wait', 'Jon', '2011-04-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (725, '1-467153946', 'In Progress', 'Jon', '2011-04-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (726, '1-467153946', 'Wait', 'Jon', '2011-04-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (727, '1-467153946', 'Awaiting Assignment', 'Jon', '2011-04-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (728, '1-467153946', 'In Progress', 'Gustav', '2011-04-12 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (729, '1-467153946', 'In Progress', 'Magnus', '2011-08-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (730, '1-467153946', 'Assigned', 'Magnus', '2011-09-12 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (731, '1-467153946', 'In Progress', 'Magnus', '2011-11-21 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (732, '1-467153946', 'Wait - Implementation', 'Magnus', '2011-11-21 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (733, '1-467153946', 'Awaiting Assignment', 'Magnus', '2012-01-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (734, '1-467153946', 'In Progress', 'Andreas', '2012-01-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (735, '1-467153946', 'Awaiting Assignment', 'Andreas', '2012-01-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (736, '1-467153946', 'In Progress', 'Torbjörn', '2012-05-15 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (737, '1-467153946', 'Resolved', 'Torbjörn', '2012-05-15 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (738, '1-467153946', 'Closed', 'Siebel', '2012-05-23 00:00:00', NULL, NULL);
+
+
+--
+-- Data for Name: log4_excerpt17; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO log4 VALUES (739, '1-726668161', 'Awaiting Assignment', 'Peter', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (740, '1-726668161', 'Awaiting Assignment', 'Peter', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (741, '1-726668161', 'In Progress', 'Alex', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (742, '1-726668161', 'Awaiting Assignment', 'Alex', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (743, '1-726668161', 'In Progress', 'Stefan', '2012-04-20 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (744, '1-726668161', 'Awaiting Assignment', 'Stefan', '2012-04-20 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (745, '1-726668161', 'Awaiting Assignment', 'Stefan', '2012-04-20 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (746, '1-726668161', 'In Progress', 'Carolyn', '2012-04-20 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (747, '1-726668161', 'Wait - User', 'Carolyn', '2012-04-20 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (748, '1-726668161', 'Resolved', 'Carolyn', '2012-05-15 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (749, '1-726668161', 'Closed', 'Siebel', '2012-05-23 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (750, '1-726695193', 'In Progress', 'Royal', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (751, '1-726695193', 'In Progress', 'Royal', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (752, '1-726695193', 'Awaiting Assignment', 'Royal', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (753, '1-726695193', 'In Progress', 'Rajkishore', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (754, '1-726695193', 'Wait', 'Rajkishore', '2012-04-19 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (755, '1-726695193', 'In Progress', 'Devakumar', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (756, '1-726695193', 'In Progress', 'Devakumar', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (757, '1-726695193', 'Awaiting Assignment', 'Devakumar', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (758, '1-726695193', 'In Progress', 'Rajendra', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (759, '1-726695193', 'Resolved', 'Rajendra', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (760, '1-726695193', 'Assigned', 'Sudhir', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (761, '1-726695193', 'In Progress', 'Sudhir', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (762, '1-726695193', 'Awaiting Assignment', 'Sudhir', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (763, '1-726695193', 'In Progress', 'Dawid', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (764, '1-726695193', 'Assigned', 'Dawid', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (765, '1-726695193', 'In Progress', 'Devakumar', '2012-04-25 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (766, '1-726695193', 'Resolved', 'Devakumar', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (767, '1-726695193', 'Closed', 'Siebel', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (768, '1-726695193', 'In Progress', 'Vijay', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (769, '1-726695193', 'Wait - User', 'Vijay', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (770, '1-726695193', 'Wait - User', 'Vijay', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (771, '1-726695193', 'In Progress', 'Vijay', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (772, '1-726695193', 'Awaiting Assignment', 'Vijay', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (773, '1-726695193', 'In Progress', 'Muthu', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (774, '1-726695193', 'Wait - User', 'Muthu', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (775, '1-726695193', 'In Progress', 'Muthu', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (776, '1-726695193', 'Wait - User', 'Muthu', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (777, '1-726695193', 'In Progress', 'Muthu', '2012-05-14 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (778, '1-726695193', 'Resolved', 'Muthu', '2012-05-14 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (779, '1-726695193', 'Closed', 'Muthu', '2012-05-14 00:00:00', NULL, NULL);
+
+
+--
+-- Data for Name: log4_excerpt18; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO log4 VALUES (780, '1-733449471', 'In Progress', 'Michael', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (781, '1-733449471', 'In Progress', 'Michael', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (782, '1-733449471', 'Awaiting Assignment', 'Michael', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (783, '1-733449471', 'In Progress', 'Pankaj', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (784, '1-733449471', 'Wait', 'Pankaj', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (785, '1-733449471', 'In Progress', 'Jayakrishnan', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (786, '1-733449471', 'Awaiting Assignment', 'Jayakrishnan', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (787, '1-733449471', 'In Progress', 'Michael', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (788, '1-733449471', 'Assigned', 'Michael', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (789, '1-733449471', 'In Progress', 'Michael', '2012-04-27 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (790, '1-733449471', 'Wait - User', 'Michael', '2012-04-27 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (791, '1-733449471', 'Awaiting Assignment', 'Michael', '2012-05-01 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (792, '1-733449471', 'In Progress', 'Dhriti', '2012-05-01 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (793, '1-733449471', 'Wait', 'Dhriti', '2012-05-01 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (794, '1-733449471', 'Resolved', 'Dhriti', '2012-05-01 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (795, '1-733449471', 'Closed', 'Siebel', '2012-05-09 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (796, '1-733456610', 'In Progress', 'Felipe', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (797, '1-733456610', 'In Progress', 'Felipe', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (798, '1-733456610', 'Wait', 'Felipe', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (799, '1-733456610', 'In Progress', 'Felipe', '2012-05-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (800, '1-733456610', 'Resolved', 'Felipe', '2012-05-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (801, '1-733456610', 'Closed', 'Siebel', '2012-05-15 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (802, '1-733469984', 'In Progress', 'Patricia', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (803, '1-733469984', 'In Progress', 'Patricia', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (804, '1-733469984', 'Awaiting Assignment', 'Patricia', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (805, '1-733469984', 'In Progress', 'Patricia', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (806, '1-733469984', 'Wait - User', 'Patricia', '2012-04-26 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (807, '1-733469984', 'Resolved', 'Patricia', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (808, '1-733469984', 'Closed', 'Siebel', '2012-05-03 00:00:00', NULL, NULL);
+
+
+--
+-- Data for Name: log4_excerpt19; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO log4 VALUES (809, '1-738812220', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (810, '1-738812220', 'In Progress', 'Helene', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (811, '1-738812220', 'Resolved', 'Helene', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (812, '1-738812220', 'Closed', 'Siebel', '2012-05-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (813, '1-738812232', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (814, '1-738812232', 'In Progress', 'Tom', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (815, '1-738812232', 'Awaiting Assignment', 'Tom', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (816, '1-738812232', 'In Progress', 'Anette', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (817, '1-738812232', 'Resolved', 'Anette', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (818, '1-738812232', 'Closed', 'Siebel', '2012-05-12 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (819, '1-738812266', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (820, '1-738812266', 'In Progress', 'Tom', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (821, '1-738812266', 'Resolved', 'Tom', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (822, '1-738812266', 'Closed', 'Siebel', '2012-05-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (823, '1-738812312', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (824, '1-738812312', 'In Progress', 'Tom', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (825, '1-738812312', 'Resolved', 'Tom', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (826, '1-738812312', 'Closed', 'Siebel', '2012-05-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (827, '1-738812459', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (828, '1-738812459', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (829, '1-738812459', 'In Progress', 'Helene', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (830, '1-738812459', 'Resolved', 'Helene', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (831, '1-738812459', 'Closed', 'Siebel', '2012-05-10 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (832, '1-738812504', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (833, '1-738812504', 'In Progress', 'Johan', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (834, '1-738812504', 'Awaiting Assignment', 'Johan', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (835, '1-738812504', 'In Progress', 'Hans', '2012-05-03 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (836, '1-738812504', 'Resolved', 'Hans', '2012-05-03 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (837, '1-738812504', 'Closed', 'Siebel', '2012-05-11 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (838, '1-738812756', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (839, '1-738812756', 'Awaiting Assignment', 'Siebel', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (840, '1-738812756', 'In Progress', 'Helene', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (841, '1-738812756', 'Resolved', 'Helene', '2012-05-02 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (842, '1-738812756', 'Closed', 'Siebel', '2012-05-10 00:00:00', NULL, NULL);
+
+
+--
+-- Data for Name: log4_excerpt20; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO log4 VALUES (843, '1-740859781', 'In Progress', 'Joakim', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (844, '1-740859781', 'In Progress', 'Joakim', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (845, '1-740859781', 'Wait - Vendor', 'Joakim', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (846, '1-740859781', 'Awaiting Assignment', 'Joakim', '2012-05-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (847, '1-740859781', 'In Progress', 'Joakim', '2012-05-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (848, '1-740859781', 'In Progress', 'Joakim', '2012-05-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (849, '1-740859781', 'Awaiting Assignment', 'Joakim', '2012-05-06 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (850, '1-740859781', 'In Progress', 'Eduardo', '2012-05-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (851, '1-740859781', 'Awaiting Assignment', 'Priscila', '2012-05-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (852, '1-740859781', 'Resolved', 'Angelo', '2012-05-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (853, '1-740861081', 'In Progress', 'Lierson', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (854, '1-740861081', 'In Progress', 'Lierson', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (855, '1-740861081', 'In Call', 'Lierson', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (856, '1-740861351', 'In Progress', 'Yuusuke', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (857, '1-740861351', 'In Progress', 'Yuusuke', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (858, '1-740861351', 'Wait', 'Yuusuke', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (859, '1-740861351', 'Awaiting Assignment', 'Yuusuke', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (860, '1-740861351', 'In Progress', 'Andrés', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (861, '1-740861351', 'In Progress', 'Christer', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (862, '1-740861351', 'In Progress', 'Klas-Ove', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (863, '1-740861351', 'Wait - User', 'Klas-Ove', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (864, '1-740861351', 'Wait - User', 'Klas-Ove', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (865, '1-740861351', 'Resolved', 'Klas-Ove', '2012-05-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (866, '1-740861351', 'Closed', 'Siebel', '2012-05-15 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (867, '1-740861371', 'In Progress', 'Yuusuke', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (868, '1-740861371', 'In Progress', 'Yuusuke', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (869, '1-740861371', 'Awaiting Assignment', 'Yuusuke', '2012-05-05 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (870, '1-740861371', 'In Progress', 'Ryou', '2012-05-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (871, '1-740861371', 'Resolved', 'Ryou', '2012-05-07 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (872, '1-740861371', 'Closed', 'Siebel', '2012-05-08 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (873, '1-740861917', 'In Progress', 'Howard', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (874, '1-740861917', 'In Progress', 'Howard', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (875, '1-740861917', 'In Call', 'Howard', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (876, '1-740862061', 'In Progress', 'Robert', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (877, '1-740862061', 'In Progress', 'Robert', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (878, '1-740862061', 'Awaiting Assignment', 'Robert', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (879, '1-740862061', 'In Progress', 'Michael', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (880, '1-740862061', 'Resolved', 'Michael', '2012-05-04 00:00:00', NULL, NULL);
+INSERT INTO log4 VALUES (881, '1-740862061', 'Closed', 'Siebel', '2012-05-05 00:00:00', NULL, NULL);
+
