@@ -69,6 +69,7 @@
        ]
     ],
     "column_types": [
+       "text",
        "number",
        "text",
        "text",

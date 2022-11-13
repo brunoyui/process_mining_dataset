@@ -1,0 +1,29 @@
+SELECT DISTINCT idcase FROM log1 WHERE resource LIKE '%908%' and idcase NOT IN (SELECT DISTINCT idcase FROM log1 where activity = 'Closed')	process_mining	2693
+SELECT * FROM log1 WHERE idcase = 'INC0001287' AND enddatetime BETWEEN '2016-03-02' AND '2016-07-13' ORDER BY enddatetime	process_mining	2694
+SELECT DISTINCT idcase, resource FROM log6 WHERE idcase NOT IN (SELECT DISTINCT T0.idcase FROM log6 as T0 join log6 AS T1 on T0.idcase = T1.idcase where T0.resource != T1.resource)	process_mining	2734
+SELECT INI.idcase, FIM.activity, FIM.enddatetime - INI.enddatetime FROM log8 as INI JOIN log8 as FIM ON INI.idcase = FIM.idcase WHERE INI.idevent != FIM.idevent AND INI.enddatetime = (SELECT MIN(enddatetime) FROM log8 WHERE idcase = INI.idcase) AND FIM.activity = 'Declaration REJECTED by EMPLOYEE' OR FIM.activity = 'Payment Handled' OR FIM.activity = 'End trip'	process_mining	2738
+SELECT AVG(costevent) FROM log8 WHERE activity != 'Start trip' AND activity != 'End trip'	process_mining	2758
+SELECT * FROM log8 WHERE enddatetime = '2011-10-01' OR enddatetime = '2011-10-02'	process_mining	2761
+SELECT * FROM log3 WHERE resource = '112' OR resource = '11002' OR resource = '11179'	process_mining	2773
+SELECT activity, resource FROM log7 WHERE resource != '560532' AND resource != '560458'	process_mining	2776
+SELECT * FROM log8 WHERE activity = 'Start trip' OR activity = 'End trip'	process_mining	2778
+SELECT idcase FROM log1 WHERE enddatetime BETWEEN '2016-03-01' AND '2016-03-31' AND activity IN (SELECT activity from log1 where activity = 'New' OR activity = 'Active')	process_mining	2781
+SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining	2782
+SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Assigned' AND resource IN (SELECT resource FROM log6 where resource = 'Marie' OR resource = 'Peter')	process_mining	2789
+SELECT idcase, enddatetime, count(idevent) FROM log7 GROUP BY idcase, enddatetime HAVING count(idevent) > 1	process_mining	2799
+SELECT enddatetime, count(idevent), sum(costevent) FROM log2 GROUP BY enddatetime ORDER BY enddatetime, count(idevent)	process_mining	2802
+SELECT log_s.idcase, (MIN(log_e.startdatetime) - log_s.startdatetime) FROM log6 as log_s JOIN log6 as log_e ON log_s.idcase = log_e.idcase WHERE log_s.activity = 'Awaiting Assignment' AND log_e.activity != 'Awaiting Assignment' AND log_e.startdatetime > log_s.startdatetime GROUP BY log_s.idcase, log_s.activity, log_s.startdatetime	process_mining	2819
+SELECT DISTINCT idcase FROM log2 WHERE enddatetime IN (SELECT enddatetime FROM log2 WHERE activity = 'Decisão')	process_mining	2835
+SELECT resource, COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'Closed' GROUP BY resource ORDER BY COUNT(DISTINCT idcase) DESC LIMIT 1	process_mining	2837
+SELECT * FROM log3 as le WHERE le.activity LIKE 'W_%' AND le.enddatetime > (SELECT MAX(le2.enddatetime) FROM log3 as le2 WHERE le2.activity LIKE 'O_%')	process_mining	2854
+SELECT T1.idcase FROM log5 AS T1 WHERE T1.idcase NOT IN (SELECT idcase FROM log5 WHERE activity = 'In Progress' OR activity = 'Closed' GROUP BY idcase, activity)	process_mining	2869
+SELECT resource, COUNT(DISTINCT idcase) FROM log1 GROUP BY resource ORDER BY COUNT(DISTINCT idcase) DESC	process_mining	2894
+SELECT idcase FROM log6 WHERE activity = 'Wait' OR activity = 'Awaiting Assignment' GROUP BY idcase ORDER BY COUNT(*) DESC	process_mining	2897
+SELECT activity, count(activity) FROM log4 WHERE activity = 'Resolved' OR activity = 'In Call' GROUP BY activity	process_mining	3014
+(SELECT idcase FROM log2 GROUP BY idcase ORDER BY MAX(enddatetime) DESC) EXCEPT (SELECT idcase FROM log2 WHERE activity = 'Decisão') LIMIT 10	process_mining	2845
+SELECT count(activity) FROM log7 GROUP BY idcase ORDER BY count(activity) DESC LIMIT 1	process_mining	2690
+SELECT DISTINCT idcase FROM log5 WHERE resource = 'Niklas' AND idcase NOT IN (SELECT idcase FROM log5 WHERE resource != 'Niklas')	process_mining	2796
+select idcase, resource, COUNT(*) from log7 where costevent = 'null' GROUP BY idcase, resource	process_mining	2800
+SELECT activity, COUNT(DISTINCT idcase) FROM log1 WHERE enddatetime = '2016-03-02' GROUP BY activity	process_mining	2867
+SELECT T0.ACTIVITY, AVG(T0.ENDDATETIME - T1.ENDDATETIME) FROM LOG8 as T0 JOIN LOG8 as T1 ON T0.IDCASE = T1.IDCASE AND T0.IDEVENT = T1.IDEVENT + 1 GROUP BY T0.activity	process_mining	2743
+SELECT idcase FROM log6 WHERE idcase IN (SELECT DISTINCT idcase FROM log6 WHERE activity != 'Closed') GROUP BY idcase HAVING count(DISTINCT resource) > 1	process_mining	2828

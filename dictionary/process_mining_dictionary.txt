@@ -1,0 +1,148 @@
+activities
+    - Closed
+
+employee -> resource
+resources
+    - Peter
+
+
+event cost -> cost
+costevent -> cost
+
+
+events
+cases
+
+requests ? (2716) -> requests entendo que é case
+activities - events or activity?
+
+
+authorization requests -> events or cases? (entendo que sejam os cases)
+incidents -> events or cases? (entendo que sejam os cases)
+problem -> events or cases? (entendo que sejam os cases)
+
+
+end date -> timestamp
+startdatetime -> timestamp
+
+
+
+2770 <-> 2895
+Removido 2895
+
+2697 <-> 2753
+Removido 2753
+36
+removido 2767
+
+2853 <-> 3007 porém logs diferentes
+
+
+
+2667 <-> 2774 (Porém a 2774 precisa reformular, consulta errada)
+SELECT COUNT(*) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6	2774	How many cases have the activity 'Awaiting Assignment'?
+removido 2774
+
+2777 -> consulta errada
+SELECT COUNT(*) FROM log7 WHERE costevent = 'null'	process_mining_7	2777	How many cases have a null costevent?
+removido 2777
+
+2866 - reformular incidents - cases
+2884 - adaptado para eventos ao invés de cases
+
+
+
+2757-2 -> precisa errar
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Análise das consultas diversificadas
+activity <-> event
+
+resource, sem mencionar distintos, não coloca palavra reservada DISTINCT
+- Não tem a capacidade de entender que os recursos precisam ser únicos
+
+Correto todos e varições
+2667, 2752, 2784, 2864, 2866, 2886 (activities -> todo), 2887, 2896, 3003
+
+
+Erros de sinônimos
+sinônimo
+employee -> resource (2670-3, 2670-4, 2670-6)
+people -> resource (2673-4, 2673-6, 2673-9)
+
+2680 - envolvendo date time
+
+2681 - mudar para log1
+with up to -> alterou o sinal <= para >=
+incidentes -> *
+pode ser necessário criar uma tabela cases para responder
+
+2689 -> activities tratando como eventos
+
+2697 -> problemas de superlativo largest, hightest, biggest
+ realiza query sem utilizar as functions
+
+
+Conceitos de null, modelo não parece entender
+2677 - não conseguiu entender as variações
+
+2710 -> utilizacao de null
+does not have, without --> probabilidade de colocar != na condição =
+Atencao
+- timestamp has null != 
+- end data has null =
+
+2716 -> utilizacao de null
+non-null, other than ok
+have, with , there is -> probabilidade de colocar = na condição ao invés de !=
+
+2762 - does not have, missing, without --> EXCEPT
+
+2780 -> does not have, missing, without --> EXCEPT ou !=
+
+2853 - activities vinculou a coluna activity
+       events vinculou a coluna idevent
+
+2884 -> does not have, without --> NOT IN
+
+3007 -> is not null != (OK)
+       events -> cost
+       has cost information (???)
+---------------------------------------------------------------------------------
+
+2741-2 -> associated to records
+O modelo se perdeu e gerou condições a mais
+
+Ambiguo
+2747 - Variados erros, activities entendeu coluna activity
+events não entendeu o log todo
+contains -> LIKE
+does not have -> not or EXCEPT
+
+2751 - vinculou events a coluna idevent
+
+2757-2 - previsto errar mesmo (mas não entendeu a pergunta)
+
+2769-2 - nao explicitando que 'declaration 56300' é um case, erro. Entende como event
+
+2782 - incidents --> todo e não cada case
+
+2785 - problemas de superlativo smallest
+ realiza query sem utilizar as functions
+
+2838 - não conseguiu distinguir cases para condicionar o count
+
+
+
+2863 - problemas de superlativo oldest
+ realiza query sem utilizar as functions
+
+2864 - OK, porém uma ressalva, SELECT com ou sem DISTINCT são considerados ok (SELECT DISTINCT resource <-> SELECT resource)
+
+2866 - acertou, porém necessário revermos a query -> cases, incidents tratando como events
+
+2892 - Ajustar consulta gold
+
+3003 - OK, porém uma ressalva, SELECT com ou sem DISTINCT são considerados ok

@@ -1,0 +1,97 @@
+SELECT * FROM log6 WHERE costevent != 'null'	process_mining
+SELECT v0.resource, count(v0.idcase) FROM log4 AS v0 WHERE v0.startdatetime BETWEEN '2012-05-01' AND '2012-05-31' GROUP BY v0.resource HAVING count(v0.idcase) > 0	process_mining
+SELECT re_1.idcase FROM log8 AS re_1 GROUP BY re_1.idcase ORDER BY count(re_1.idcase) DESC LIMIT 10	process_mining
+SELECT max(costevent) FROM log8	process_mining
+SELECT v0.resource, count(v0.idcase) FROM log4 AS v0 WHERE v0.startdatetime BETWEEN '2012-05-01' AND '2012-05-31' GROUP BY v0.resource HAVING count(v0.idcase) > 0	process_mining
+SELECT idcase, count(DISTINCT idcase) FROM log1 GROUP BY idcase	process_mining
+SELECT resource, count(*) FROM log5 GROUP BY resource HAVING count(*) >= 100	process_mining
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining
+SELECT idcase, count(DISTINCT resource) FROM log1 GROUP BY idcase ORDER BY count(DISTINCT resource) DESC	process_mining
+SELECT count(idevent) FROM log3 WHERE costevent != 'null'	process_mining
+SELECT resource, count(idevent) FROM log4 WHERE resource = 'Priscila' AND costevent != 'null' GROUP BY resource	process_mining
+SELECT idcase, max(startdatetime), min(startdatetime), (max(startdatetime) - min(startdatetime)) FROM log6 GROUP BY idcase	process_mining
+SELECT idcase, MIN(costevent), MAX(costevent) FROM log8 GROUP BY idcase HAVING MAX(costevent) > 0	process_mining
+SELECT DISTINCT IDCASE, COSTEVENT FROM log8 WHERE COSTEVENT = (SELECT MAX(COSTEVENT) FROM log8)	process_mining
+SELECT * FROM log8 WHERE activity LIKE 'Start trip'	process_mining
+SELECT activity, count(*) FROM log8 GROUP BY activity	process_mining
+SELECT activity FROM log2 WHERE costevent = 'null'	process_mining
+SELECT * FROM log3 WHERE idcase = 'null'	process_mining
+SELECT MAX(costevent) FROM log8	process_mining
+SELECT * FROM log8 ORDER BY costevent DESC LIMIT 5	process_mining
+SELECT idcase FROM log8 WHERE resource = 'null'	process_mining
+SELECT * FROM log3 WHERE resource IN ('112', '11002', '11179')	process_mining
+SELECT activity, resource FROM log7 WHERE resource NOT IN ('560532', '560458')	process_mining
+SELECT COUNT(idevent) FROM log7 WHERE costevent = 'null'	process_mining
+SELECT idcase FROM log8 WHERE activity IN ('start trip', 'end trip') AND activity NOT IN ('request payment', 'payment handled')	process_mining
+SELECT idevent FROM log3 WHERE resource = 'null'	process_mining
+SELECT idcase FROM log1 WHERE activity IN ('new', 'active') AND enddatetime BETWEEN '2016-03-01' AND '2016-03-31'	process_mining
+SELECT idcase FROM log1 WHERE activity IN ('new', 'active') AND resource = 'updated by 974'	process_mining
+SELECT idcase FROM log6 WHERE activity = ANY (SELECT activity FROM log6 WHERE activity = 'closed' )	process_mining
+SELECT count(DISTINCT idcase) FROM log6 WHERE resource IN ('Marie', 'Peter') AND activity = 'Assigned'	process_mining
+SELECT idcase, count(DISTINCT resource) AS num_resources_id FROM log3 GROUP BY 1	process_mining
+SELECT DISTINCT idcase FROM log5 WHERE resource = 'Niklas' AND idcase <> ALL (SELECT idcase FROM log5 WHERE resource <> 'Niklas' )	process_mining
+SELECT idcase, enddatetime, count(idevent) AS n_events FROM log7 GROUP BY 1, 2 HAVING COUNT(3) > 1	process_mining
+SELECT idcase, resource, COUNT(CASE WHEN costevent = 'null' THEN 1 END) FROM log7 GROUP BY 1, 2	process_mining
+SELECT enddatetime, count(idevent) events, sum(costevent) total_cost FROM log2 GROUP BY 1 ORDER BY 1, 2	process_mining
+SELECT enddatetime, count(idevent) events, sum(costevent) total_cost FROM log2 GROUP BY 1 ORDER BY 1, 2	process_mining
+SELECT avg((costevent)), idcase FROM log8 WHERE idcase = idcase GROUP BY idcase ORDER BY avg((costevent)) DESC	process_mining
+SELECT avg((costevent)), resource FROM log8 WHERE resource = resource GROUP BY resource ORDER BY avg((costevent)) DESC	process_mining
+SELECT count(*) FROM log8 act1 INNER JOIN log8 act2 ON act1.idcase = act2.idcase WHERE act1.activity = 'Permit FINAL_APPROVED by SUPERVISOR' AND act2.activity = 'Start trip' AND act1.enddatetime < act2.enddatetime	process_mining
+SELECT resource, count(idevent) n_events, count(activity) n_activities FROM log4 GROUP BY 1	process_mining
+SELECT AVG(DISTINCT COSTEVENT) FROM log8 WHERE activity LIKE '%REJECTED%'	process_mining
+SELECT log_s.idcase, MIN(log_e.startdatetime) - log_s.startdatetime AS awaitingassingmenttime FROM log6 log_s INNER JOIN log6 log_e ON log_s.idcase = log_e.idcase WHERE log_s.activity = 'Awaiting Assignment' AND log_e.activity <> 'Awaiting Assignment' AND log_e.startdatetime > log_s.startdatetime GROUP BY log_s.idcase, log_s.activity, log_s.startdatetime	process_mining
+SELECT log_s.idcase, MIN(log_e.startdatetime) - log_s.startdatetime AS awaitingassingmenttime FROM log6 log_s INNER JOIN log6 log_e ON log_s.idcase = log_e.idcase WHERE log_s.activity = 'Awaiting Assignment' AND log_e.activity <> 'Awaiting Assignment' AND log_e.startdatetime > log_s.startdatetime GROUP BY log_s.idcase, log_s.activity, log_s.startdatetime	process_mining
+SELECT idcase, COUNT(idevent) AS num_events, COUNT(DISTINCT resource) AS unique_resources FROM log6 WHERE startdatetime = SOME (SELECT startdatetime FROM log6 WHERE CAST(startdatetime AS varchar) LIKE '%-04-%' ) GROUP BY idcase	process_mining
+SELECT DISTINCT idcase FROM log2 WHERE enddatetime = ALL (SELECT enddatetime FROM log2 WHERE activity = 'Decisão' )	process_mining
+SELECT resource, COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'Closed' GROUP BY 1 ORDER BY 2 DESC LIMIT 1	process_mining
+SELECT idcase, MAX(enddatetime) - MIN(enddatetime), COUNT(idevent) FROM log2 GROUP BY idcase HAVING COUNT(idevent) > 20 ORDER BY COUNT(idevent) ASC LIMIT 5	process_mining
+SELECT idcase FROM log8 WHERE activity = 'Start trip' AND current_timestamp - enddatetime < '5 days' GROUP BY idcase ORDER BY max(enddatetime) DESC	process_mining
+SELECT idcase FROM log8 WHERE activity = 'Start trip' AND current_timestamp - enddatetime < '5 days' GROUP BY idcase ORDER BY max(enddatetime) DESC	process_mining
+SELECT AVG(costevent) FROM log8 WHERE enddatetime < '2018-01-01' AND activity = 'Payment Handled'	process_mining
+SELECT idcase, COUNT(*) FROM log8 WHERE activity LIKE 'Permit%' GROUP BY idcase	process_mining
+SELECT activity FROM log8 WHERE costevent != 'null'	process_mining
+SELECT * FROM log3 le WHERE le.activity LIKE 'W_%' AND le.enddatetime > ALL (SELECT le2.enddatetime FROM log3 le2 WHERE le2.activity LIKE 'O_%' )	process_mining
+SELECT T1.idcase, count(*) AS countactivity FROM log5 AS T1 INNER JOIN log5 AS T2 ON T1.idcase = T2.idcase WHERE T1.activity != 'Closed' AND T2.activity = 'Closed' GROUP BY T1.idcase	process_mining
+SELECT T1.idcase FROM log5 AS T1 WHERE T1.idcase NOT IN (SELECT idcase FROM log5 WHERE activity IN ('In Progress', 'Closed') GROUP BY idcase, activity)	process_mining
+SELECT COUNT(*), SUBSTRING(activity, 1, 1) FROM log3 WHERE activity LIKE '%SCHEDULE' OR activity LIKE '%START' GROUP BY activity	process_mining
+SELECT activity, 1, 1 AS sub_process, COUNT(activity), resource, idcase FROM log3 GROUP BY activity, resource, idcase ORDER BY idcase, resource DESC	process_mining
+SELECT count(resource) FROM log1 WHERE resource != 'null'	process_mining
+SELECT resource, activity, COUNT(activity) FROM log1 WHERE resource != 'null' GROUP BY resource, activity	process_mining
+SELECT resource, activity, COUNT(activity) FROM log1 WHERE resource != 'null' GROUP BY resource, activity	process_mining
+SELECT resource, activity, COUNT(activity) FROM log1 WHERE resource != 'null' GROUP BY resource, activity	process_mining
+SELECT resource, activity, COUNT(activity) FROM log1 WHERE resource != 'null' GROUP BY resource, activity	process_mining
+SELECT COUNT(*) FROM log7 WHERE costevent = 'null'	process_mining
+SELECT t1.resource FROM log6 t1 LEFT JOIN (SELECT resource, COUNT(*) AS pending FROM log6 WHERE activity = 'In Progress' GROUP BY resource) t2 ON t1.resource = t2.resource WHERE NOT (t1.activity = 'In Progress') GROUP BY t1.resource, t2.resource, t2.pending HAVING t2.pending > COUNT(t1.activity) ORDER BY t2.pending DESC	process_mining
+SELECT resource, COUNT(DISTINCT idcase) FROM log1 GROUP BY resource ORDER BY Count DESC	process_mining
+SELECT idcase FROM log6 WHERE activity IN ('Wait', 'Awaiting Assignment') GROUP BY idcase ORDER BY COUNT(*) DESC	process_mining
+SELECT resource, COUNT(activity) FROM log8 WHERE activity = 'assigned' GROUP BY resource	process_mining
+SELECT idcase, min(costevent), count(idcase) FROM log8 WHERE activity LIKE '%Declaration%' GROUP BY idcase, costevent HAVING min(costevent) <> 0	process_mining
+SELECT activity, enddatetime FROM log2 WHERE DATE(enddatetime) IN ('2020-03-17')	process_mining
+SELECT activity, resource, costevent FROM log2 WHERE costevent = ANY (SELECT costevent FROM log2 WHERE costevent > 10 )	process_mining
+SELECT * FROM log2 WHERE costevent != 'null'	process_mining
+SELECT end_trip.idcase, (max(payment.enddatetime) - min(end_trip.enddatetime)) AS delay FROM log8 end_trip JOIN log8 payment ON end_trip.idcase = payment.idcase WHERE end_trip.activity LIKE '%Declaration SUBMITTED%' AND payment.activity LIKE '%Handled%' AND payment.costevent <> 0 GROUP BY end_trip.idcase	process_mining
+SELECT activity, count(activity) FROM log4 WHERE activity IN ('Resolved', 'In Call') GROUP BY activity	process_mining
+SELECT T1.idevent, T2.idevent AS T2event, T1.activity, T1.resource FROM log4 AS T1 INNER JOIN log5 AS T2 ON T1.startdatetime <= T2.startdatetime WHERE T1.startdatetime <= T2.startdatetime AND T2.activity LIKE 'Closed' ORDER BY T1.idevent	process_mining
+SELECT idcase, idevent, startdatetime, activity, resource FROM log6 WHERE activity = 'In Progress' UNION SELECT idcase, idevent, startdatetime, activity, resource FROM log6 WHERE activity = 'Closed'	process_mining
+SELECT idcase FROM log8 WHERE activity = 'Start Trip' INTERSECT SELECT idcase FROM log8 WHERE activity = 'End Trip'	process_mining
+SELECT idcase FROM log8 WHERE activity = 'Start Trip' INTERSECT SELECT idcase FROM log8 WHERE activity = 'End Trip'	process_mining
+(SELECT 'FIRST' AS firstorlast, activity FROM log7 WHERE idcase = (SELECT MIN(idcase) FROM log7) EXCEPT SELECT 'FIRST' AS firstorlast, activity FROM log7 WHERE idcase = (SELECT MAX(idcase) FROM log7)) UNION (SELECT 'LAST' AS firstorlast, activity FROM log7 WHERE idcase = (SELECT MAX(idcase) FROM log7) EXCEPT SELECT 'LAST' AS firstorlast, activity FROM log7 WHERE idcase = (SELECT MIN(idcase) FROM log7)) ORDER BY firstorlast	process_mining
+SELECT * FROM log8 WHERE activity LIKE '%SUPERVISOR%' OR activity LIKE '%DIRECTOR%' UNION SELECT * FROM log8 WHERE costevent >= 50	process_mining
+SELECT * FROM log4 WHERE activity LIKE 'Closed' INTERSECT SELECT * FROM log4 WHERE startdatetime != ('2012-05-10')	process_mining
+SELECT max(enddatetime), 'COMPLETE' FROM log3 WHERE activity LIKE '%COMPLETE' UNION SELECT max(enddatetime), 'SCHEDULE' FROM log3 WHERE activity LIKE '%SCHEDULE' UNION SELECT max(enddatetime), 'START' FROM log3 WHERE activity LIKE '%START'	process_mining
+(SELECT idcase FROM log2 GROUP BY idcase ORDER BY MAX(enddatetime) DESC) EXCEPT (SELECT idcase FROM log2 WHERE activity = 'Decisão') LIMIT 10	process_mining
+SELECT DATE, 'New Cases' AS DESCRIPTION, COUNT(DATE) FROM (SELECT IDCASE, MIN(ENDDATETIME) AS DATE FROM log1 WHERE ACTIVITY <> 'Closed' GROUP BY IDCASE ORDER BY IDCASE, MIN(ENDDATETIME)) NEW_CASES GROUP BY DATE UNION SELECT ENDDATETIME AS DATE, 'Closed Cases' AS DESCRIPTION, COUNT(ENDDATETIME) FROM log1 WHERE ACTIVITY = 'Closed' GROUP BY ENDDATETIME ORDER BY DATE, DESCRIPTION DESC	process_mining
+SELECT SUM(early.ct) AS sum_column FROM (SELECT COUNT(resource) AS ct FROM log4 WHERE activity IN ('In Progress', 'Awaiting Assignment') GROUP BY activity) early UNION SELECT SUM(later.ct) AS sum_column FROM (SELECT COUNT(resource) AS ct FROM log4 WHERE activity IN ('Resolved', 'Closed') GROUP BY activity) later	process_mining
+SELECT max(tb_activity.count_activity) FROM (SELECT count(activity) AS count_activity, idcase FROM log7 GROUP BY idcase) AS tb_activity	process_mining
+SELECT avg(total_time) AS avg_total_time, min(total_time) AS min_total_time, max(total_time) AS max_total_time FROM (SELECT idcase, max(startdatetime) - min(startdatetime) AS total_time FROM log5 GROUP BY idcase) AS f	process_mining
+SELECT F.idcase, C.total_time, F.activity FROM (SELECT idcase, max(startdatetime) - min(startdatetime) AS total_time FROM log5 GROUP BY idcase) AS C INNER JOIN log5 AS F ON C.idcase = F.idcase WHERE activity = 'Closed'	process_mining
+SELECT AVG(Count) FROM (SELECT COUNT(*) AS Count FROM log6 WHERE activity = 'In Progress' GROUP BY idcase) AS counts	process_mining
+SELECT MIN(Count), MAX(Count), AVG(Count) FROM (SELECT COUNT('Awaiting Assignment') AS Count FROM log6 GROUP BY idcase) AS counts	process_mining
+SELECT ACTIVITY, AVG(DURATION) FROM (SELECT LOG1.ACTIVITY, LOG1.ENDDATETIME - LOG2.ENDDATETIME AS DURATION FROM LOG8 LOG1 JOIN LOG8 LOG2 ON LOG1.IDCASE = LOG2.IDCASE AND LOG1.IDEVENT = LOG2.IDEVENT + 1) AS ACTIVITY_DURATIONS GROUP BY ACTIVITY	process_mining
+SELECT AVG(chamados) FROM (SELECT COUNT(*) AS chamados FROM log6 GROUP BY resource) chamados	process_mining
+SELECT idcase FROM (SELECT CASE WHEN activity = 'Closed' THEN true ELSE false END problem_closed, idcase, resource FROM log6) l6e29 GROUP BY idcase, problem_closed HAVING problem_closed != true AND count(DISTINCT resource) > 1	process_mining
+SELECT procedural_movement, avg(qty) lawsuits_movement_avg FROM (SELECT activity procedural_movement, count(activity) qty FROM log2 GROUP BY idcase, activity) l2e10 GROUP BY procedural_movement ORDER BY lawsuits_movement_avg DESC	process_mining
+SELECT AVG(resAVG) FROM (SELECT COUNT(*) AS resAVG FROM log5 GROUP BY resource) a	process_mining
+SELECT T1.activity, T2.min AS firstExecution, T1.max AS lastExecution FROM (SELECT activity, MAX(enddatetime) FROM log2 GROUP BY activity) AS T1 JOIN (SELECT activity, MIN(enddatetime) FROM log2 GROUP BY activity) AS T2 ON T1.activity = T2.activity ORDER BY T1.activity	process_mining
+SELECT T2.activity, COUNT(*) FROM (SELECT T1.idcase, T1.activity, enddatetime FROM log1 AS T1 WHERE T1.enddatetime = '2016-03-02' GROUP BY T1.idcase, T1.activity, T1.enddatetime) AS T2 GROUP BY T2.activity	process_mining
+SELECT T1.idcase, T2.min AS starttime, T1.max AS endtime FROM (SELECT idcase, MAX(enddatetime) FROM log8 GROUP BY idcase) AS T1 JOIN (SELECT idcase, MIN(enddatetime) FROM log8 GROUP BY idcase) AS T2 ON T1.idcase = T2.idcase	process_mining

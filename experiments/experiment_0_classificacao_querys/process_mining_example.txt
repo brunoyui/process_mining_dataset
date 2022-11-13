@@ -1,0 +1,121 @@
+SELECT count(*) FROM log1 WHERE activity = 'Closed'	process_mining	2667
+SELECT count(*) FROM log1 WHERE activity = 'Closed' GROUP BY resource HAVING resource = 'Updated by 27'	process_mining	2668
+SELECT COUNT(idevent), resource FROM log6 GROUP BY resource	process_mining	2669
+SELECT COUNT(idevent) FROM log6 WHERE resource = 'Peter'	process_mining	2670
+SELECT COUNT(DISTINCT resource) FROM log5	process_mining	2673
+SELECT resource, COUNT(resource) FROM log5 GROUP BY resource	process_mining	2674
+SELECT resource, COUNT(resource) FROM log2 GROUP BY resource ORDER BY COUNT(resource) DESC	process_mining	2676
+SELECT activity, COUNT(activity) FROM log1 GROUP BY activity ORDER BY COUNT(activity)	process_mining	2679
+SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining	2680
+SELECT idcase FROM log3 GROUP BY idcase HAVING count(idcase) BETWEEN 1 AND 20	process_mining	2681
+SELECT resource FROM log2 GROUP BY resource ORDER BY count(idevent) DESC LIMIT 5	process_mining	2683
+SELECT resource, count(*) FROM log6 WHERE activity = 'Awaiting Assignment' GROUP BY resource	process_mining	2688
+SELECT count(activity) FROM log7 GROUP BY idcase HAVING count(activity) > 50	process_mining	2689
+SELECT DISTINCT idcase, costevent FROM log7 ORDER BY idcase	process_mining	2704
+SELECT * FROM log3 WHERE activity LIKE '%A_S'	process_mining	2750
+SELECT idcase, idevent, startdatetime FROM log4 ORDER BY idcase, startdatetime	process_mining	2712
+SELECT resource, count(idevent) FROM log5 WHERE activity = 'Closed' GROUP BY resource	process_mining	2713
+SELECT activity, count(idevent) FROM log5 WHERE resource = 'Minnie' AND startdatetime BETWEEN '2010-01-01' AND '2010-12-31' GROUP BY activity	process_mining	2714
+SELECT activity, max(enddatetime) FROM log3 GROUP BY activity	process_mining	2715
+SELECT activity, enddatetime, idevent FROM log1 ORDER BY enddatetime	process_mining	2718
+SELECT activity, count(idevent) FROM log4 WHERE resource = 'Joakim' AND activity = 'In Progress' GROUP BY activity	process_mining	2719
+SELECT idcase, count(DISTINCT idevent), count(DISTINCT resource) FROM log3 GROUP BY idcase HAVING count(DISTINCT idevent) > 3	process_mining	2721
+SELECT DISTINCT resource FROM log3 WHERE activity IN (SELECT activity FROM log3 WHERE activity LIKE '%DECLINED%')	process_mining	2722
+SELECT count(*) FROM log6 WHERE startdatetime BETWEEN '2012-01-01' AND '2012-05-30' AND activity = 'Closed'	process_mining	2723
+SELECT idcase, count(idevent) FROM log6 GROUP BY idcase HAVING COUNT(idevent) > 3	process_mining	2725
+SELECT idcase, COUNT(idcase) FROM log4 WHERE activity = 'In Progress' GROUP BY idcase	process_mining	2731
+SELECT * FROM log5 WHERE activity = 'Closed' AND startdatetime BETWEEN '2011-01-01 00:00:00' AND '2012-12-31 23:59:59'	process_mining	2735
+SELECT * FROM log5 WHERE activity LIKE '%assign%' OR activity LIKE '%Assign%'	process_mining	2736
+SELECT * FROM log6 WHERE activity IN ('Closed')	process_mining	2741
+SELECT costevent, activity FROM log2 ORDER BY costevent	process_mining	2748
+SELECT count(*) FROM log7 WHERE activity IN ('send confirmation receipt')	process_mining	2752
+SELECT COUNT(*), activity, resource FROM log2 WHERE activity = 'decisao' GROUP BY activity, resource	process_mining	2756
+SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining	2757
+SELECT idcase, COUNT(*) FROM log3 GROUP BY idcase HAVING COUNT(*) > 1	process_mining	2760
+SELECT activity, COUNT(idcase) FROM log3 WHERE enddatetime BETWEEN '2011-12-01' AND '2011-12-05' GROUP BY activity	process_mining	2763
+SELECT * FROM log4 WHERE resource LIKE 'M%'	process_mining	2764
+SELECT activity, COUNT(idcase) FROM log1 GROUP BY activity HAVING COUNT(idcase) > 5	process_mining	2766
+SELECT count(resource) FROM log4 WHERE resource = 'Siebel'	process_mining	2767
+SELECT * FROM log1 WHERE activity = 'Active' ORDER BY enddatetime ASC	process_mining	2770
+SELECT COUNT(idevent), activity FROM log1 WHERE enddatetime < '2016-03-08T00:00:00.000Z' GROUP BY activity HAVING COUNT(idevent) > 1	process_mining	2771
+SELECT COUNT(idevent), activity FROM log3 GROUP BY activity	process_mining	2772
+SELECT COUNT(idevent) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining	2774
+SELECT COUNT(idevent), resource FROM log6 WHERE startdatetime BETWEEN '2012-05-01T00:00:00.000Z' AND '2012-06-01T00:00:00.000Z' GROUP BY resource	process_mining	2775
+SELECT idcase FROM log3 WHERE resource = '112'	process_mining	2779
+SELECT resource, count(activity) FROM log4 GROUP BY resource HAVING COUNT(activity) > 5	process_mining	2783
+SELECT activity FROM log4 GROUP BY activity	process_mining	2784
+SELECT MIN(resource) FROM log3	process_mining	2785
+SELECT activity, COUNT(activity) FROM log6 GROUP BY activity ORDER BY count(activity) DESC LIMIT 1	process_mining	2787
+SELECT resource, COUNT(resource) FROM log6 WHERE activity = 'In Progress' GROUP BY resource ORDER BY count(resource) DESC	process_mining	2788
+SELECT resource, count(activity) FROM log6 WHERE activity = 'Closed' GROUP BY idcase, resource, activity HAVING count(activity) >= 2	process_mining	2791
+SELECT DISTINCT idcase FROM log6 WHERE activity = 'In Progress' AND startdatetime BETWEEN '2012-05-01' AND '2012-05-02'	process_mining	2792
+SELECT idevent, activity FROM log2 WHERE activity LIKE '%Remetido%'	process_mining	2801
+SELECT count((idevent)), idcase FROM log5 WHERE idcase = idcase GROUP BY idcase	process_mining	2805
+SELECT count((idevent)), resource FROM log5 WHERE resource = resource GROUP BY resource	process_mining	2806
+SELECT count((idcase)), activity FROM log3 WHERE activity LIKE '%COMPLETE%' GROUP BY activity	process_mining	2807
+SELECT count((idcase)), activity FROM log3 WHERE activity LIKE '%COMPLETE%' GROUP BY activity HAVING COUNT(*) >= 3	process_mining	2808
+SELECT count(idcase), resource, idcase FROM log6 WHERE idcase = idcase AND resource = 'Alice' GROUP BY resource, idcase ORDER BY count(idcase) DESC	process_mining	2811
+SELECT count(idcase), resource FROM log6 WHERE idcase = idcase GROUP BY resource HAVING COUNT(*) >= 10 ORDER BY count(idcase) DESC	process_mining	2812
+SELECT count(DISTINCT idcase) FROM log3 WHERE activity LIKE 'O_SENT%'	process_mining	2821
+SELECT idcase, startdatetime, resource FROM log5 WHERE activity = 'Closed' ORDER BY resource ASC	process_mining	2822
+SELECT count(idevent) FROM log5 GROUP BY idcase	process_mining	2823
+SELECT COUNT(*) FROM log6 WHERE activity = 'Closed' AND startdatetime BETWEEN '2012-05-02T00:00:00.000Z' AND '2012-05-12T23:59:59.000Z'	process_mining	2824
+SELECT idevent, idcase, resource, enddatetime FROM log7 WHERE activity LIKE 'by law' ORDER BY enddatetime ASC	process_mining	2826
+SELECT idcase, COUNT(DISTINCT resource), AVG(costevent) FROM log7 GROUP BY idcase	process_mining	2829
+SELECT idcase, activity, count(activity) FROM log2 GROUP BY idcase, activity HAVING count(activity) > 1 AND activity LIKE 'Remetido%'	process_mining	2830
+SELECT idcase, MAX(startdatetime) FROM log6 GROUP BY idcase ORDER BY MAX(startdatetime)	process_mining	2833
+SELECT COUNT(*) FROM log3 WHERE activity LIKE '%Afhandelen leads-COMPLETE%'	process_mining	2834
+SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	process_mining	2838
+SELECT COUNT(*), resource FROM log5 GROUP BY resource	process_mining	2841
+SELECT * FROM log3 WHERE activity LIKE '%ACCEPTED%'	process_mining	2842
+SELECT COUNT(*), enddatetime FROM log3 WHERE activity LIKE '%DECLINED%' GROUP BY enddatetime	process_mining	2843
+SELECT idcase FROM log7 GROUP BY idcase HAVING count(idevent) < 11 ORDER BY max(enddatetime) DESC	process_mining	2848
+SELECT resource, COUNT(*) FROM log4 WHERE activity = 'In Progress' GROUP BY resource	process_mining	2851
+SELECT activity, COUNT(*) FROM log4 GROUP BY activity	process_mining	2852
+SELECT resource, activity, count(*) FROM log5 GROUP BY resource, activity	process_mining	2855
+SELECT activity, enddatetime FROM log2 WHERE enddatetime BETWEEN '2020-01-01' AND '2020-03-31'	process_mining	2857
+SELECT idcase, resource FROM log3 WHERE resource = '112' ORDER BY idcase	process_mining	2858
+SELECT idcase, activity FROM log5 WHERE resource = 'Tomas' AND startdatetime BETWEEN '2012-01-01' AND '2012-06-30'	process_mining	2860
+SELECT idevent, activity FROM log5 WHERE activity = 'In Progress' ORDER BY startDateTime ASC	process_mining	2861
+SELECT T1.idcase FROM log1 AS T1 WHERE T1.enddatetime <= '2016-03-31' AND T1.activity = 'Active' GROUP BY T1.idcase	process_mining	2862
+SELECT MIN(startdatetime) FROM log5	process_mining	2863
+SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining	2864
+SELECT activity, count(*) FROM log4 GROUP BY activity	process_mining	2865
+SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4	process_mining	2866
+SELECT * FROM log3 WHERE activity LIKE 'O%'	process_mining	2868
+SELECT * FROM log6 WHERE activity = 'In Progress' OR activity = 'Assigned' ORDER BY startdatetime, resource	process_mining	2870
+SELECT COUNT(*), resource FROM log6 WHERE activity LIKE 'In Progress' GROUP BY resource ORDER BY resource	process_mining	2871
+SELECT resource, activity, COUNT(activity) FROM log1 WHERE activity LIKE '%ed' GROUP BY resource, activity	process_mining	2879
+SELECT resource, COUNT(activity) FROM log1 WHERE activity IN ('New') GROUP BY resource, activity	process_mining	2880
+SELECT activity FROM log1 WHERE activity LIKE '%register%'	process_mining	2882
+SELECT COUNT(activity) FROM log2 WHERE activity = 'Petição Juntada'	process_mining	2886
+SELECT AVG(costevent) FROM log2	process_mining	2887
+SELECT COUNT(activity), enddatetime FROM log7 GROUP BY enddatetime	process_mining	2889
+SELECT idevent FROM log1 WHERE activity = 'Resolved' ORDER BY enddatetime	process_mining	2891
+SELECT activity FROM log1 GROUP BY activity HAVING COUNT(idevent) > 6	process_mining	2892
+SELECT Count(*) FROM log6 WHERE resource = 'Peter'	process_mining	2895
+SELECT Resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining	2896
+SELECT startdatetime FROM log4 WHERE activity = 'Closed' OR activity = 'Resolved' ORDER BY startdatetime	process_mining	2898
+SELECT activity FROM log3 WHERE activity LIKE 'A_%'	process_mining	3000
+SELECT idevent, activity, resource, costevent FROM log2 WHERE costevent BETWEEN 3500000 AND 4000000	process_mining	3001
+SELECT idevent, activity, enddatetime FROM log3 WHERE activity LIKE 'A_PARTLYSUBMITTED-COMPLETE' OR activity LIKE 'O_CREATED-COMPLETE' ORDER BY enddatetime	process_mining	3005
+SELECT resource, count(*) FROM log2 WHERE activity = 'Decisão' GROUP BY resource	process_mining	3009
+SELECT enddatetime FROM log1 WHERE resource LIKE '%5' AND activity = 'new'	process_mining	3012
+SELECT activity, resource, Sum(costevent) FROM log4 GROUP BY activity, resource	process_mining	3013
+SELECT activity, count(activity) FROM log5 GROUP BY activity HAVING count(activity) > 3	process_mining	3015
+SELECT COUNT(idevent), resource FROM log4 WHERE activity NOT LIKE 'Closed' GROUP BY resource	process_mining	3018
+SELECT DISTINCT idcase FROM log1 WHERE activity = 'New' EXCEPT SELECT idcase FROM log1 WHERE resource = 'Updated by 804'	process_mining	2672
+SELECT activity, count(idevent) FROM log1 WHERE activity = 'Resolved' AND enddatetime BETWEEN '2020-01-01' AND '2020-12-31' GROUP BY activity UNION SELECT activity, count(idevent) FROM log1 WHERE activity = 'New' AND enddatetime > '2020-12-31' GROUP BY activity	process_mining	2717
+SELECT * FROM log6 WHERE resource = 'Hineesh' EXCEPT SELECT * FROM log6 WHERE startdatetime BETWEEN '2012-01-01' AND '2012-02-01'	process_mining	2724
+SELECT resource FROM log4 WHERE activity = 'Awaiting Assignement' EXCEPT SELECT resource FROM log4 WHERE activity = 'In Progress'	process_mining	2732
+SELECT idcase FROM log5 WHERE resource = 'Carrie' INTERSECT SELECT idcase FROM log5 WHERE resource = 'Tomas'	process_mining	2754
+SELECT activity FROM log6 WHERE idcase = '1-147898401' EXCEPT SELECT activity FROM log6 WHERE idcase = '1-236817141'	process_mining	2790
+SELECT activity FROM log7 WHERE activity LIKE '%resgist%' UNION SELECT activity FROM log7 WHERE activity LIKE '%decision%'	process_mining	2885
+SELECT activity, costevent FROM log7 INTERSECT SELECT activity, costevent FROM log7	process_mining	2890
+SELECT DISTINCT idcase, enddatetime FROM log1 WHERE enddatetime BETWEEN '2016-03-01' AND '2016-03-31'	process_mining	2671
+SELECT idcase, idevent FROM log2 WHERE costevent > 10	process_mining	2675
+SELECT resource, count(*) FROM log6 WHERE activity = 'In Progress' AND startdatetime BETWEEN '2012-01-01' AND '2012-12-31' GROUP BY resource	process_mining	2686
+SELECT count(*) FROM log8 WHERE idcase IN ('declaration 56300')	process_mining	2769
+SELECT costevent / COUNT(*) FROM log7 WHERE idcase = '7273165' GROUP BY costevent	process_mining	2883
+SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining	3003
+SELECT resource, activity FROM log1 WHERE enddatetime = (SELECT MAX(enddatetime) FROM log1)	process_mining	3016

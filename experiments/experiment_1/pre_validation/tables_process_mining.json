@@ -1,5 +1,5 @@
 [
-    {
+   {
     "column_names": [
        [
           -1,
@@ -461,6 +461,7 @@
        ]
     ],
     "column_types": [
+       "text",
        "number",
        "text",
        "text",
