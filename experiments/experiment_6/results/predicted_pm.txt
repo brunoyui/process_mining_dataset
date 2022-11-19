@@ -1,0 +1,161 @@
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.activity = 'terminal'	process_mining_1
+SELECT Count(*) FROM log6 WHERE log6.resource = 'terminal'	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.resource = 'terminal'	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.resource = 'terminal'	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.idcase = 'terminal'	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.resource = 'terminal'	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.idcase = 'terminal'	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.resource = 'terminal'	process_mining_6
+SELECT Count(DISTINCT log5.resource) FROM log5	process_mining_5
+SELECT Count(DISTINCT log5.resource) FROM log5	process_mining_5
+SELECT Count(DISTINCT log5.resource) FROM log5	process_mining_5
+SELECT Count(*) FROM log5	process_mining_5
+SELECT Count(*) FROM log5	process_mining_5
+SELECT Count(DISTINCT log5.resource) FROM log5	process_mining_5
+SELECT Count(*) FROM log5	process_mining_5
+SELECT Count(DISTINCT log5.resource) FROM log5	process_mining_5
+SELECT Count(DISTINCT log5.resource) FROM log5	process_mining_5
+SELECT Count(*) FROM log5	process_mining_5
+SELECT Count(DISTINCT log5.resource) FROM log5	process_mining_5
+SELECT * FROM log6 WHERE log6.costevent != 'terminal'	process_mining_6
+SELECT log6.costevent FROM log6 WHERE log6.costevent != 'terminal'	process_mining_6
+SELECT log6.costevent FROM log6 WHERE log6.idcase != 'terminal'	process_mining_6
+SELECT log6.costevent FROM log6 WHERE log6.idcase != 'terminal'	process_mining_6
+SELECT log6.costevent FROM log6 WHERE log6.costevent != 'terminal'	process_mining_6
+SELECT log6.costevent FROM log6 WHERE log6.costevent != 'terminal'	process_mining_6
+SELECT log6.costevent FROM log6	process_mining_6
+SELECT log6.costevent FROM log6	process_mining_6
+SELECT log6.costevent FROM log6 WHERE log6.idcase = 'terminal'	process_mining_6
+SELECT log6.costevent FROM log6	process_mining_6
+SELECT * FROM log1 WHERE log1.costevent = 'terminal'	process_mining_1
+SELECT * FROM log1 WHERE log1.costevent = 'terminal'	process_mining_1
+SELECT * FROM log1 WHERE log1.costevent = 'terminal'	process_mining_1
+SELECT log1.startdatetime FROM log1 WHERE log1.startdatetime LIKE 'terminal'	process_mining_1
+SELECT * FROM log1 WHERE log1.startdatetime LIKE 'terminal'	process_mining_1
+SELECT log3.idcase FROM log3 GROUP BY log3.idcase HAVING Count(*) BETWEEN 'terminal' AND 'terminal'	process_mining_3
+SELECT * FROM log3 GROUP BY * HAVING Count(*) >= 'terminal'	process_mining_3
+SELECT * FROM log3 GROUP BY * HAVING Count(*) >= 'terminal'	process_mining_3
+SELECT log3.idcase FROM log3 GROUP BY log3.idcase HAVING Count(*) >= 'terminal'	process_mining_3
+SELECT Count(*) FROM log3	process_mining_3
+SELECT * FROM log3 GROUP BY * HAVING Count(*) >= 'terminal'	process_mining_3
+SELECT log3.idcase FROM log3 GROUP BY log3.idcase HAVING Count(*) >= 'terminal'	process_mining_3
+SELECT log7.idcase FROM log7 GROUP BY log7.idcase HAVING Count(*) > 'terminal'	process_mining_7
+SELECT log7.idcase FROM log7 GROUP BY log7.idcase HAVING Count(*) > 'terminal'	process_mining_7
+SELECT log7.idcase FROM log7 GROUP BY log7.idcase HAVING Count(*) > 'terminal'	process_mining_7
+SELECT log7.idcase FROM log7 GROUP BY log7.idcase HAVING Count(*) > 'terminal'	process_mining_7
+SELECT Max(log8.costevent) FROM log8 ORDER BY log8.costevent Desc LIMIT 1	process_mining_8
+SELECT log8.costevent FROM log8 ORDER BY log8.costevent Desc LIMIT 1	process_mining_8
+SELECT log8.costevent FROM log8 ORDER BY log8.costevent Desc LIMIT 1	process_mining_8
+SELECT log8.costevent FROM log8 ORDER BY log8.costevent Desc LIMIT 1	process_mining_8
+SELECT log8.costevent FROM log8 ORDER BY log8.costevent Desc LIMIT 1	process_mining_8
+SELECT Count(*) FROM log1 WHERE log1.enddatetime != 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.startdatetime NOT IN (SELECT * FROM log1 WHERE log1.startdatetime = 'terminal')	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.startdatetime != 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.enddatetime = 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.enddatetime != 'terminal'	process_mining_1
+SELECT Count(*) FROM log1 WHERE log1.startdatetime != 'terminal'	process_mining_1
+SELECT Count(*) FROM log3 WHERE log3.resource = 'terminal'	process_mining_3
+SELECT Count(*) FROM log3 WHERE log3.costevent != 'terminal'	process_mining_3
+SELECT Count(*) FROM log3 WHERE log3.costevent = 'terminal'	process_mining_3
+SELECT Count(*) FROM log3	process_mining_3
+SELECT Count(*) FROM log3 WHERE log3.costevent != 'terminal'	process_mining_3
+SELECT * FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT * FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT * FROM log6 WHERE log6.activity = 'terminal' OR log6.activity = 'terminal'	process_mining_6
+SELECT * FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT log2.activity FROM log2 WHERE log2.costevent = 'terminal'	process_mining_2
+SELECT log2.activity FROM log2 WHERE log2.costevent = 'terminal'	process_mining_2
+SELECT log2.costevent FROM log2 WHERE log2.costevent = 'terminal'	process_mining_2
+SELECT log2.activity FROM log2 EXCEPT SELECT log2.activity FROM log2	process_mining_2
+SELECT * FROM log2 WHERE * NOT IN (SELECT log2.idevent FROM log2)	process_mining_2
+SELECT log2.activity FROM log2 WHERE log2.costevent LIKE 'terminal'	process_mining_2
+SELECT log2.costevent FROM log2 WHERE log2.idcase != 'terminal'	process_mining_2
+SELECT * FROM log3 WHERE log3.idcase = 'terminal'	process_mining_3
+SELECT log3.idevent FROM log3 WHERE log3.idcase = 'terminal'	process_mining_3
+SELECT log3.idevent FROM log3 WHERE log3.idcase = 'terminal'	process_mining_3
+SELECT * FROM log3 WHERE log3.idcase = 'terminal'	process_mining_3
+SELECT Count(*) FROM log7 WHERE log7.activity = 'terminal'	process_mining_7
+SELECT Count(*) FROM log7 WHERE log7.activity = 'terminal'	process_mining_7
+SELECT Count(*) FROM log7 WHERE log7.activity = 'terminal'	process_mining_7
+SELECT Count(*) FROM log7 WHERE log7.activity = 'terminal'	process_mining_7
+SELECT Count(*) FROM log7 WHERE log7.activity = 'terminal'	process_mining_7
+SELECT Sum(log2.costevent) FROM log2 WHERE log2.resource = 'terminal'	process_mining_2
+SELECT Sum(log2.costevent) FROM log2 WHERE log2.resource = 'terminal'	process_mining_2
+SELECT Sum(log2.resource) FROM log2	process_mining_2
+SELECT log8.idcase FROM log8 EXCEPT SELECT log8.idcase FROM log8	process_mining_8
+SELECT log8.idcase FROM log8 EXCEPT SELECT log8.idcase FROM log8	process_mining_8
+SELECT DISTINCT log8.idcase FROM log8 WHERE log8.resource = 'terminal'	process_mining_8
+SELECT log8.idcase FROM log8 EXCEPT SELECT log8.idcase FROM log8	process_mining_8
+SELECT Count(*) FROM log8 WHERE log8.idcase = 'terminal'	process_mining_8
+SELECT Count(*) FROM log8 WHERE log8.idcase = 'terminal'	process_mining_8
+SELECT Count(*) FROM log8 WHERE log8.idevent LIKE 'terminal'	process_mining_8
+SELECT Count(*) FROM log8 WHERE log8.idcase = 'terminal'	process_mining_8
+SELECT log3.idcase FROM log3 WHERE log3.resource = 'terminal'	process_mining_3
+SELECT log3.idcase FROM log3 WHERE log3.resource = 'terminal'	process_mining_3
+SELECT log3.idcase FROM log3 WHERE log3.resource = 'terminal'	process_mining_3
+SELECT * FROM log3 WHERE log3.resource NOT IN (SELECT log3.idevent FROM log3)	process_mining_3
+SELECT * FROM log3 EXCEPT SELECT log3.idevent FROM log3	process_mining_3
+SELECT * FROM log3 WHERE log3.resource = 'terminal'	process_mining_3
+SELECT * FROM log3 WHERE log3.resource != 'terminal'	process_mining_3
+SELECT * FROM log1 WHERE log1.resource = 'terminal'	process_mining_1
+SELECT * FROM log1 WHERE log1.resource = 'terminal'	process_mining_1
+SELECT log1.idcase FROM log1 WHERE log1.resource = 'terminal'	process_mining_1
+SELECT DISTINCT log4.activity FROM log4	process_mining_4
+SELECT log3.resource FROM log3 ORDER BY log3.resource Asc LIMIT 1	process_mining_3
+SELECT log3.resource FROM log3 ORDER BY log3.resource Asc LIMIT 1	process_mining_3
+SELECT log3.resource FROM log3 ORDER BY log3.resource Asc LIMIT 1	process_mining_3
+SELECT Count(*) FROM log6	process_mining_6
+SELECT Count(*) FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT log8.activity FROM log8 WHERE log8.costevent != 'terminal'	process_mining_8
+SELECT log8.activity FROM log8 WHERE log8.costevent != 'terminal'	process_mining_8
+SELECT log8.costevent FROM log8 WHERE log8.costevent != 'terminal'	process_mining_8
+SELECT log8.activity FROM log8	process_mining_8
+SELECT log8.costevent FROM log8 WHERE log8.costevent != 'terminal'	process_mining_8
+SELECT log5.startdatetime FROM log5 ORDER BY log5.startdatetime Asc LIMIT 1	process_mining_5
+SELECT log5.startdatetime FROM log5 ORDER BY log5.startdatetime Asc LIMIT 1	process_mining_5
+SELECT log5.startdatetime FROM log5 ORDER BY log5.startdatetime Asc LIMIT 1	process_mining_5
+SELECT log5.startdatetime FROM log5 ORDER BY log5.startdatetime Asc LIMIT 1	process_mining_5
+SELECT log5.startdatetime FROM log5 ORDER BY log5.startdatetime Asc LIMIT 1	process_mining_5
+SELECT log5.resource FROM log5 ORDER BY log5.resource Asc	process_mining_5
+SELECT log5.resource FROM log5 ORDER BY log5.resource Asc	process_mining_5
+SELECT log5.resource FROM log5 ORDER BY log5.resource Asc	process_mining_5
+SELECT log5.resource FROM log5 ORDER BY log5.resource Asc	process_mining_5
+SELECT log4.resource FROM log4 GROUP BY log4.resource HAVING Count(*) > 'terminal'	process_mining_4
+SELECT log4.resource FROM log4 GROUP BY log4.resource HAVING Count(*) > 'terminal'	process_mining_4
+SELECT log4.resource FROM log4 GROUP BY log4.resource HAVING Count(*) > 'terminal'	process_mining_4
+SELECT log4.resource FROM log4 GROUP BY log4.resource HAVING Count(*) > 'terminal'	process_mining_4
+SELECT Count(*) FROM log7 WHERE log7.costevent NOT IN (SELECT log7.idevent FROM log7)	process_mining_7
+SELECT Count(*) FROM log7 WHERE log7.costevent = 'terminal'	process_mining_7
+SELECT Count(*) FROM log7 WHERE log7.costevent NOT IN (SELECT log7.idevent FROM log7)	process_mining_7
+SELECT Count(*) FROM log2 WHERE log2.activity = 'terminal'	process_mining_2
+SELECT Count(*) FROM log2 WHERE log2.activity = 'terminal'	process_mining_2
+SELECT Count(*) FROM log2 WHERE log2.activity = 'terminal'	process_mining_2
+SELECT Avg(log2.costevent) FROM log2	process_mining_2
+SELECT Avg(log2.costevent) FROM log2	process_mining_2
+SELECT Avg(log2.costevent) FROM log2	process_mining_2
+SELECT log1.idcase FROM log1 GROUP BY log1.idcase HAVING Count(*) >= 'terminal'	process_mining_1
+SELECT log1.idcase FROM log1 GROUP BY log1.idcase HAVING Count(*) >= 'terminal'	process_mining_1
+SELECT log1.idcase FROM log1 GROUP BY log1.idcase HAVING Count(*) >= 'terminal'	process_mining_1
+SELECT log1.idcase FROM log1 GROUP BY log1.idcase HAVING Count(*) >= 'terminal'	process_mining_1
+SELECT log1.idcase FROM log1 GROUP BY log1.idcase HAVING Count(*) >= 'terminal'	process_mining_1
+SELECT log6.resource FROM log6 GROUP BY log6.resource HAVING Count(*) > 'terminal'	process_mining_6
+SELECT log6.resource FROM log6 GROUP BY log6.resource HAVING Count(*) > 'terminal'	process_mining_6
+SELECT log6.resource FROM log6 GROUP BY log6.resource HAVING Count(*) > 'terminal'	process_mining_6
+SELECT log6.resource FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT log6.resource FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT log6.resource FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT DISTINCT log6.resource FROM log6 WHERE log6.activity = 'terminal'	process_mining_6
+SELECT * FROM log2 WHERE log2.costevent != 'terminal'	process_mining_2
+SELECT log2.costevent FROM log2 WHERE log2.costevent != 'terminal'	process_mining_2
+SELECT DISTINCT * FROM log2	process_mining_2

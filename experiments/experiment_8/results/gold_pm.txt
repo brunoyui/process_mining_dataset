@@ -1,0 +1,115 @@
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT count(*) FROM events WHERE resource = 'Peter'	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(idevent) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(activity) > 50	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) > 50	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) > 50	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) > 50	process_mining_events
+SELECT max(cost) FROM events	process_mining_events
+SELECT max(cost) FROM events	process_mining_events
+SELECT max(cost) FROM events	process_mining_events
+SELECT MAX(cost) FROM events	process_mining_events
+SELECT MAX(cost) FROM events	process_mining_events
+SELECT max(cost) FROM events	process_mining_events
+SELECT max(cost) FROM events	process_mining_events
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_events
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_events
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'	process_mining_events
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'	process_mining_events
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'	process_mining_events
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_events
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_events
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_events
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_events
+SELECT idcase FROM events WHERE resource = '112'	process_mining_events
+SELECT idcase FROM events WHERE resource = '112'	process_mining_events
+SELECT idcase FROM events WHERE resource = '112'	process_mining_events
+SELECT DISTINCT idcase FROM events WHERE resource = 'Updated by 974'	process_mining_events
+SELECT DISTINCT idcase FROM events WHERE resource = 'Updated by 974'	process_mining_events
+SELECT DISTINCT idcase FROM events WHERE resource = 'Updated by 974'	process_mining_events
+SELECT DISTINCT activity FROM events	process_mining_events
+SELECT MIN(resource) FROM events	process_mining_events
+SELECT MIN(resource) FROM events	process_mining_events
+SELECT MIN(resource) FROM events	process_mining_events
+SELECT MIN(resource) FROM events	process_mining_events
+SELECT COUNT(DISTINCT idcase) FROM events WHERE activity = 'In Progress'	process_mining_events
+SELECT COUNT(DISTINCT idcase) FROM events WHERE activity = 'In Progress'	process_mining_events
+SELECT MIN(timestamp) FROM events	process_mining_events
+SELECT MIN(timestamp) FROM events	process_mining_events
+SELECT MIN(timestamp) FROM events	process_mining_events
+SELECT MIN(timestamp) FROM events	process_mining_events
+SELECT MIN(timestamp) FROM events	process_mining_events
+SELECT MIN(timestamp) FROM events	process_mining_events
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_events
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_events
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_events
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_events
+SELECT resource FROM events GROUP BY resource HAVING COUNT(*) > 4	process_mining_events
+SELECT resource FROM events GROUP BY resource HAVING COUNT(*) > 4	process_mining_events
+SELECT resource FROM events GROUP BY resource HAVING COUNT(*) > 4	process_mining_events
+SELECT resource FROM events GROUP BY resource HAVING COUNT(*) > 4	process_mining_events
+SELECT COUNT(*) FROM events WHERE activity = 'Petição Juntada'	process_mining_events
+SELECT COUNT(*) FROM events WHERE activity = 'Petição Juntada'	process_mining_events
+SELECT COUNT(*) FROM events WHERE activity = 'Petição Juntada'	process_mining_events
+SELECT AVG(cost) FROM events	process_mining_events
+SELECT AVG(cost) FROM events	process_mining_events
+SELECT AVG(cost) FROM events	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING COUNT(*) >= 7	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING COUNT(*) >= 7	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING COUNT(*) >= 7	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING COUNT(*) >= 7	process_mining_events
+SELECT idcase FROM events GROUP BY idcase HAVING COUNT(*) >= 7	process_mining_events
+SELECT resource FROM events GROUP BY Resource HAVING count(*) > 3	process_mining_events
+SELECT resource FROM events GROUP BY Resource HAVING count(*) > 3	process_mining_events
+SELECT resource FROM events GROUP BY Resource HAVING count(*) > 3	process_mining_events
+SELECT resource FROM events GROUP BY Resource HAVING count(*) > 3	process_mining_events
+SELECT resource FROM events GROUP BY Resource HAVING count(*) > 3	process_mining_events
+SELECT DISTINCT resource FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT DISTINCT resource FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT DISTINCT resource FROM events WHERE activity = 'Closed'	process_mining_events
+SELECT DISTINCT resource FROM events WHERE activity = 'Closed'	process_mining_events

@@ -1,11 +1,14 @@
-Utilização do conjunto classificado com 196 exemplos
+Utilização do conjunto classificado e ajustado com 196 exemplos
     - /process_mining/5_classified_separated_db_adjustment
 
 ## Ajustes nas consultas e perguntas classificadas como fácil
- - 
- -
- -
- -
+ - Campo adicionado na cláusula select → nova classificação da declaração em SQL
+ - Alteração na cláusula select e having: count(atributo) → count (*)
+ - Alteração de atributo IN (‘valor’) →atributo = ‘valor’ 
+ - Alteração de operador “>” para “>=” mantendo mesmo significado semântico, porém com uma associação mais próxima da pergunta “pelo menos”
+ - Ajustes no atributo em cláusula selects
+ - Substituição de sinônimos na pergunta: people → resource
+ - Adicionado a palavra “distinto” na pergunta
 
 ## Commands
 ### Extractors

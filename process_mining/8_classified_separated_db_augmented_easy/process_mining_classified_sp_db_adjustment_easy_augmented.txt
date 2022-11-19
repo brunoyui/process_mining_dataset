@@ -90,8 +90,6 @@ SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_m
 SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7	2752-2	How many occurrences have activity 'send confirmation receipt'?
 SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7	2752-3	How many events with activity 'send confirmation receipt'?
 SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7	2752-4	How many activities 'send confirmation receipt'?
-SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7	2752-5	How many chairs have activity 'send confirmation receipt'?
-SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7	2752-6	How many books have activity 'send confirmation receipt'?
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757	What is the total of costevent for TVMF77077810579481 resource?
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757-1	What is the total cost for TVMF77077810579481 resource?
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757-2	What is the total cost per resource?
@@ -154,8 +152,6 @@ SELECT idcase FROM log1 GROUP BY idcase HAVING COUNT(*) >= 7	process_mining_1	28
 SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6	2896	Which resource are working on more than three events?
 SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6	2896-1	Report all resources that are working on more than 3 events.
 SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6	2896-2	Which resource appear in more than 3 events?
-SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6	2896-3	Which resource appear in more than 3 shows?
-SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6	2896-4	Report all resources that are working on more than 3 houses.
 SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6	3003	Which resources managed to reach 'closed' status on some activity?
 SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6	3003-1	Which resource occur in activities with status 'closed'?
 SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6	3003-2	List the resources that appear in activities with status 'closed'.
