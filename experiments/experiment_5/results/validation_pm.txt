@@ -83,7 +83,7 @@ question_id	question	predicted	gold	hardness	exact_match	select_match_gold	selec
 2774	How many cases have the activity status Awaiting Assignment?	SELECT Count(*) FROM log6 WHERE log6.activity = 'terminal'	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
 2775	How many cases each resource has that started between 1/5/2012 and 1/6/2012?	SELECT Count(*) FROM log6 WHERE log6.startdatetime BETWEEN 'terminal' AND 'terminal'	SELECT COUNT(idevent), resource FROM log6 WHERE startdatetime BETWEEN '2012-05-01T00:00:00.000Z' AND '2012-06-01T00:00:00.000Z' GROUP BY resource	medium	NOK	2	1	NOK	2	1	NOK	1	1	OK	1	1	OK	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	2	1	NOK	
 2776	Whats the activity state and resource for cases which are not in resource 560532 and 560458?	SELECT log7.activity, log7.resource FROM log7 WHERE log7.resource != 'terminal'	SELECT activity, resource FROM log7 WHERE resource != '560532' AND resource != '560458'	medium	NOK	2	2	OK	2	2	OK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	0	0	NA	0	1	NA	0	0	NA	1	1	OK	
-2777	How many cases have a null costevent?	SELECT Count(*) FROM log7 WHERE log7.costevent = 'terminal'	SELECT COUNT(DISTINCT idcase) FROM log7 WHERE costevent = 'null'	easy	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2777	How many cases have a null costevent?	SELECT Count(*) FROM log7 WHERE log7.costevent = 'terminal'	select DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null'	hard	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	1	0	ND	2	1	NOK	
 2778	Which trips have started or ended and which payments have not yet been requested or paid ?	SELECT log8.startdatetime, log8.enddatetime, log8.enddatetime FROM log8 EXCEPT SELECT log8.startdatetime, log8.enddatetime, log8.costevent FROM log8 WHERE log8.costevent = 'terminal' OR log8.costevent < 'terminal'	SELECT * FROM log8 WHERE activity = 'Start trip' OR activity = 'End trip'	medium	NOK	1	3	NOK	1	3	NOK	2	0	ND	2	0	ND	0	0	NA	0	0	NA	0	0	NA	0	1	NA	0	1	NA	2	1	NOK	
 2779	Report all cases in which resource 112 was used	SELECT log3.idcase FROM log3 WHERE log3.resource = 'terminal'	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
 2780	List all events that are not associated with resources	SELECT * FROM log3 WHERE log3.resource NOT IN (SELECT log3.idevent FROM log3)	SELECT * FROM log3 WHERE resource = 'null'	easy	NOK	1	1	OK	1	1	OK	1	1	NOK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	3	NOK	
@@ -194,41 +194,41 @@ question_id	question	predicted	gold	hardness	exact_match	select_match_gold	selec
 3017	Find in resource, event id and activity of in progress events that have start date previous to the events that are already closed.	SELECT log4.resource, log4.activity, log4.activity FROM log4 WHERE log4.startdatetime < (SELECT Min(log4.startdatetime) FROM log4 WHERE log4.startdatetime = 'terminal')	SELECT T1.idevent, T2.idevent, T1.activity, T1.resource FROM log4 AS T1 JOIN log4 AS T2 ON T1.startdatetime <= T2.startdatetime WHERE T1.startdatetime <= T2.startdatetime AND T2.activity LIKE 'Closed' ORDER BY T1.idevent	extra	NOK	4	3	NOK	4	3	NOK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	1	0	ND	0	1	NA	0	0	NA	4	1	NOK	
 3018	Find the number of events per resouce that are not closed.	SELECT Count(*) FROM log4 WHERE log4.idcase NOT IN (SELECT log4.idevent FROM log4 WHERE log4.idcase != 'terminal')	SELECT COUNT(idevent), resource FROM log4 WHERE activity NOT LIKE 'Closed' GROUP BY resource	hard	NOK	2	1	NOK	2	1	NOK	1	1	NOK	1	1	NOK	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	4	3	NOK	
                      easy                 medium               hard                 extra                all                 
-count                36                   84                   32                   42                   194                 
+count                35                   84                   33                   42                   194                 
 
 ====================== EXACT MATCHING ACCURACY =====================
-exact match          0.528                0.060                0.062                0.000                0.134               
+exact match          0.543                0.060                0.061                0.000                0.134               
 
 ---------------------PARTIAL MATCHING ACCURACY----------------------
-select               0.806                0.214                0.250                0.238                0.335               
-select(no AGG)       0.861                0.226                0.281                0.262                0.361               
-where                0.750                0.162                0.167                0.056                0.289               
-where(no OP)         0.875                0.270                0.444                0.056                0.412               
+select               0.829                0.214                0.242                0.238                0.335               
+select(no AGG)       0.886                0.226                0.273                0.262                0.361               
+where                0.739                0.162                0.211                0.056                0.289               
+where(no OP)         0.870                0.270                0.474                0.056                0.412               
 group(no Having)     1.000                0.741                0.583                0.438                0.632               
 group                1.000                0.556                0.500                0.438                0.526               
 order                0.200                0.583                0.000                0.182                0.256               
-and/or               1.000                0.877                0.906                0.619                0.848               
+and/or               1.000                0.877                0.909                0.619                0.848               
 IUEN                 0.000                0.000                0.600                0.000                0.273               
-keywords             0.750                0.493                0.241                0.212                0.443               
+keywords             0.742                0.493                0.233                0.212                0.437               
 ---------------------- PARTIAL MATCHING RECALL ----------------------
-select               0.806                0.214                0.250                0.238                0.335               
-select(no AGG)       0.861                0.226                0.281                0.262                0.361               
-where                0.720                0.120                0.115                0.029                0.207               
-where(no OP)         0.840                0.200                0.308                0.029                0.296               
+select               0.829                0.214                0.242                0.238                0.335               
+select(no AGG)       0.886                0.226                0.273                0.262                0.361               
+where                0.708                0.120                0.148                0.029                0.207               
+where(no OP)         0.833                0.200                0.333                0.029                0.296               
 group(no Having)     0.500                0.444                0.389                0.280                0.391               
 group                0.500                0.333                0.333                0.280                0.326               
 order                1.000                0.583                0.000                0.154                0.263               
 and/or               1.000                0.947                1.000                0.929                0.964               
-IUEN                 0.000                0.000                0.429                0.000                0.214               
-keywords             0.800                0.429                0.219                0.167                0.394               
+IUEN                 0.000                0.000                0.375                0.000                0.200               
+keywords             0.793                0.429                0.212                0.167                0.388               
 ---------------------- PARTIAL MATCHING F1 --------------------------
-select               0.806                0.214                0.250                0.238                0.335               
-select(no AGG)       0.861                0.226                0.281                0.262                0.361               
-where                0.735                0.138                0.136                0.038                0.241               
-where(no OP)         0.857                0.230                0.364                0.038                0.345               
+select               0.829                0.214                0.242                0.238                0.335               
+select(no AGG)       0.886                0.226                0.273                0.262                0.361               
+where                0.723                0.138                0.174                0.038                0.241               
+where(no OP)         0.851                0.230                0.391                0.038                0.345               
 group(no Having)     0.667                0.556                0.467                0.341                0.483               
 group                0.667                0.417                0.400                0.341                0.403               
 order                0.333                0.583                1.000                0.167                0.260               
-and/or               1.000                0.910                0.951                0.743                0.903               
-IUEN                 1.000                1.000                0.500                1.000                0.240               
-keywords             0.774                0.459                0.230                0.187                0.417               
+and/or               1.000                0.910                0.952                0.743                0.903               
+IUEN                 1.000                1.000                0.462                1.000                0.231               
+keywords             0.767                0.459                0.222                0.187                0.411               

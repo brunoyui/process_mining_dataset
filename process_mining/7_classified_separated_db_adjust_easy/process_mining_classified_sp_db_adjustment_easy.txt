@@ -18,7 +18,6 @@ SELECT idcase FROM log8 WHERE resource = 'null'	process_mining_8	2762	Which case
 SELECT count(*) FROM log4 WHERE resource = 'Siebel'	process_mining_4	2767	How many times Siebel, as resource, was used ?
 SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8	2769	How many events has the case declaration 56300
 SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6	2774	How many cases have the activity status Awaiting Assignment?
-SELECT COUNT(DISTINCT idcase) FROM log7 WHERE costevent = 'null'	process_mining_7	2777	How many cases have a null costevent?
 SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3	2779	Report all cases in which resource 112 was used
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3	2780	List all events that are not associated with resources
 SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1	2782	Which incidents were updated by resource 974?

@@ -82,7 +82,7 @@ SELECT * FROM log3 WHERE resource = '112' OR resource = '11002' OR resource = '1
 SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6
 SELECT COUNT(idevent), resource FROM log6 WHERE startdatetime BETWEEN '2012-05-01T00:00:00.000Z' AND '2012-06-01T00:00:00.000Z' GROUP BY resource	process_mining_6
 SELECT activity, resource FROM log7 WHERE resource != '560532' AND resource != '560458'	process_mining_7
-SELECT COUNT(DISTINCT idcase) FROM log7 WHERE costevent = 'null'	process_mining_7
+select DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null'	process_mining_7
 SELECT * FROM log8 WHERE activity = 'Start trip' OR activity = 'End trip'	process_mining_8
 SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3

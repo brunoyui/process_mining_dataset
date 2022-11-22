@@ -12,7 +12,7 @@ SELECT * FROM log6 WHERE costevent != 'null'	process_mining_6	2677	What are the 
 SELECT idcase, idevent, startdatetime, activity, resource FROM log6 WHERE activity = 'In Progress' UNION SELECT idcase, idevent, startdatetime, activity, resource FROM log6 WHERE activity = 'Closed'	process_mining_6	2678	Return only In Progress and Closed events
 SELECT activity, COUNT(activity) FROM log1 GROUP BY activity ORDER BY COUNT(activity)	process_mining_1	2679	What are the most frequent activities?
 SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining_1	2680	What are the events that happened in the year 2016?
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_3	2681	What are the incidents with the number of events between 1 and 20?
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_1	2681	What are the incidents with the number of events between 1 and 20?
 SELECT resource FROM log2 GROUP BY resource ORDER BY count(idevent) DESC LIMIT 5	process_mining_2	2683	What are the top 5 resources with the most cases?
 SELECT resource, count(*) FROM log6 WHERE activity = 'In Progress' AND startdatetime BETWEEN '2012-01-01' AND '2012-12-31' GROUP BY resource	process_mining_6	2686	How many activities do we have in progress for each resource in the year of 2012?
 SELECT resource, count(*) FROM log6 WHERE activity = 'Awaiting Assignment' GROUP BY resource	process_mining_6	2688	What activity does the resource have the most?
@@ -82,7 +82,7 @@ SELECT * FROM log3 WHERE resource = '112' OR resource = '11002' OR resource = '1
 SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6	2774	How many cases have the activity status Awaiting Assignment?
 SELECT COUNT(idevent), resource FROM log6 WHERE startdatetime BETWEEN '2012-05-01T00:00:00.000Z' AND '2012-06-01T00:00:00.000Z' GROUP BY resource	process_mining_6	2775	How many cases each resource has that started between 1/5/2012 and 1/6/2012?
 SELECT activity, resource FROM log7 WHERE resource != '560532' AND resource != '560458'	process_mining_7	2776	Whats the activity state and resource for cases which are not in resource 560532 and 560458?
-SELECT COUNT(DISTINCT idcase) FROM log7 WHERE costevent = 'null'	process_mining_7	2777	How many cases have a null costevent?
+select DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null'	process_mining_7	2777	How many cases have a null costevent?
 SELECT * FROM log8 WHERE activity = 'Start trip' OR activity = 'End trip'	process_mining_8	2778	Which trips have started or ended and which payments have not yet been requested or paid ?
 SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3	2779	Report all cases in which resource 112 was used
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3	2780	List all events that are not associated with resources
