@@ -2,38 +2,35 @@ SELECT count(*) FROM log1 WHERE activity = 'Closed'	process_mining_1	2667	How ma
 SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	process_mining_6	2670	Show the amount of events that have had Peter as resource
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673	How many different resources are there in the log?
 SELECT * FROM log6 WHERE costevent != 'null'	process_mining_6	2677	What are the events where the event cost is not null?
-SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining_1	2680	What are the events that end in the year 2016?
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_3	2681	What are the cases with number of events between 1 and 20?
-SELECT idcase FROM log7 GROUP BY idcase HAVING count(activity) > 50	process_mining_7	2689	Which cases have more than 50 activities?
+SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining_1	2680	What are the events that happened in the year 2016?
+SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_3	2681	What are the incidents with the number of events between 1 and 20?
+SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	process_mining_7	2689	Which cases have more than 50 activities?
 SELECT max(costevent) FROM log8	process_mining_8	2697	What is the largest event cost value found in the log?
-SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1	2710	How many events without end date
-SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3	2716	How many requests with event cost information?
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1	2710	select event count with no end date
+SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3	2716	Counting requests with event cost information
 SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6	2741	Are there any records of Closed activity in the log? If yes, show event data.
-SELECT activity FROM log2 WHERE costevent = 'null'	process_mining_2	2747	Which activities have the costevent null?
+SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	process_mining_2	2747	Which activities have the costevent null?
 SELECT * FROM log3 WHERE idcase = 'null'	process_mining_3	2751	Is there Null values on idcase column?
 SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7	2752	How many records do they have as a send confirmation receipt activity?
-SELECT MAX(costevent) FROM log8	process_mining_8	2753	What is the highest event cost value presented in the log?
+SELECT MAX(costevent) FROM log8	process_mining_8	2753	What is the highest event cost value among all activities presented in the log?
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757	What is the total of costevent for TVMF77077810579481 resource?
-SELECT idcase FROM log8 WHERE resource = 'null'	process_mining_8	2762	Which cases do not have a resource?
+SELECT idcase FROM log8 WHERE resource = 'null'	process_mining_8	2762	Which cases do not have an resource?
 SELECT count(*) FROM log4 WHERE resource = 'Siebel'	process_mining_4	2767	How many times Siebel, as resource, was used ?
 SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8	2769	How many events has the case declaration 56300
-SELECT COUNT(*) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6	2774	How many cases have the activity status Awaiting Assignment?
-SELECT COUNT(*) FROM log7 WHERE costevent = 'null'	process_mining_7	2777	How many cases have a null costevent?
-SELECT idcase FROM log3 WHERE resource = '112'	process_mining_3	2779	Report all cases in which resource 112 was used
-SELECT * FROM log3 WHERE resource = 'null'	process_mining_3	2780	List events that not have a resource associated
-SELECT * FROM log1 WHERE resource = 'Updated by 974'	process_mining_1	2782	Which incidents were updated by resource 974?
-SELECT DISTINCT activity FROM log4	process_mining_4	2784	Which different types of activities exist in the log?
+SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6	2774	How many cases have the activity status Awaiting Assignment?
+SELECT COUNT(DISTINCT idcase) FROM log7 WHERE costevent = 'null'	process_mining_7	2777	How many cases have a null costevent?
+SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3	2779	Report all cases in which resource 112 was used
+SELECT * FROM log3 WHERE resource = 'null'	process_mining_3	2780	List all events that are not associated with resources
+SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1	2782	Which incidents were updated by resource 974?
+SELECT DISTINCT activity FROM log4 GROUP BY activity	process_mining_4	2784	What types of activities exist in the log?
 SELECT MIN(resource) FROM log3	process_mining_3	2785	Which is the smallest resource?
-SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	process_mining_6	2838	How many cases are still in progress?
-SELECT activity FROM log8 WHERE costevent != 'null'	process_mining_8	2853	What are activities whose costevent is not null?
+SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	process_mining_6	2838	How many cases have activity 'in progress'?
+SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8	2853	What are activities whose costevent is not null?
 SELECT MIN(startdatetime) FROM log5	process_mining_5	2863	When was the oldest problem?
 SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5	2864	What are the resources in alphabetical order?
-SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4	process_mining_4	2866	Which resources have more than 4 incidents?
-SELECT COUNT(*) FROM log7 WHERE costevent = 'null'	process_mining_7	2884	How many authorization requests does not have any cost?
-SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	process_mining_2	2886	How many activities are classified as Joined Petition?
+SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	process_mining_2	2886	How many events are associated with the 'Joined Petition' activity?
 SELECT AVG(costevent) FROM log2	process_mining_2	2887	What is the average event cost of this event log?
 SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1	2892	Which activities have at least 7 events?
-SELECT Count(*) FROM log6 WHERE resource = 'Peter'	process_mining_6	2895	How many events has Peter as resource?
-SELECT Resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6	2896	Which resource are working on more than three events?
-SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6	3003	Which resources mananged to reach closed status on some activity?
+SELECT Count(*) FROM log6 WHERE resource = 'Peter'	process_mining_6	2895	How many events are tied to Peter?
+SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6	3003	What resources were associated with closing an case?
 SELECT * FROM log2 WHERE costevent != 'null'	process_mining_2	3007	Select all rows where the cost of the event is not null
