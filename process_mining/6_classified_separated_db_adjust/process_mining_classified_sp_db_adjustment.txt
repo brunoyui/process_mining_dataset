@@ -82,14 +82,14 @@ SELECT * FROM log3 WHERE resource = '112' OR resource = '11002' OR resource = '1
 SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6	2774	How many cases have the activity status Awaiting Assignment?
 SELECT COUNT(idevent), resource FROM log6 WHERE startdatetime BETWEEN '2012-05-01T00:00:00.000Z' AND '2012-06-01T00:00:00.000Z' GROUP BY resource	process_mining_6	2775	How many cases each resource has that started between 1/5/2012 and 1/6/2012?
 SELECT activity, resource FROM log7 WHERE resource != '560532' AND resource != '560458'	process_mining_7	2776	Whats the activity state and resource for cases which are not in resource 560532 and 560458?
-select DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null'	process_mining_7	2777	How many cases have a null costevent?
+SELECT COUNT(*) FROM (SELECT DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null')	process_mining_7	2777	How many cases have a null costevent?
 SELECT * FROM log8 WHERE activity = 'Start trip' OR activity = 'End trip'	process_mining_8	2778	Which trips have started or ended and which payments have not yet been requested or paid ?
 SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3	2779	Report all cases in which resource 112 was used
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3	2780	List all events that are not associated with resources
 SELECT idcase FROM log1 WHERE enddatetime BETWEEN '2016-03-01' AND '2016-03-31' AND activity IN (SELECT activity from log1 where activity = 'New' OR activity = 'Active')	process_mining_1	2781	What cases were opened in March 2016?
 SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1	2782	Which incidents were updated by resource 974?
 SELECT resource, count(activity) FROM log4 GROUP BY resource HAVING COUNT(activity) > 5	process_mining_4	2783	Which resources have more than 5 actions on incidents?
-SELECT DISTINCT activity FROM log4 GROUP BY activity	process_mining_4	2784	What types of activities exist in the log?
+SELECT DISTINCT activity FROM log4	process_mining_4	2784	What types of activities exist in the log?
 SELECT MIN(resource) FROM log3	process_mining_3	2785	Which is the smallest resource?
 SELECT activity, COUNT(activity) FROM log6 GROUP BY activity ORDER BY count(activity) DESC LIMIT 1	process_mining_6	2787	What activity is most recurrent in the log?
 SELECT resource, COUNT(resource) FROM log6 WHERE activity = 'In Progress' GROUP BY resource ORDER BY count(resource) DESC	process_mining_6	2788	What resources are most active in the In Progress activity? Considering from the biggest to the smallest.
@@ -163,7 +163,7 @@ SELECT resource, activity, COUNT(activity) FROM log1 WHERE activity LIKE '%ed' G
 SELECT resource, COUNT(activity) FROM log1 WHERE activity IN ('New') GROUP BY resource, activity	process_mining_1	2880	How many new incidents was each person responsible?
 SELECT activity FROM log1 WHERE activity LIKE '%register%'	process_mining_1	2882	What activities involve resgistration?
 SELECT costevent / COUNT(*) FROM log7 WHERE idcase = '7273165' GROUP BY costevent	process_mining_7	2883	On average, how much each activity would cost?
-select DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null'	process_mining_7	2884	How many cases have no cost?
+SELECT COUNT(*) FROM (SELECT DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null')	process_mining_7	2884	How many cases have no cost?
 SELECT activity FROM log7 WHERE activity LIKE '%resgist%' UNION SELECT activity FROM log7 WHERE activity LIKE '%decision%'	process_mining_7	2885	What activities involve recording and decision making?
 SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	process_mining_2	2886	How many events are associated with the 'Joined Petition' activity?
 SELECT AVG(costevent) FROM log2	process_mining_2	2887	What is the average event cost of this event log?

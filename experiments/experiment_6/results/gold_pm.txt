@@ -43,85 +43,97 @@ SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	proce
 SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining_1
 SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining_1
 SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining_1
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_3
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(idevent) <= 20	process_mining_3
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20	process_mining_3
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20	process_mining_3
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20	process_mining_3
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20	process_mining_3
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20	process_mining_3
-SELECT idcase FROM log7 GROUP BY idcase HAVING count(activity) > 50	process_mining_7
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_1
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	process_mining_1
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	process_mining_1
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	process_mining_1
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	process_mining_1
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	process_mining_1
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	process_mining_1
+SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	process_mining_7
 SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	process_mining_7
 SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	process_mining_7
 SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	process_mining_7
 SELECT max(costevent) FROM log8	process_mining_8
 SELECT max(costevent) FROM log8	process_mining_8
+SELECT max(costevent) FROM log8	process_mining_8
+SELECT max(costevent) FROM log8	process_mining_8
+SELECT max(costevent) FROM log8	process_mining_8
+SELECT max(costevent) FROM log8	process_mining_8
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
+SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
+SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
+SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
+SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
+SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
+SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
+SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
+SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
+SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
+SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
+SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
+SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	process_mining_2
+SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	process_mining_2
+SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	process_mining_2
+SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	process_mining_2
+SELECT * FROM log3 WHERE idcase = 'null'	process_mining_3
+SELECT * FROM log3 WHERE idcase = 'null'	process_mining_3
+SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
+SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
+SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
+SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
 SELECT MAX(costevent) FROM log8	process_mining_8
-SELECT max(costevent) FROM log8	process_mining_8
-SELECT max(costevent) FROM log8	process_mining_8
-SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
-SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
-SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
-SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
-SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
-SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1
-SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
-SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
-SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
-SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
-SELECT count(*) FROM log3 WHERE costevent != 'null'	process_mining_3
-SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
-SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
-SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
-SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
-SELECT * FROM log2 WHERE costevent = 'null'	process_mining_2
-SELECT * FROM log2 WHERE costevent = 'null'	process_mining_2
-SELECT * FROM log2 WHERE costevent = 'null'	process_mining_2
-SELECT * FROM log2 WHERE costevent = 'null'	process_mining_2
-SELECT * FROM log2 WHERE costevent = 'null'	process_mining_2
-SELECT * FROM log2 WHERE costevent = 'null'	process_mining_2
-SELECT * FROM log2 WHERE costevent = 'null'	process_mining_2
-SELECT * FROM log3 WHERE idcase = 'null'	process_mining_3
-SELECT * FROM log3 WHERE idcase = 'null'	process_mining_3
-SELECT * FROM log3 WHERE idcase = 'null'	process_mining_3
-SELECT * FROM log3 WHERE idcase = 'null'	process_mining_3
-SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
-SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
-SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
-SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
-SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
+SELECT MAX(costevent) FROM log8	process_mining_8
+SELECT MAX(costevent) FROM log8	process_mining_8
+SELECT MAX(costevent) FROM log8	process_mining_8
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2
-SELECT idcase FROM log8 WHERE resource = 'null'	process_mining_8
-SELECT idcase FROM log8 WHERE resource = 'null'	process_mining_8
-SELECT idcase FROM log8 WHERE resource = 'null'	process_mining_8
-SELECT idcase FROM log8 WHERE resource = 'null'	process_mining_8
+SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	process_mining_8
+SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	process_mining_8
+SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	process_mining_8
+SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	process_mining_8
+SELECT count(*) FROM log4 WHERE resource = 'Siebel'	process_mining_4
+SELECT count(*) FROM log4 WHERE resource = 'Siebel'	process_mining_4
+SELECT count(*) FROM log4 WHERE resource = 'Siebel'	process_mining_4
 SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8
 SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8
 SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8
 SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8
-SELECT idcase FROM log3 WHERE resource = '112'	process_mining_3
-SELECT idcase FROM log3 WHERE resource = '112'	process_mining_3
-SELECT idcase FROM log3 WHERE resource = '112'	process_mining_3
+SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8
+SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	process_mining_8
+SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6
+SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6
+SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6
+SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3
+SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3
+SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3
+SELECT * FROM log3 WHERE resource = 'null'	process_mining_3
+SELECT * FROM log3 WHERE resource = 'null'	process_mining_3
+SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1
 SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1
 SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1
 SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1
 SELECT DISTINCT activity FROM log4	process_mining_4
+SELECT DISTINCT activity FROM log4	process_mining_4
+SELECT MIN(resource) FROM log3	process_mining_3
 SELECT MIN(resource) FROM log3	process_mining_3
 SELECT MIN(resource) FROM log3	process_mining_3
 SELECT MIN(resource) FROM log3	process_mining_3
 SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	process_mining_6
 SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	process_mining_6
-SELECT * FROM log8 WHERE costevent != 'null'	process_mining_8
-SELECT * FROM log8 WHERE costevent != 'null'	process_mining_8
-SELECT * FROM log8 WHERE costevent != 'null'	process_mining_8
-SELECT * FROM log8 WHERE costevent != 'null'	process_mining_8
-SELECT * FROM log8 WHERE costevent != 'null'	process_mining_8
+SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8
+SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8
+SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8
 SELECT MIN(startdatetime) FROM log5	process_mining_5
 SELECT MIN(startdatetime) FROM log5	process_mining_5
 SELECT MIN(startdatetime) FROM log5	process_mining_5
@@ -131,28 +143,23 @@ SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5
 SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5
 SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5
 SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5
-SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4	process_mining_4
-SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4	process_mining_4
-SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4	process_mining_4
-SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4	process_mining_4
-SELECT COUNT(*) FROM log7 WHERE costevent = 'null'	process_mining_7
-SELECT COUNT(*) FROM log7 WHERE costevent = 'null'	process_mining_7
-SELECT COUNT(*) FROM log7 WHERE costevent = 'null'	process_mining_7
+SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5
+SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5
 SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	process_mining_2
 SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	process_mining_2
 SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	process_mining_2
 SELECT AVG(costevent) FROM log2	process_mining_2
 SELECT AVG(costevent) FROM log2	process_mining_2
 SELECT AVG(costevent) FROM log2	process_mining_2
-SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1
-SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1
-SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1
-SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1
-SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1
-SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6
-SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6
-SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3	process_mining_6
-SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6
+SELECT AVG(costevent) FROM log2	process_mining_2
+SELECT AVG(costevent) FROM log2	process_mining_2
+SELECT AVG(costevent) FROM log2	process_mining_2
+SELECT AVG(costevent) FROM log2	process_mining_2
+SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1
+SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	process_mining_1
+SELECT Count(*) FROM log6 WHERE resource = 'Peter'	process_mining_6
+SELECT Count(*) FROM log6 WHERE resource = 'Peter'	process_mining_6
+SELECT Count(*) FROM log6 WHERE resource = 'Peter'	process_mining_6
 SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6
 SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6
 SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	process_mining_6

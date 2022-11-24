@@ -13,7 +13,7 @@ question_id	question	predicted	gold	hardness	exact_match	select_match_gold	selec
 2678	Return only In Progress and Closed events	SELECT log6.idevent FROM log6 WHERE log6.idcase = 'terminal' INTERSECT SELECT log6.idevent FROM log6 WHERE log6.idcase = 'terminal'	SELECT idcase, idevent, startdatetime, activity, resource FROM log6 WHERE activity = 'In Progress' UNION SELECT idcase, idevent, startdatetime, activity, resource FROM log6 WHERE activity = 'Closed'	extra	NOK	5	1	NOK	5	1	NOK	1	1	NOK	1	1	NOK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	1	1	NOK	2	2	NOK	
 2679	What are the most frequent activities?	SELECT log1.activity FROM log1 GROUP BY log1.activity ORDER BY Count(*) Desc LIMIT 1	SELECT activity, COUNT(activity) FROM log1 GROUP BY activity ORDER BY COUNT(activity)	extra	NOK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	1	1	OK	1	1	OK	1	1	NOK	1	1	OK	0	0	NA	3	4	NOK	
 2680	What are the events that happened in the year 2016?	SELECT * FROM log1 WHERE log1.costevent = 'terminal'	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	NOK	1	1	OK	1	1	OK	1	1	NOK	1	1	NOK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
-2681	What are the incidents with the number of events between 1 and 20?	SELECT * FROM log3 WHERE log3.costevent BETWEEN 'terminal' AND 'terminal'	SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	easy	NOK	1	1	NOK	1	1	NOK	0	1	NA	0	1	NA	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	2	1	NOK	
+2681	What are the incidents with the number of events between 1 and 20?	SELECT * FROM log1 WHERE * BETWEEN 'terminal' AND 'terminal'	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	easy	NOK	1	1	NOK	1	1	NOK	0	1	NA	0	1	NA	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	2	1	NOK	
 2683	What are the top 5 resources with the most cases?	SELECT log2.resource FROM log2 GROUP BY log2.resource ORDER BY Count(*) Desc LIMIT 1	SELECT resource FROM log2 GROUP BY resource ORDER BY count(idevent) DESC LIMIT 5	hard	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	1	1	OK	1	1	OK	1	1	NOK	1	1	OK	0	0	NA	4	4	OK	
 2686	How many activities do we have in progress for each resource in the year of 2012?	SELECT log6.resource, Count(*) FROM log6 WHERE log6.startdatetime = 'terminal' GROUP BY log6.resource	SELECT resource, count(*) FROM log6 WHERE activity = 'In Progress' AND startdatetime BETWEEN '2012-01-01' AND '2012-12-31' GROUP BY resource	extra	NOK	2	2	OK	2	2	OK	2	1	NOK	2	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	1	NA	0	0	NA	2	2	OK	
 2688	What activity does the resource have the most?	SELECT log6.activity FROM log6 GROUP BY log6.resource ORDER BY Count(*) Desc LIMIT 1	SELECT resource, count(*) FROM log6 WHERE activity = 'Awaiting Assignment' GROUP BY resource	medium	NOK	2	1	NOK	2	1	NOK	1	0	ND	1	0	ND	1	1	OK	1	1	OK	0	1	NA	1	1	OK	0	0	NA	2	4	NOK	
@@ -83,14 +83,14 @@ question_id	question	predicted	gold	hardness	exact_match	select_match_gold	selec
 2774	How many cases have the activity status Awaiting Assignment?	SELECT Count(*) FROM log6 WHERE log6.activity = 'terminal'	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
 2775	How many cases each resource has that started between 1/5/2012 and 1/6/2012?	SELECT Count(*) FROM log6 WHERE log6.startdatetime BETWEEN 'terminal' AND 'terminal'	SELECT COUNT(idevent), resource FROM log6 WHERE startdatetime BETWEEN '2012-05-01T00:00:00.000Z' AND '2012-06-01T00:00:00.000Z' GROUP BY resource	medium	NOK	2	1	NOK	2	1	NOK	1	1	OK	1	1	OK	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	2	1	NOK	
 2776	Whats the activity state and resource for cases which are not in resource 560532 and 560458?	SELECT log7.activity, log7.resource FROM log7 WHERE log7.resource != 'terminal'	SELECT activity, resource FROM log7 WHERE resource != '560532' AND resource != '560458'	medium	NOK	2	2	OK	2	2	OK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	0	0	NA	0	1	NA	0	0	NA	1	1	OK	
-2777	How many cases have a null costevent?	SELECT Count(*) FROM log7 WHERE log7.costevent = 'terminal'	select DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null'	hard	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	1	0	ND	2	1	NOK	
+2777	How many cases have a null costevent?	SELECT Count(*) FROM log7 WHERE log7.costevent = 'terminal'	SELECT COUNT(*) FROM (SELECT DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null')	easy	NOK	1	1	OK	1	1	OK	0	1	NA	0	1	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	1	NA	
 2778	Which trips have started or ended and which payments have not yet been requested or paid ?	SELECT log8.startdatetime, log8.enddatetime, log8.enddatetime FROM log8 EXCEPT SELECT log8.startdatetime, log8.enddatetime, log8.costevent FROM log8 WHERE log8.costevent = 'terminal' OR log8.costevent < 'terminal'	SELECT * FROM log8 WHERE activity = 'Start trip' OR activity = 'End trip'	medium	NOK	1	3	NOK	1	3	NOK	2	0	ND	2	0	ND	0	0	NA	0	0	NA	0	0	NA	0	1	NA	0	1	NA	2	1	NOK	
 2779	Report all cases in which resource 112 was used	SELECT log3.idcase FROM log3 WHERE log3.resource = 'terminal'	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
 2780	List all events that are not associated with resources	SELECT * FROM log3 WHERE log3.resource NOT IN (SELECT log3.idevent FROM log3)	SELECT * FROM log3 WHERE resource = 'null'	easy	NOK	1	1	OK	1	1	OK	1	1	NOK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	3	NOK	
 2781	What cases were opened in March 2016?	SELECT log1.idcase FROM log1 WHERE log1.idevent >= 'terminal'	SELECT idcase FROM log1 WHERE enddatetime BETWEEN '2016-03-01' AND '2016-03-31' AND activity IN (SELECT activity from log1 where activity = 'New' OR activity = 'Active')	extra	NOK	1	1	OK	1	1	OK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	0	0	NA	0	1	NA	0	0	NA	2	1	NOK	
 2782	Which incidents were updated by resource 974?	SELECT * FROM log1 WHERE log1.resource = 'terminal'	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
 2783	Which resources have more than 5 actions on incidents?	SELECT log4.resource FROM log4 GROUP BY log4.resource HAVING Count(*) > 'terminal'	SELECT resource, count(activity) FROM log4 GROUP BY resource HAVING COUNT(activity) > 5	medium	NOK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	1	1	OK	1	1	NOK	0	0	NA	1	1	OK	0	0	NA	2	2	OK	
-2784	What types of activities exist in the log?	SELECT log4.activity FROM log4	SELECT DISTINCT activity FROM log4 GROUP BY activity	easy	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2784	What types of activities exist in the log?	SELECT log4.activity FROM log4	SELECT DISTINCT activity FROM log4	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
 2785	Which is the smallest resource?	SELECT log3.resource FROM log3 ORDER BY log3.resource Asc LIMIT 1	SELECT MIN(resource) FROM log3	easy	NOK	1	1	NOK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	1	NA	1	1	OK	0	0	NA	0	3	NA	
 2787	What activity is most recurrent in the log?	SELECT log6.activity FROM log6 GROUP BY log6.activity ORDER BY Count(*) Desc LIMIT 1	SELECT activity, COUNT(activity) FROM log6 GROUP BY activity ORDER BY count(activity) DESC LIMIT 1	hard	NOK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	1	1	OK	1	1	OK	1	1	NOK	1	1	OK	0	0	NA	4	4	OK	
 2788	What resources are most active in the In Progress activity? Considering from the biggest to the smallest.	SELECT log6.resource FROM log6 WHERE log6.activity = 'terminal' GROUP BY log6.resource ORDER BY Avg(*) Desc LIMIT 1	SELECT resource, COUNT(resource) FROM log6 WHERE activity = 'In Progress' GROUP BY resource ORDER BY count(resource) DESC	hard	NOK	2	1	NOK	2	1	NOK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	1	1	NOK	1	1	OK	0	0	NA	4	5	NOK	
@@ -164,7 +164,7 @@ question_id	question	predicted	gold	hardness	exact_match	select_match_gold	selec
 2880	How many new incidents was each person responsible?	SELECT log1.resource, Count(*) FROM log1 GROUP BY log1.resource	SELECT resource, COUNT(activity) FROM log1 WHERE activity IN ('New') GROUP BY resource, activity	extra	NOK	2	2	NOK	2	2	NOK	1	0	ND	1	0	ND	2	1	NOK	1	1	NOK	0	0	NA	1	1	OK	0	0	NA	3	1	NOK	
 2882	What activities involve resgistration?	SELECT log1.activity FROM log1 WHERE log1.activity = 'terminal'	SELECT activity FROM log1 WHERE activity LIKE '%register%'	medium	NOK	1	1	OK	1	1	OK	1	1	NOK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	2	1	NOK	
 2883	On average, how much each activity would cost?	SELECT Avg(log7.activity) FROM log7	SELECT costevent / COUNT(*) FROM log7 WHERE idcase = '7273165' GROUP BY costevent	medium	NOK	1	1	NOK	1	1	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	2	0	ND	
-2884	How many cases have no cost?	SELECT Count(*) FROM log7 WHERE log7.idcase NOT IN (SELECT log7.idcase FROM log7)	select DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null'	hard	NOK	1	1	NOK	1	1	NOK	1	1	NOK	1	1	NOK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	1	0	ND	2	3	NOK	
+2884	How many cases have no cost?	SELECT Count(*) FROM log7 WHERE log7.idcase NOT IN (SELECT log7.idcase FROM log7)	SELECT COUNT(*) FROM (SELECT DISTINCT idcase from log7 where costevent = 'null' EXCEPT SELECT DISTINCT idcase FROM log7 WHERE costevent != 'null')	easy	NOK	1	1	OK	1	1	OK	0	1	NA	0	1	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	3	NA	
 2885	What activities involve recording and decision making?	SELECT log7.activity FROM log7 INTERSECT SELECT log7.activity FROM log7 WHERE log7.activity = 'terminal'	SELECT activity FROM log7 WHERE activity LIKE '%resgist%' UNION SELECT activity FROM log7 WHERE activity LIKE '%decision%'	extra	NOK	1	1	OK	1	1	OK	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	1	1	NOK	3	1	NOK	
 2886	How many events are associated with the 'Joined Petition' activity?	SELECT Count(*) FROM log2 WHERE log2.activity = 'terminal'	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
 2887	What is the average event cost of this event log?	SELECT Avg(log2.costevent) FROM log2	SELECT AVG(costevent) FROM log2	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
@@ -194,41 +194,41 @@ question_id	question	predicted	gold	hardness	exact_match	select_match_gold	selec
 3017	Find in resource, event id and activity of in progress events that have start date previous to the events that are already closed.	SELECT log4.resource, log4.activity, log4.activity FROM log4 WHERE log4.startdatetime < (SELECT Min(log4.startdatetime) FROM log4 WHERE log4.startdatetime = 'terminal')	SELECT T1.idevent, T2.idevent, T1.activity, T1.resource FROM log4 AS T1 JOIN log4 AS T2 ON T1.startdatetime <= T2.startdatetime WHERE T1.startdatetime <= T2.startdatetime AND T2.activity LIKE 'Closed' ORDER BY T1.idevent	extra	NOK	4	3	NOK	4	3	NOK	2	1	NOK	2	1	NOK	0	0	NA	0	0	NA	1	0	ND	0	1	NA	0	0	NA	4	1	NOK	
 3018	Find the number of events per resouce that are not closed.	SELECT Count(*) FROM log4 WHERE log4.idcase NOT IN (SELECT log4.idevent FROM log4 WHERE log4.idcase != 'terminal')	SELECT COUNT(idevent), resource FROM log4 WHERE activity NOT LIKE 'Closed' GROUP BY resource	hard	NOK	2	1	NOK	2	1	NOK	1	1	NOK	1	1	NOK	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	4	3	NOK	
                      easy                 medium               hard                 extra                all                 
-count                35                   84                   33                   42                   194                 
+count                37                   84                   31                   42                   194                 
 
 ====================== EXACT MATCHING ACCURACY =====================
-exact match          0.543                0.060                0.061                0.000                0.134               
+exact match          0.541                0.060                0.065                0.000                0.139               
 
 ---------------------PARTIAL MATCHING ACCURACY----------------------
-select               0.829                0.214                0.242                0.238                0.335               
-select(no AGG)       0.886                0.226                0.273                0.262                0.361               
-where                0.739                0.162                0.211                0.056                0.289               
-where(no OP)         0.870                0.270                0.474                0.056                0.412               
+select               0.838                0.214                0.258                0.238                0.345               
+select(no AGG)       0.892                0.226                0.290                0.262                0.371               
+where                0.680                0.162                0.176                0.056                0.278               
+where(no OP)         0.800                0.270                0.471                0.056                0.402               
 group(no Having)     1.000                0.741                0.583                0.438                0.632               
 group                1.000                0.556                0.500                0.438                0.526               
 order                0.200                0.583                0.000                0.182                0.256               
-and/or               1.000                0.877                0.909                0.619                0.848               
+and/or               1.000                0.877                0.903                0.619                0.848               
 IUEN                 0.000                0.000                0.600                0.000                0.273               
-keywords             0.742                0.493                0.233                0.212                0.437               
+keywords             0.697                0.493                0.250                0.212                0.437               
 ---------------------- PARTIAL MATCHING RECALL ----------------------
-select               0.829                0.214                0.242                0.238                0.335               
-select(no AGG)       0.886                0.226                0.273                0.262                0.361               
-where                0.708                0.120                0.148                0.029                0.207               
-where(no OP)         0.833                0.200                0.333                0.029                0.296               
-group(no Having)     0.500                0.444                0.389                0.280                0.391               
-group                0.500                0.333                0.333                0.280                0.326               
+select               0.838                0.214                0.258                0.238                0.345               
+select(no AGG)       0.892                0.226                0.290                0.262                0.371               
+where                0.708                0.120                0.120                0.029                0.203               
+where(no OP)         0.833                0.200                0.320                0.029                0.293               
+group(no Having)     0.667                0.444                0.389                0.280                0.396               
+group                0.667                0.333                0.333                0.280                0.330               
 order                1.000                0.583                0.000                0.154                0.263               
 and/or               1.000                0.947                1.000                0.929                0.964               
-IUEN                 0.000                0.000                0.375                0.000                0.200               
-keywords             0.793                0.429                0.212                0.167                0.388               
+IUEN                 0.000                0.000                0.500                0.000                0.231               
+keywords             0.821                0.429                0.226                0.167                0.395               
 ---------------------- PARTIAL MATCHING F1 --------------------------
-select               0.829                0.214                0.242                0.238                0.335               
-select(no AGG)       0.886                0.226                0.273                0.262                0.361               
-where                0.723                0.138                0.174                0.038                0.241               
-where(no OP)         0.851                0.230                0.391                0.038                0.345               
-group(no Having)     0.667                0.556                0.467                0.341                0.483               
-group                0.667                0.417                0.400                0.341                0.403               
+select               0.838                0.214                0.258                0.238                0.345               
+select(no AGG)       0.892                0.226                0.290                0.262                0.371               
+where                0.694                0.138                0.143                0.038                0.235               
+where(no OP)         0.816                0.230                0.381                0.038                0.339               
+group(no Having)     0.800                0.556                0.467                0.341                0.486               
+group                0.800                0.417                0.400                0.341                0.405               
 order                0.333                0.583                1.000                0.167                0.260               
-and/or               1.000                0.910                0.952                0.743                0.903               
-IUEN                 1.000                1.000                0.462                1.000                0.231               
-keywords             0.767                0.459                0.222                0.187                0.411               
+and/or               1.000                0.910                0.949                0.743                0.903               
+IUEN                 1.000                1.000                0.545                1.000                0.250               
+keywords             0.754                0.459                0.237                0.187                0.415               

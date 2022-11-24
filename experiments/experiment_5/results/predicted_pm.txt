@@ -12,7 +12,7 @@ SELECT * FROM log6 WHERE log6.costevent != 'terminal'	process_mining_6
 SELECT log6.idevent FROM log6 WHERE log6.idcase = 'terminal' INTERSECT SELECT log6.idevent FROM log6 WHERE log6.idcase = 'terminal'	process_mining_6
 SELECT log1.activity FROM log1 GROUP BY log1.activity ORDER BY Count(*) Desc LIMIT 1	process_mining_1
 SELECT * FROM log1 WHERE log1.costevent = 'terminal'	process_mining_1
-SELECT * FROM log3 WHERE log3.costevent BETWEEN 'terminal' AND 'terminal'	process_mining_3
+SELECT * FROM log1 WHERE * BETWEEN 'terminal' AND 'terminal'	process_mining_1
 SELECT log2.resource FROM log2 GROUP BY log2.resource ORDER BY Count(*) Desc LIMIT 1	process_mining_2
 SELECT log6.resource, Count(*) FROM log6 WHERE log6.startdatetime = 'terminal' GROUP BY log6.resource	process_mining_6
 SELECT log6.activity FROM log6 GROUP BY log6.resource ORDER BY Count(*) Desc LIMIT 1	process_mining_6

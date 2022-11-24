@@ -21,7 +21,7 @@ SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	p
 SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	process_mining_3	2779	Report all cases in which resource 112 was used
 SELECT * FROM log3 WHERE resource = 'null'	process_mining_3	2780	List all events that are not associated with resources
 SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	process_mining_1	2782	Which incidents were updated by resource 974?
-SELECT DISTINCT activity FROM log4 GROUP BY activity	process_mining_4	2784	What types of activities exist in the log?
+SELECT DISTINCT activity FROM log4	process_mining_4	2784	What types of activities exist in the log?
 SELECT MIN(resource) FROM log3	process_mining_3	2785	Which is the smallest resource?
 SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	process_mining_6	2838	How many cases have activity 'in progress'?
 SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8	2853	What are activities whose costevent is not null?

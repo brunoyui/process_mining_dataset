@@ -147464,13 +147464,13 @@
         }
     },
     {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20",
+        "db_id": "process_mining_1",
+        "query": "SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20",
         "query_toks": [
             "select",
             "idcase",
             "from",
-            "log3",
+            "log1",
             "group",
             "by",
             "idcase",
@@ -147484,13 +147484,14 @@
             "and",
             "20"
         ],
-        "question": "What are the cases with number of events between 1 and 20?",
+        "question": "What are the incidents with the number of events between 1 and 20?",
         "question_toks": [
             "what",
             "are",
             "the",
-            "cases",
+            "incidents",
             "with",
+            "the",
             "number",
             "of",
             "events",
@@ -147560,104 +147561,13 @@
         }
     },
     {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 GROUP BY idcase HAVING count(idevent) <= 20",
+        "db_id": "process_mining_1",
+        "query": "SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20",
         "query_toks": [
             "select",
             "idcase",
             "from",
-            "log3",
-            "group",
-            "by",
-            "idcase",
-            "having",
-            "count",
-            "(",
-            "idevent",
-            ")",
-            "<=",
-            "20"
-        ],
-        "question": "What are the incidents with up to 20 events?",
-        "question_toks": [
-            "what",
-            "are",
-            "the",
-            "incidents",
-            "with",
-            "up",
-            "to",
-            "20",
-            "events",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    2,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    6,
-                    [
-                        0,
-                        [
-                            3,
-                            1,
-                            false
-                        ],
-                        null
-                    ],
-                    20.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                2,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20",
-        "query_toks": [
-            "select",
-            "idcase",
-            "from",
-            "log3",
+            "log1",
             "group",
             "by",
             "idcase",
@@ -147742,13 +147652,104 @@
         }
     },
     {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20",
+        "db_id": "process_mining_1",
+        "query": "SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20",
         "query_toks": [
             "select",
             "idcase",
             "from",
-            "log3",
+            "log1",
+            "group",
+            "by",
+            "idcase",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            "<=",
+            "20"
+        ],
+        "question": "What are the incidents with up to 20 events?",
+        "question_toks": [
+            "what",
+            "are",
+            "the",
+            "incidents",
+            "with",
+            "up",
+            "to",
+            "20",
+            "events",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [
+                [
+                    0,
+                    2,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    6,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    20.0,
+                    null
+                ]
+            ],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                2,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_1",
+        "query": "SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20",
+        "query_toks": [
+            "select",
+            "idcase",
+            "from",
+            "log1",
             "group",
             "by",
             "idcase",
@@ -147833,13 +147834,13 @@
         }
     },
     {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20",
+        "db_id": "process_mining_1",
+        "query": "SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20",
         "query_toks": [
             "select",
             "idcase",
             "from",
-            "log3",
+            "log1",
             "group",
             "by",
             "idcase",
@@ -147926,13 +147927,13 @@
         }
     },
     {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20",
+        "db_id": "process_mining_1",
+        "query": "SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20",
         "query_toks": [
             "select",
             "idcase",
             "from",
-            "log3",
+            "log1",
             "group",
             "by",
             "idcase",
@@ -148018,13 +148019,13 @@
         }
     },
     {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) <= 20",
+        "db_id": "process_mining_1",
+        "query": "SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20",
         "query_toks": [
             "select",
             "idcase",
             "from",
-            "log3",
+            "log1",
             "group",
             "by",
             "idcase",
@@ -148111,95 +148112,6 @@
     },
     {
         "db_id": "process_mining_7",
-        "query": "SELECT idcase FROM log7 GROUP BY idcase HAVING count(activity) > 50",
-        "query_toks": [
-            "select",
-            "idcase",
-            "from",
-            "log7",
-            "group",
-            "by",
-            "idcase",
-            "having",
-            "count",
-            "(",
-            "activity",
-            ")",
-            ">",
-            "50"
-        ],
-        "question": "Which cases have more than 50 activities?",
-        "question_toks": [
-            "which",
-            "cases",
-            "have",
-            "more",
-            "than",
-            "50",
-            "activities",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    2,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            3,
-                            false
-                        ],
-                        null
-                    ],
-                    50.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                2,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_7",
         "query": "SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50",
         "query_toks": [
             "select",
@@ -148306,9 +148218,99 @@
             ">",
             "50"
         ],
-        "question": "In which cases are there more than 50 activities carried out?",
+        "question": "Which cases are there more than 50 activities performed?",
         "question_toks": [
-            "in",
+            "which",
+            "cases",
+            "are",
+            "there",
+            "more",
+            "than",
+            "50",
+            "activities",
+            "performed",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [
+                [
+                    0,
+                    2,
+                    false
+                ]
+            ],
+            "having": [
+                [
+                    false,
+                    3,
+                    [
+                        0,
+                        [
+                            3,
+                            0,
+                            false
+                        ],
+                        null
+                    ],
+                    50.0,
+                    null
+                ]
+            ],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                2,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_7",
+        "query": "SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50",
+        "query_toks": [
+            "select",
+            "idcase",
+            "from",
+            "log7",
+            "group",
+            "by",
+            "idcase",
+            "having",
+            "count",
+            "(",
+            "*",
+            ")",
+            ">",
+            "50"
+        ],
+        "question": "Which cases are there more than 50 activities carried out?",
+        "question_toks": [
             "which",
             "cases",
             "are",
@@ -148483,12 +148485,13 @@
             "from",
             "log8"
         ],
-        "question": "What is the largest cost value found in the log?",
+        "question": "What is the largest event cost value found in the log?",
         "question_toks": [
             "what",
             "is",
             "the",
             "largest",
+            "event",
             "cost",
             "value",
             "found",
@@ -148599,7 +148602,7 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT MAX(costevent) FROM log8",
+        "query": "SELECT max(costevent) FROM log8",
         "query_toks": [
             "select",
             "max",
@@ -148784,6 +148787,146 @@
             ],
             "union": null,
             "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_8",
+        "query": "SELECT max(costevent) FROM log8",
+        "query_toks": [
+            "select",
+            "max",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log8"
+        ],
+        "question": "What is the maximum cost in the log?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "maximum",
+            "cost",
+            "in",
+            "the",
+            "log",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_1",
+        "query": "SELECT count(*) FROM log1 WHERE enddatetime = 'null'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log1",
+            "where",
+            "enddatetime",
+            "=",
+            "\"null\""
+        ],
+        "question": "select event count with no end date",
+        "question_toks": [
+            "select",
+            "event",
+            "count",
+            "with",
+            "no",
+            "end",
+            "date"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            6,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"null\"",
+                    null
+                ]
+            ]
         }
     },
     {
@@ -149253,6 +149396,84 @@
                         [
                             0,
                             6,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"null\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_3",
+        "query": "SELECT count(*) FROM log3 WHERE costevent != 'null'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log3",
+            "where",
+            "costevent",
+            "!=",
+            "\"null\""
+        ],
+        "question": "Counting requests with event cost information",
+        "question_toks": [
+            "counting",
+            "requests",
+            "with",
+            "event",
+            "cost",
+            "information"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    7,
+                    [
+                        0,
+                        [
+                            0,
+                            7,
                             false
                         ],
                         null
@@ -150017,10 +150238,11 @@
     },
     {
         "db_id": "process_mining_2",
-        "query": "SELECT * FROM log2 WHERE costevent = 'null'",
+        "query": "SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'",
         "query_toks": [
             "select",
-            "*",
+            "distinct",
+            "activity",
             "from",
             "log2",
             "where",
@@ -150055,7 +150277,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -150063,7 +150285,7 @@
                             0,
                             [
                                 0,
-                                0,
+                                3,
                                 false
                             ],
                             null
@@ -150093,10 +150315,11 @@
     },
     {
         "db_id": "process_mining_2",
-        "query": "SELECT * FROM log2 WHERE costevent = 'null'",
+        "query": "SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'",
         "query_toks": [
             "select",
-            "*",
+            "distinct",
+            "activity",
             "from",
             "log2",
             "where",
@@ -150131,7 +150354,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -150139,7 +150362,7 @@
                             0,
                             [
                                 0,
-                                0,
+                                3,
                                 false
                             ],
                             null
@@ -150169,86 +150392,11 @@
     },
     {
         "db_id": "process_mining_2",
-        "query": "SELECT * FROM log2 WHERE costevent = 'null'",
+        "query": "SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'",
         "query_toks": [
             "select",
-            "*",
-            "from",
-            "log2",
-            "where",
-            "costevent",
-            "=",
-            "\"null\""
-        ],
-        "question": "Which events have the cost null?",
-        "question_toks": [
-            "which",
-            "events",
-            "have",
-            "the",
-            "cost",
-            "null",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_2",
-        "query": "SELECT * FROM log2 WHERE costevent = 'null'",
-        "query_toks": [
-            "select",
-            "*",
+            "distinct",
+            "activity",
             "from",
             "log2",
             "where",
@@ -150284,7 +150432,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -150292,7 +150440,7 @@
                             0,
                             [
                                 0,
-                                0,
+                                3,
                                 false
                             ],
                             null
@@ -150322,87 +150470,11 @@
     },
     {
         "db_id": "process_mining_2",
-        "query": "SELECT * FROM log2 WHERE costevent = 'null'",
+        "query": "SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'",
         "query_toks": [
             "select",
-            "*",
-            "from",
-            "log2",
-            "where",
-            "costevent",
-            "=",
-            "\"null\""
-        ],
-        "question": "Which events does not have cost information?",
-        "question_toks": [
-            "which",
-            "events",
-            "does",
-            "not",
-            "have",
-            "cost",
-            "information",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_2",
-        "query": "SELECT * FROM log2 WHERE costevent = 'null'",
-        "query_toks": [
-            "select",
-            "*",
+            "distinct",
+            "activity",
             "from",
             "log2",
             "where",
@@ -150439,7 +150511,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -150447,85 +150519,7 @@
                             0,
                             [
                                 0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_2",
-        "query": "SELECT * FROM log2 WHERE costevent = 'null'",
-        "query_toks": [
-            "select",
-            "*",
-            "from",
-            "log2",
-            "where",
-            "costevent",
-            "=",
-            "\"null\""
-        ],
-        "question": "List events that contains cost with null value.",
-        "question_toks": [
-            "list",
-            "events",
-            "that",
-            "contains",
-            "cost",
-            "with",
-            "null",
-            "value",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
+                                3,
                                 false
                             ],
                             null
@@ -150566,94 +150560,16 @@
             "=",
             "\"null\""
         ],
-        "question": "Is there null value on idcase column?",
+        "question": "Is there Null values on idcase column?",
         "question_toks": [
             "is",
             "there",
             "null",
-            "value",
+            "values",
             "on",
             "idcase",
             "column",
             "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            2,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_3",
-        "query": "SELECT * FROM log3 WHERE idcase = 'null'",
-        "query_toks": [
-            "select",
-            "*",
-            "from",
-            "log3",
-            "where",
-            "idcase",
-            "=",
-            "\"null\""
-        ],
-        "question": "Report events that have cases with null value.",
-        "question_toks": [
-            "report",
-            "events",
-            "that",
-            "have",
-            "cases",
-            "with",
-            "null",
-            "value",
-            "."
         ],
         "sql": {
             "except": null,
@@ -150728,83 +150644,6 @@
             "has",
             "idcase",
             "column",
-            "with",
-            "null",
-            "value",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            2,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_3",
-        "query": "SELECT * FROM log3 WHERE idcase = 'null'",
-        "query_toks": [
-            "select",
-            "*",
-            "from",
-            "log3",
-            "where",
-            "idcase",
-            "=",
-            "\"null\""
-        ],
-        "question": "Which events has case with null value?",
-        "question_toks": [
-            "which",
-            "events",
-            "has",
-            "case",
             "with",
             "null",
             "value",
@@ -151186,27 +151025,33 @@
         }
     },
     {
-        "db_id": "process_mining_7",
-        "query": "SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'",
+        "db_id": "process_mining_8",
+        "query": "SELECT MAX(costevent) FROM log8",
         "query_toks": [
             "select",
-            "count",
+            "max",
             "(",
-            "*",
+            "costevent",
             ")",
             "from",
-            "log7",
-            "where",
-            "activity",
-            "=",
-            "\"send confirmation receipt\""
+            "log8"
         ],
-        "question": "How many activities 'send confirmation receipt'?",
+        "question": "What is the highest event cost value among all activities presented in the log?",
         "question_toks": [
-            "how",
-            "many",
+            "what",
+            "is",
+            "the",
+            "highest",
+            "event",
+            "cost",
+            "value",
+            "among",
+            "all",
             "activities",
-            "\"send confirmation receipt\"",
+            "presented",
+            "in",
+            "the",
+            "log",
             "?"
         ],
         "sql": {
@@ -151229,12 +151074,12 @@
                 false,
                 [
                     [
-                        3,
+                        1,
                         [
                             0,
                             [
                                 0,
-                                0,
+                                7,
                                 false
                             ],
                             null
@@ -151243,23 +151088,198 @@
                 ]
             ],
             "union": null,
-            "where": [
-                [
-                    false,
-                    2,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_8",
+        "query": "SELECT MAX(costevent) FROM log8",
+        "query_toks": [
+            "select",
+            "max",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log8"
+        ],
+        "question": "What is the highest event cost value in the log?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "highest",
+            "event",
+            "cost",
+            "value",
+            "in",
+            "the",
+            "log",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
                     [
-                        0,
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        1,
                         [
                             0,
-                            3,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"send confirmation receipt\"",
-                    null
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
                 ]
-            ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_8",
+        "query": "SELECT MAX(costevent) FROM log8",
+        "query_toks": [
+            "select",
+            "max",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log8"
+        ],
+        "question": "What is the largest event cost value in the event log?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "largest",
+            "event",
+            "cost",
+            "value",
+            "in",
+            "the",
+            "event",
+            "log",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_8",
+        "query": "SELECT MAX(costevent) FROM log8",
+        "query_toks": [
+            "select",
+            "max",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log8"
+        ],
+        "question": "What is the maximum event cost value in the event log?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "maximum",
+            "event",
+            "cost",
+            "value",
+            "in",
+            "the",
+            "event",
+            "log",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        1,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
         }
     },
     {
@@ -151507,9 +151527,10 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT idcase FROM log8 WHERE resource = 'null'",
+        "query": "SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'",
         "query_toks": [
             "select",
+            "distinct",
             "idcase",
             "from",
             "log8",
@@ -151546,7 +151567,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -151584,9 +151605,10 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT idcase FROM log8 WHERE resource = 'null'",
+        "query": "SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'",
         "query_toks": [
             "select",
+            "distinct",
             "idcase",
             "from",
             "log8",
@@ -151622,7 +151644,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -151660,9 +151682,10 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT idcase FROM log8 WHERE resource = 'null'",
+        "query": "SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'",
         "query_toks": [
             "select",
+            "distinct",
             "idcase",
             "from",
             "log8",
@@ -151698,7 +151721,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -151736,9 +151759,10 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT idcase FROM log8 WHERE resource = 'null'",
+        "query": "SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'",
         "query_toks": [
             "select",
+            "distinct",
             "idcase",
             "from",
             "log8",
@@ -151773,7 +151797,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -151804,6 +151828,251 @@
                         null
                     ],
                     "\"null\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_4",
+        "query": "SELECT count(*) FROM log4 WHERE resource = 'Siebel'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log4",
+            "where",
+            "resource",
+            "=",
+            "\"Siebel\""
+        ],
+        "question": "How many times Siebel, as resource, was used ?",
+        "question_toks": [
+            "how",
+            "many",
+            "times",
+            "siebel",
+            ",",
+            "as",
+            "resource",
+            ",",
+            "was",
+            "used",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Siebel\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_4",
+        "query": "SELECT count(*) FROM log4 WHERE resource = 'Siebel'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log4",
+            "where",
+            "resource",
+            "=",
+            "\"Siebel\""
+        ],
+        "question": "How many times Siebel performed some activity?",
+        "question_toks": [
+            "how",
+            "many",
+            "times",
+            "siebel",
+            "performed",
+            "some",
+            "activity",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Siebel\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_4",
+        "query": "SELECT count(*) FROM log4 WHERE resource = 'Siebel'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log4",
+            "where",
+            "resource",
+            "=",
+            "\"Siebel\""
+        ],
+        "question": "How many occurrences of Siebel are in the log?",
+        "question_toks": [
+            "how",
+            "many",
+            "occurrences",
+            "of",
+            "siebel",
+            "are",
+            "in",
+            "the",
+            "log",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Siebel\"",
                     null
                 ]
             ]
@@ -152064,12 +152333,14 @@
             "=",
             "\"declaration 56300\""
         ],
-        "question": "How many occurrences has case 'declaration 56300'?",
+        "question": "How many events occurred in the case 'declaration 56300'?",
         "question_toks": [
             "how",
             "many",
-            "occurrences",
-            "has",
+            "events",
+            "occurred",
+            "in",
+            "the",
             "case",
             "\"declaration 56300\"",
             "?"
@@ -152128,10 +152399,422 @@
         }
     },
     {
-        "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 WHERE resource = '112'",
+        "db_id": "process_mining_8",
+        "query": "SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'",
         "query_toks": [
             "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log8",
+            "where",
+            "idcase",
+            "=",
+            "\"declaration 56300\""
+        ],
+        "question": "What is the size of the trace associated with the case 'declaration 56300'?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "size",
+            "of",
+            "the",
+            "trace",
+            "associated",
+            "with",
+            "the",
+            "case",
+            "\"declaration 56300\"",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"declaration 56300\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_8",
+        "query": "SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log8",
+            "where",
+            "idcase",
+            "=",
+            "\"declaration 56300\""
+        ],
+        "question": "How many events does the 'declaration 56300' case have?",
+        "question_toks": [
+            "how",
+            "many",
+            "events",
+            "does",
+            "the",
+            "\"declaration 56300\"",
+            "case",
+            "have",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"declaration 56300\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "distinct",
+            "idcase",
+            ")",
+            "from",
+            "log6",
+            "where",
+            "activity",
+            "=",
+            "\"Awaiting Assignment\""
+        ],
+        "question": "How many cases have the activity status Awaiting Assignment?",
+        "question_toks": [
+            "how",
+            "many",
+            "cases",
+            "have",
+            "the",
+            "activity",
+            "status",
+            "awaiting",
+            "assignment",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                2,
+                                true
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Awaiting Assignment\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "distinct",
+            "idcase",
+            ")",
+            "from",
+            "log6",
+            "where",
+            "activity",
+            "=",
+            "\"Awaiting Assignment\""
+        ],
+        "question": "How many cases appear the activity 'Awaiting Assignment'?",
+        "question_toks": [
+            "how",
+            "many",
+            "cases",
+            "appear",
+            "the",
+            "activity",
+            "\"Awaiting Assignment\"",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                2,
+                                true
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Awaiting Assignment\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "distinct",
+            "idcase",
+            ")",
+            "from",
+            "log6",
+            "where",
+            "activity",
+            "=",
+            "\"Awaiting Assignment\""
+        ],
+        "question": "How many cases the activity 'Awaiting Assignment' occur?",
+        "question_toks": [
+            "how",
+            "many",
+            "cases",
+            "the",
+            "activity",
+            "\"Awaiting Assignment\"",
+            "occur",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                2,
+                                true
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Awaiting Assignment\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_3",
+        "query": "SELECT DISTINCT idcase FROM log3 WHERE resource = '112'",
+        "query_toks": [
+            "select",
+            "distinct",
             "idcase",
             "from",
             "log3",
@@ -152140,7 +152823,7 @@
             "=",
             "\"112\""
         ],
-        "question": "Report all cases in which resource '112' was used.",
+        "question": "Report all cases in which resource 112 was used.",
         "question_toks": [
             "report",
             "all",
@@ -152148,7 +152831,7 @@
             "in",
             "which",
             "resource",
-            "\"112\"",
+            "112",
             "was",
             "used",
             "."
@@ -152170,7 +152853,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -152208,9 +152891,10 @@
     },
     {
         "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 WHERE resource = '112'",
+        "query": "SELECT DISTINCT idcase FROM log3 WHERE resource = '112'",
         "query_toks": [
             "select",
+            "distinct",
             "idcase",
             "from",
             "log3",
@@ -152247,7 +152931,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -152285,9 +152969,10 @@
     },
     {
         "db_id": "process_mining_3",
-        "query": "SELECT idcase FROM log3 WHERE resource = '112'",
+        "query": "SELECT DISTINCT idcase FROM log3 WHERE resource = '112'",
         "query_toks": [
             "select",
+            "distinct",
             "idcase",
             "from",
             "log3",
@@ -152325,7 +153010,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -152452,165 +153137,339 @@
             "=",
             "\"null\""
         ],
-        "question": "Which events without a resource associated?",
-        "question_toks": [
-            "which",
-            "events",
-            "without",
-            "a",
-            "resource",
-            "associated",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            4,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_3",
-        "query": "SELECT * FROM log3 WHERE resource = 'null'",
-        "query_toks": [
-            "select",
-            "*",
-            "from",
-            "log3",
-            "where",
-            "resource",
-            "=",
-            "\"null\""
-        ],
-        "question": "Which events with a null resource?",
-        "question_toks": [
-            "which",
-            "events",
-            "with",
-            "a",
-            "null",
-            "resource",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            4,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_3",
-        "query": "SELECT * FROM log3 WHERE resource = 'null'",
-        "query_toks": [
-            "select",
-            "*",
-            "from",
-            "log3",
-            "where",
-            "resource",
-            "=",
-            "\"null\""
-        ],
-        "question": "List events with missing resource.",
+        "question": "List the events in which resource usage was not used or reported.",
         "question_toks": [
             "list",
+            "the",
             "events",
-            "with",
-            "missing",
+            "in",
+            "which",
             "resource",
+            "usage",
+            "was",
+            "not",
+            "used",
+            "or",
+            "reported",
+            "."
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"null\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_3",
+        "query": "SELECT * FROM log3 WHERE resource = 'null'",
+        "query_toks": [
+            "select",
+            "*",
+            "from",
+            "log3",
+            "where",
+            "resource",
+            "=",
+            "\"null\""
+        ],
+        "question": "List all events that are not associated with resources.",
+        "question_toks": [
+            "list",
+            "all",
+            "events",
+            "that",
+            "are",
+            "not",
+            "associated",
+            "with",
+            "resources",
+            "."
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"null\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_3",
+        "query": "SELECT * FROM log3 WHERE resource = 'null'",
+        "query_toks": [
+            "select",
+            "*",
+            "from",
+            "log3",
+            "where",
+            "resource",
+            "=",
+            "\"null\""
+        ],
+        "question": "What are the events that are not associated with resources?",
+        "question_toks": [
+            "what",
+            "are",
+            "the",
+            "events",
+            "that",
+            "are",
+            "not",
+            "associated",
+            "with",
+            "resources",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"null\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_3",
+        "query": "SELECT * FROM log3 WHERE resource = 'null'",
+        "query_toks": [
+            "select",
+            "*",
+            "from",
+            "log3",
+            "where",
+            "resource",
+            "=",
+            "\"null\""
+        ],
+        "question": "What are the events that no resources were associated with?",
+        "question_toks": [
+            "what",
+            "are",
+            "the",
+            "events",
+            "that",
+            "no",
+            "resources",
+            "were",
+            "associated",
+            "with",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"null\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_3",
+        "query": "SELECT * FROM log3 WHERE resource = 'null'",
+        "query_toks": [
+            "select",
+            "*",
+            "from",
+            "log3",
+            "where",
+            "resource",
+            "=",
+            "\"null\""
+        ],
+        "question": "Retrieve event identifiers for which no resources have been associated.",
+        "question_toks": [
+            "retrieve",
+            "event",
+            "identifiers",
+            "for",
+            "which",
+            "no",
+            "resources",
+            "have",
+            "been",
+            "associated",
             "."
         ],
         "sql": {
@@ -152899,6 +153758,143 @@
         }
     },
     {
+        "db_id": "process_mining_1",
+        "query": "SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'",
+        "query_toks": [
+            "select",
+            "distinct",
+            "idcase",
+            "from",
+            "log1",
+            "where",
+            "resource",
+            "=",
+            "\"Updated by 974\""
+        ],
+        "question": "Which cases were updated by resource 974?",
+        "question_toks": [
+            "which",
+            "cases",
+            "were",
+            "updated",
+            "by",
+            "resource",
+            "974",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                2,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Updated by 974\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_4",
+        "query": "SELECT DISTINCT activity FROM log4",
+        "query_toks": [
+            "select",
+            "distinct",
+            "activity",
+            "from",
+            "log4"
+        ],
+        "question": "What types of activities exist in the log?",
+        "question_toks": [
+            "what",
+            "types",
+            "of",
+            "activities",
+            "exist",
+            "in",
+            "the",
+            "log",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
         "db_id": "process_mining_4",
         "query": "SELECT DISTINCT activity FROM log4",
         "query_toks": [
@@ -153137,6 +154133,67 @@
         }
     },
     {
+        "db_id": "process_mining_3",
+        "query": "SELECT MIN(resource) FROM log3",
+        "query_toks": [
+            "select",
+            "min",
+            "(",
+            "resource",
+            ")",
+            "from",
+            "log3"
+        ],
+        "question": "Which is the minimum value for a resource?",
+        "question_toks": [
+            "which",
+            "is",
+            "the",
+            "minimum",
+            "value",
+            "for",
+            "a",
+            "resource",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
         "db_id": "process_mining_6",
         "query": "SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'",
         "query_toks": [
@@ -153153,15 +154210,14 @@
             "=",
             "\"In Progress\""
         ],
-        "question": "How many cases are still in progress?",
+        "question": "How many cases have activity 'in progress'?",
         "question_toks": [
             "how",
             "many",
             "cases",
-            "are",
-            "still",
-            "in",
-            "progress",
+            "have",
+            "activity",
+            "\"in progress\"",
             "?"
         ],
         "sql": {
@@ -153300,10 +154356,11 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT * FROM log8 WHERE costevent != 'null'",
+        "query": "SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'",
         "query_toks": [
             "select",
-            "*",
+            "distinct",
+            "activity",
             "from",
             "log8",
             "where",
@@ -153311,12 +154368,13 @@
             "!=",
             "\"null\""
         ],
-        "question": "What activities whose cost is not null?",
+        "question": "What are activities whose costevent is not null?",
         "question_toks": [
             "what",
+            "are",
             "activities",
             "whose",
-            "cost",
+            "costevent",
             "is",
             "not",
             "null",
@@ -153339,7 +154397,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -153347,7 +154405,7 @@
                             0,
                             [
                                 0,
-                                0,
+                                3,
                                 false
                             ],
                             null
@@ -153377,10 +154435,11 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT * FROM log8 WHERE costevent != 'null'",
+        "query": "SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'",
         "query_toks": [
             "select",
-            "*",
+            "distinct",
+            "activity",
             "from",
             "log8",
             "where",
@@ -153415,7 +154474,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -153423,7 +154482,7 @@
                             0,
                             [
                                 0,
-                                0,
+                                3,
                                 false
                             ],
                             null
@@ -153453,86 +154512,11 @@
     },
     {
         "db_id": "process_mining_8",
-        "query": "SELECT * FROM log8 WHERE costevent != 'null'",
+        "query": "SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'",
         "query_toks": [
             "select",
-            "*",
-            "from",
-            "log8",
-            "where",
-            "costevent",
-            "!=",
-            "\"null\""
-        ],
-        "question": "What events whose cost is non-null?",
-        "question_toks": [
-            "what",
-            "events",
-            "whose",
-            "cost",
-            "is",
-            "non-null",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    7,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_8",
-        "query": "SELECT * FROM log8 WHERE costevent != 'null'",
-        "query_toks": [
-            "select",
-            "*",
+            "distinct",
+            "activity",
             "from",
             "log8",
             "where",
@@ -153566,7 +154550,7 @@
             "limit": null,
             "orderBy": [],
             "select": [
-                false,
+                true,
                 [
                     [
                         0,
@@ -153574,86 +154558,7 @@
                             0,
                             [
                                 0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    7,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_8",
-        "query": "SELECT * FROM log8 WHERE costevent != 'null'",
-        "query_toks": [
-            "select",
-            "*",
-            "from",
-            "log8",
-            "where",
-            "costevent",
-            "!=",
-            "\"null\""
-        ],
-        "question": "List events whose cost is not a null value?",
-        "question_toks": [
-            "list",
-            "events",
-            "whose",
-            "cost",
-            "is",
-            "not",
-            "a",
-            "null",
-            "value",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
+                                3,
                                 false
                             ],
                             null
@@ -154061,20 +154966,173 @@
             "by",
             "resource"
         ],
-        "question": "Which resources are present in the event log in alphabetical order?",
+        "question": "List all resources alphabetically and without repetition.",
         "question_toks": [
-            "which",
+            "list",
+            "all",
+            "resources",
+            "alphabetically",
+            "and",
+            "without",
+            "repetition",
+            "."
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_5",
+        "query": "SELECT DISTINCT resource FROM log5 ORDER BY resource",
+        "query_toks": [
+            "select",
+            "distinct",
+            "resource",
+            "from",
+            "log5",
+            "order",
+            "by",
+            "resource"
+        ],
+        "question": "List all resources alphabetically and without duplicates.",
+        "question_toks": [
+            "list",
+            "all",
+            "resources",
+            "alphabetically",
+            "and",
+            "without",
+            "duplicates",
+            "."
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_5",
+        "query": "SELECT DISTINCT resource FROM log5 ORDER BY resource",
+        "query_toks": [
+            "select",
+            "distinct",
+            "resource",
+            "from",
+            "log5",
+            "order",
+            "by",
+            "resource"
+        ],
+        "question": "What resources are recorded in the event log? List in alphabetical order and without repetitions.",
+        "question_toks": [
+            "what",
             "resources",
             "are",
-            "present",
+            "recorded",
             "in",
             "the",
             "event",
             "log",
+            "?",
+            "list",
             "in",
             "alphabetical",
             "order",
-            "?"
+            "and",
+            "without",
+            "repetitions",
+            "."
         ],
         "sql": {
             "except": null,
@@ -154139,15 +155197,13 @@
             "by",
             "resource"
         ],
-        "question": "List all the resources in alphabetical order.",
+        "question": "List all distinct resources alphabetically.",
         "question_toks": [
             "list",
             "all",
-            "the",
+            "distinct",
             "resources",
-            "in",
-            "alphabetical",
-            "order",
+            "alphabetically",
             "."
         ],
         "sql": {
@@ -154213,14 +155269,24 @@
             "by",
             "resource"
         ],
-        "question": "Report the resources in alphabetical order.",
+        "question": "Retrieve, in alphabetical order and without repetitions, all the resources recorded in the log.",
         "question_toks": [
-            "report",
-            "the",
-            "resources",
+            "retrieve",
+            ",",
             "in",
             "alphabetical",
             "order",
+            "and",
+            "without",
+            "repetitions",
+            ",",
+            "all",
+            "the",
+            "resources",
+            "recorded",
+            "in",
+            "the",
+            "log",
             "."
         ],
         "sql": {
@@ -154271,612 +155337,6 @@
             ],
             "union": null,
             "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_4",
-        "query": "SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4",
-        "query_toks": [
-            "select",
-            "resource",
-            "from",
-            "log4",
-            "group",
-            "by",
-            "resource",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">",
-            "4"
-        ],
-        "question": "Which resources have more than 4 incidents?",
-        "question_toks": [
-            "which",
-            "resources",
-            "have",
-            "more",
-            "than",
-            "4",
-            "incidents",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    4,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    4.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_4",
-        "query": "SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4",
-        "query_toks": [
-            "select",
-            "resource",
-            "from",
-            "log4",
-            "group",
-            "by",
-            "resource",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">",
-            "4"
-        ],
-        "question": "Which resources participated in more than 4 cases?",
-        "question_toks": [
-            "which",
-            "resources",
-            "participated",
-            "in",
-            "more",
-            "than",
-            "4",
-            "cases",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    4,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    4.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_4",
-        "query": "SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4",
-        "query_toks": [
-            "select",
-            "resource",
-            "from",
-            "log4",
-            "group",
-            "by",
-            "resource",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">",
-            "4"
-        ],
-        "question": "List the resources that have occurrence in more than 4 cases.",
-        "question_toks": [
-            "list",
-            "the",
-            "resources",
-            "that",
-            "have",
-            "occurrence",
-            "in",
-            "more",
-            "than",
-            "4",
-            "cases",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    4,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    4.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_4",
-        "query": "SELECT resource FROM log4 GROUP BY resource HAVING COUNT(*) > 4",
-        "query_toks": [
-            "select",
-            "resource",
-            "from",
-            "log4",
-            "group",
-            "by",
-            "resource",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">",
-            "4"
-        ],
-        "question": "List the resources that have occurrence in more than 4 incidents.",
-        "question_toks": [
-            "list",
-            "the",
-            "resources",
-            "that",
-            "have",
-            "occurrence",
-            "in",
-            "more",
-            "than",
-            "4",
-            "incidents",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    4,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    4.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_7",
-        "query": "SELECT COUNT(*) FROM log7 WHERE costevent = 'null'",
-        "query_toks": [
-            "select",
-            "count",
-            "(",
-            "*",
-            ")",
-            "from",
-            "log7",
-            "where",
-            "costevent",
-            "=",
-            "\"null\""
-        ],
-        "question": "How many events does not have any cost?",
-        "question_toks": [
-            "how",
-            "many",
-            "events",
-            "does",
-            "not",
-            "have",
-            "any",
-            "cost",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        3,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_7",
-        "query": "SELECT COUNT(*) FROM log7 WHERE costevent = 'null'",
-        "query_toks": [
-            "select",
-            "count",
-            "(",
-            "*",
-            ")",
-            "from",
-            "log7",
-            "where",
-            "costevent",
-            "=",
-            "\"null\""
-        ],
-        "question": "How many events has cost with null value?",
-        "question_toks": [
-            "how",
-            "many",
-            "events",
-            "has",
-            "cost",
-            "with",
-            "null",
-            "value",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        3,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_7",
-        "query": "SELECT COUNT(*) FROM log7 WHERE costevent = 'null'",
-        "query_toks": [
-            "select",
-            "count",
-            "(",
-            "*",
-            ")",
-            "from",
-            "log7",
-            "where",
-            "costevent",
-            "=",
-            "\"null\""
-        ],
-        "question": "How many events without cost information?",
-        "question_toks": [
-            "how",
-            "many",
-            "events",
-            "without",
-            "cost",
-            "information",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        3,
-                        [
-                            0,
-                            [
-                                0,
-                                0,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            7,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"null\"",
-                    null
-                ]
-            ]
         }
     },
     {
@@ -154895,15 +155355,17 @@
             "=",
             "\"Peti\u00e7\u00e3o Juntada\""
         ],
-        "question": "How many activities are classified as 'Joined Petition'?",
+        "question": "How many events are associated with the 'Joined Petition' activity?",
         "question_toks": [
             "how",
             "many",
-            "activities",
+            "events",
             "are",
-            "classified",
-            "as",
+            "associated",
+            "with",
+            "the",
             "\"Joined Petition\"",
+            "activity",
             "?"
         ],
         "sql": {
@@ -155257,20 +155719,275 @@
             "from",
             "log2"
         ],
-        "question": "Show the average of the costs presented in the event log.",
+        "question": "What is the average cost associated with the events in this event log?",
         "question_toks": [
-            "show",
+            "what",
+            "is",
             "the",
             "average",
-            "of",
+            "cost",
+            "associated",
+            "with",
             "the",
-            "costs",
-            "presented",
+            "events",
             "in",
-            "the",
+            "this",
             "event",
             "log",
-            "."
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        5,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_2",
+        "query": "SELECT AVG(costevent) FROM log2",
+        "query_toks": [
+            "select",
+            "avg",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log2"
+        ],
+        "question": "What is the average cost of running an activity in this event log?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "average",
+            "cost",
+            "of",
+            "running",
+            "an",
+            "activity",
+            "in",
+            "this",
+            "event",
+            "log",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        5,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_2",
+        "query": "SELECT AVG(costevent) FROM log2",
+        "query_toks": [
+            "select",
+            "avg",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log2"
+        ],
+        "question": "What is the average cost of an event?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "average",
+            "cost",
+            "of",
+            "an",
+            "event",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        5,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_2",
+        "query": "SELECT AVG(costevent) FROM log2",
+        "query_toks": [
+            "select",
+            "avg",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log2"
+        ],
+        "question": "What is the average cost associated with events?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "average",
+            "cost",
+            "associated",
+            "with",
+            "events",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        5,
+                        [
+                            0,
+                            [
+                                0,
+                                7,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": []
+        }
+    },
+    {
+        "db_id": "process_mining_2",
+        "query": "SELECT AVG(costevent) FROM log2",
+        "query_toks": [
+            "select",
+            "avg",
+            "(",
+            "costevent",
+            ")",
+            "from",
+            "log2"
+        ],
+        "question": "What is the average value of costs associated with this business process?",
+        "question_toks": [
+            "what",
+            "is",
+            "the",
+            "average",
+            "value",
+            "of",
+            "costs",
+            "associated",
+            "with",
+            "this",
+            "business",
+            "process",
+            "?"
         ],
         "sql": {
             "except": null,
@@ -155311,10 +156028,10 @@
     },
     {
         "db_id": "process_mining_1",
-        "query": "SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7",
+        "query": "SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7",
         "query_toks": [
             "select",
-            "idcase",
+            "activity",
             "from",
             "log1",
             "group",
@@ -155328,10 +156045,10 @@
             ">=",
             "7"
         ],
-        "question": "Which cases have at least 7 events?",
+        "question": "Which activities have at least 7 events?",
         "question_toks": [
             "which",
-            "cases",
+            "activities",
             "have",
             "at",
             "least",
@@ -155386,7 +156103,7 @@
                             0,
                             [
                                 0,
-                                2,
+                                3,
                                 false
                             ],
                             null
@@ -155400,10 +156117,10 @@
     },
     {
         "db_id": "process_mining_1",
-        "query": "SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7",
+        "query": "SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7",
         "query_toks": [
             "select",
-            "idcase",
+            "activity",
             "from",
             "log1",
             "group",
@@ -155417,197 +156134,15 @@
             ">=",
             "7"
         ],
-        "question": "Report all cases that have at least 7 events.",
+        "question": "What activities occurred at least seven times?",
         "question_toks": [
-            "report",
-            "all",
-            "cases",
-            "that",
-            "have",
-            "at",
-            "least",
-            "7",
-            "events",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    3,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    5,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    7.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                2,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_1",
-        "query": "SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7",
-        "query_toks": [
-            "select",
-            "idcase",
-            "from",
-            "log1",
-            "group",
-            "by",
-            "activity",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">=",
-            "7"
-        ],
-        "question": "Report all cases that have at least seven events.",
-        "question_toks": [
-            "report",
-            "all",
-            "cases",
-            "that",
-            "have",
+            "what",
+            "activities",
+            "occurred",
             "at",
             "least",
             "seven",
-            "events",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    3,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    5,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    7.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                2,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_1",
-        "query": "SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7",
-        "query_toks": [
-            "select",
-            "idcase",
-            "from",
-            "log1",
-            "group",
-            "by",
-            "activity",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">=",
-            "7"
-        ],
-        "question": "Which cases have 7 events or more?",
-        "question_toks": [
-            "which",
-            "cases",
-            "have",
-            "7",
-            "events",
-            "or",
-            "more",
+            "times",
             "?"
         ],
         "sql": {
@@ -155657,98 +156192,7 @@
                             0,
                             [
                                 0,
-                                2,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_1",
-        "query": "SELECT idcase FROM log1 GROUP BY activity HAVING COUNT(*) >= 7",
-        "query_toks": [
-            "select",
-            "idcase",
-            "from",
-            "log1",
-            "group",
-            "by",
-            "activity",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">=",
-            "7"
-        ],
-        "question": "List all cases that have 7 events or more.",
-        "question_toks": [
-            "list",
-            "all",
-            "cases",
-            "that",
-            "have",
-            "7",
-            "events",
-            "or",
-            "more",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    3,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    5,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    7.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                2,
+                                3,
                                 false
                             ],
                             null
@@ -155762,546 +156206,425 @@
     },
     {
         "db_id": "process_mining_6",
-        "query": "SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3",
+        "query": "SELECT Count(*) FROM log6 WHERE resource = 'Peter'",
         "query_toks": [
             "select",
-            "resource",
-            "from",
-            "log6",
-            "group",
-            "by",
-            "resource",
-            "having",
             "count",
             "(",
             "*",
             ")",
-            ">",
-            "3"
-        ],
-        "question": "Which resource are working on more than three events?",
-        "question_toks": [
-            "which",
-            "resource",
-            "are",
-            "working",
-            "on",
-            "more",
-            "than",
-            "three",
-            "events",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    4,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    3.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_6",
-        "query": "SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3",
-        "query_toks": [
-            "select",
-            "resource",
-            "from",
-            "log6",
-            "group",
-            "by",
-            "resource",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">",
-            "3"
-        ],
-        "question": "Report all resources that are working on more than 3 events.",
-        "question_toks": [
-            "report",
-            "all",
-            "resources",
-            "that",
-            "are",
-            "working",
-            "on",
-            "more",
-            "than",
-            "3",
-            "events",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    4,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    3.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_6",
-        "query": "SELECT resource FROM log6 GROUP BY Resource HAVING count(*) > 3",
-        "query_toks": [
-            "select",
-            "resource",
-            "from",
-            "log6",
-            "group",
-            "by",
-            "resource",
-            "having",
-            "count",
-            "(",
-            "*",
-            ")",
-            ">",
-            "3"
-        ],
-        "question": "Which resource appear in more than 3 events?",
-        "question_toks": [
-            "which",
-            "resource",
-            "appear",
-            "in",
-            "more",
-            "than",
-            "3",
-            "events",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [
-                [
-                    0,
-                    4,
-                    false
-                ]
-            ],
-            "having": [
-                [
-                    false,
-                    3,
-                    [
-                        0,
-                        [
-                            3,
-                            0,
-                            false
-                        ],
-                        null
-                    ],
-                    3.0,
-                    null
-                ]
-            ],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                false,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": []
-        }
-    },
-    {
-        "db_id": "process_mining_6",
-        "query": "SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'",
-        "query_toks": [
-            "select",
-            "distinct",
-            "resource",
             "from",
             "log6",
             "where",
-            "activity",
+            "resource",
             "=",
-            "\"Closed\""
+            "\"Peter\""
         ],
-        "question": "Which resources managed to reach 'closed' status on some activity?",
+        "question": "How many events are tied to Peter?",
         "question_toks": [
-            "which",
-            "resources",
-            "managed",
+            "how",
+            "many",
+            "events",
+            "are",
+            "tied",
             "to",
-            "reach",
-            "\"closed\"",
-            "status",
+            "peter",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Peter\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT Count(*) FROM log6 WHERE resource = 'Peter'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log6",
+            "where",
+            "resource",
+            "=",
+            "\"Peter\""
+        ],
+        "question": "How many events have Peter as resource?",
+        "question_toks": [
+            "how",
+            "many",
+            "events",
+            "have",
+            "peter",
+            "as",
+            "resource",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Peter\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT Count(*) FROM log6 WHERE resource = 'Peter'",
+        "query_toks": [
+            "select",
+            "count",
+            "(",
+            "*",
+            ")",
+            "from",
+            "log6",
+            "where",
+            "resource",
+            "=",
+            "\"Peter\""
+        ],
+        "question": "How many events Peter was associated?",
+        "question_toks": [
+            "how",
+            "many",
+            "events",
+            "peter",
+            "was",
+            "associated",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                false,
+                [
+                    [
+                        3,
+                        [
+                            0,
+                            [
+                                0,
+                                0,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Peter\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'",
+        "query_toks": [
+            "select",
+            "distinct",
+            "resource",
+            "from",
+            "log6",
+            "where",
+            "activity",
+            "=",
+            "\"Closed\""
+        ],
+        "question": "What resources were associated with closing an case?",
+        "question_toks": [
+            "what",
+            "resources",
+            "were",
+            "associated",
+            "with",
+            "closing",
+            "an",
+            "case",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Closed\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'",
+        "query_toks": [
+            "select",
+            "distinct",
+            "resource",
+            "from",
+            "log6",
+            "where",
+            "activity",
+            "=",
+            "\"Closed\""
+        ],
+        "question": "What resources were associated with closing an incident?",
+        "question_toks": [
+            "what",
+            "resources",
+            "were",
+            "associated",
+            "with",
+            "closing",
+            "an",
+            "incident",
+            "?"
+        ],
+        "sql": {
+            "except": null,
+            "from": {
+                "conds": [],
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ]
+            },
+            "groupBy": [],
+            "having": [],
+            "intersect": null,
+            "limit": null,
+            "orderBy": [],
+            "select": [
+                true,
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                4,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "union": null,
+            "where": [
+                [
+                    false,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ],
+                    "\"Closed\"",
+                    null
+                ]
+            ]
+        }
+    },
+    {
+        "db_id": "process_mining_6",
+        "query": "SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'",
+        "query_toks": [
+            "select",
+            "distinct",
+            "resource",
+            "from",
+            "log6",
+            "where",
+            "activity",
+            "=",
+            "\"Closed\""
+        ],
+        "question": "What resources worked on closing an incident?",
+        "question_toks": [
+            "what",
+            "resources",
+            "worked",
             "on",
-            "some",
-            "activity",
+            "closing",
+            "an",
+            "incident",
             "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                true,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            3,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"Closed\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_6",
-        "query": "SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'",
-        "query_toks": [
-            "select",
-            "distinct",
-            "resource",
-            "from",
-            "log6",
-            "where",
-            "activity",
-            "=",
-            "\"Closed\""
-        ],
-        "question": "Which resource occur in activities with status 'closed'?",
-        "question_toks": [
-            "which",
-            "resource",
-            "occur",
-            "in",
-            "activities",
-            "with",
-            "status",
-            "\"closed\"",
-            "?"
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                true,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            3,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"Closed\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_6",
-        "query": "SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'",
-        "query_toks": [
-            "select",
-            "distinct",
-            "resource",
-            "from",
-            "log6",
-            "where",
-            "activity",
-            "=",
-            "\"Closed\""
-        ],
-        "question": "List the resources that appear in activities with status 'closed'.",
-        "question_toks": [
-            "list",
-            "the",
-            "resources",
-            "that",
-            "appear",
-            "in",
-            "activities",
-            "with",
-            "status",
-            "\"closed\"",
-            "."
-        ],
-        "sql": {
-            "except": null,
-            "from": {
-                "conds": [],
-                "table_units": [
-                    [
-                        "table_unit",
-                        0
-                    ]
-                ]
-            },
-            "groupBy": [],
-            "having": [],
-            "intersect": null,
-            "limit": null,
-            "orderBy": [],
-            "select": [
-                true,
-                [
-                    [
-                        0,
-                        [
-                            0,
-                            [
-                                0,
-                                4,
-                                false
-                            ],
-                            null
-                        ]
-                    ]
-                ]
-            ],
-            "union": null,
-            "where": [
-                [
-                    false,
-                    2,
-                    [
-                        0,
-                        [
-                            0,
-                            3,
-                            false
-                        ],
-                        null
-                    ],
-                    "\"Closed\"",
-                    null
-                ]
-            ]
-        }
-    },
-    {
-        "db_id": "process_mining_6",
-        "query": "SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'",
-        "query_toks": [
-            "select",
-            "distinct",
-            "resource",
-            "from",
-            "log6",
-            "where",
-            "activity",
-            "=",
-            "\"Closed\""
-        ],
-        "question": "List distinct resources that appear in activities with status 'closed'.",
-        "question_toks": [
-            "list",
-            "distinct",
-            "resources",
-            "that",
-            "appear",
-            "in",
-            "activities",
-            "with",
-            "status",
-            "\"closed\"",
-            "."
         ],
         "sql": {
             "except": null,

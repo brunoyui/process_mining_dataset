@@ -23,7 +23,7 @@ SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-2	How many disti
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-3	How many resources are in the event log?
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-4	How many different people performed activities?
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-5	How many different resources performed activities?
-SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-6	How many different people ap     in the event log?
+SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-6	How many different people appear in the event log?
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-7	How many different resources appear in the event log?
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-8	Report how many different resources there are in the event log.
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673-9	Report how many different people appear in the event log.
