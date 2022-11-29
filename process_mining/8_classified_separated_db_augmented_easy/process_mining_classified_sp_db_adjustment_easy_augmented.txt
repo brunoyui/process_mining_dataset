@@ -93,7 +93,7 @@ SELECT MAX(costevent) FROM log8	process_mining_8	2753-2	What is the largest even
 SELECT MAX(costevent) FROM log8	process_mining_8	2753-3	What is the maximum event cost value in the event log?
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757	What is the total of costevent for TVMF77077810579481 resource?
 SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757-1	What is the total cost for TVMF77077810579481 resource?
-SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757-2	What is the total cost per resource?
+SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2	2757-2	What is the total cost consumed by resource TVMF77077810579481?
 SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	process_mining_8	2762	Which cases does not have a resource?
 SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	process_mining_8	2762-1	Which cases without a associated resource?
 SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	process_mining_8	2762-2	Which cases with a null resource?
@@ -134,11 +134,11 @@ SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	process_m
 SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8	2853	What are activities whose costevent is not null?
 SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8	2853-1	What activities whose cost is non-null?
 SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	process_mining_8	2853-2	List activities with cost information.
-SELECT MIN(startdatetime) FROM log5	process_mining_5	2863	When was the oldest event?
-SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-1	When the oldest event occur?
-SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-2	What was the timestamp of the oldest event?
-SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-3	What was the oldest event?
-SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-4	When the oldest event occur?
+SELECT MIN(startdatetime) FROM log5	process_mining_5	2863	When was the oldest problem?
+SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-1	When the oldest problem occur?
+SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-2	What was the timestamp of the oldest problem?
+SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-3	What was the oldest case?
+SELECT MIN(startdatetime) FROM log5	process_mining_5	2863-4	When the oldest case occur?
 SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5	2864	What are the resources in alphabetical order?
 SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5	2864-1	List all resources alphabetically and without repetition.
 SELECT DISTINCT resource FROM log5 ORDER BY resource	process_mining_5	2864-2	List all resources alphabetically and without duplicates.
