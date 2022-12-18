@@ -1,161 +1,112 @@
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Count(DISTINCT events.resource) FROM events	process_mining_events
-SELECT Count(DISTINCT events.resource) FROM events	process_mining_events
-SELECT Count(DISTINCT events.resource) FROM events	process_mining_events
-SELECT Count(*) FROM events	process_mining_events
-SELECT Count(*) FROM events	process_mining_events
-SELECT Count(DISTINCT events.resource) FROM events	process_mining_events
-SELECT Count(*) FROM events	process_mining_events
-SELECT Count(DISTINCT events.resource) FROM events	process_mining_events
-SELECT Count(DISTINCT events.resource) FROM events	process_mining_events
-SELECT Count(*) FROM events	process_mining_events
-SELECT Count(DISTINCT events.resource) FROM events	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT events.cost FROM events	process_mining_events
-SELECT events.cost FROM events	process_mining_events
-SELECT * FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT events.cost FROM events	process_mining_events
-SELECT * FROM events WHERE events.timestamp = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT events.timestamp FROM events WHERE events.timestamp = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.timestamp = 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) BETWEEN 'terminal' AND 'terminal'	process_mining_events
-SELECT events.activity FROM events WHERE events.cost >= 'terminal'	process_mining_events
-SELECT events.activity FROM events WHERE events.cost >= 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE * >= 'terminal'	process_mining_events
-SELECT events.activity FROM events GROUP BY events.activity HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_events
-SELECT Max(events.cost) FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_events
-SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_events
-SELECT Max(events.cost) FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_events
-SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_events
-SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_events
-SELECT Count(*) FROM events WHERE events.idevent NOT IN (SELECT events.idevent FROM events WHERE events.timestamp = 'terminal')	process_mining_events
-SELECT Count(*) FROM events WHERE events.timestamp != 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.timestamp = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.timestamp LIKE 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.timestamp != 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.timestamp != 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT Count(events.cost) FROM events	process_mining_events
-SELECT Count(*) FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT events.activity FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT events.activity FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT events.activity FROM events EXCEPT SELECT events.activity FROM events	process_mining_events
-SELECT * FROM events WHERE events.idevent NOT IN (SELECT events.idevent FROM events)	process_mining_events
-SELECT events.activity FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Sum(events.cost) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Sum(events.cost) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Sum(events.cost) FROM events	process_mining_events
-SELECT events.idcase FROM events EXCEPT SELECT events.idcase FROM events	process_mining_events
-SELECT events.idcase FROM events EXCEPT SELECT events.idcase FROM events	process_mining_events
-SELECT DISTINCT events.idcase FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT events.idcase FROM events EXCEPT SELECT events.idcase FROM events	process_mining_events
-SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_events
-SELECT events.idcase FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT events.idcase FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT events.idcase FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.timestamp NOT IN (SELECT events.idevent FROM events)	process_mining_events
-SELECT * FROM events WHERE events.resource NOT IN (SELECT events.idevent FROM events)	process_mining_events
-SELECT * FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.resource != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT events.idcase FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT DISTINCT events.activity FROM events	process_mining_events
-SELECT events.resource FROM events ORDER BY events.resource Asc LIMIT 1	process_mining_events
-SELECT events.resource FROM events ORDER BY events.resource Asc LIMIT 1	process_mining_events
-SELECT events.resource FROM events ORDER BY events.resource Asc LIMIT 1	process_mining_events
-SELECT Count(*) FROM events	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT events.activity FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT events.activity FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT events.activity FROM events	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT events.timestamp FROM events ORDER BY events.timestamp Asc LIMIT 1	process_mining_events
-SELECT events.timestamp FROM events ORDER BY events.timestamp Asc LIMIT 1	process_mining_events
-SELECT events.timestamp FROM events ORDER BY events.timestamp Asc LIMIT 1	process_mining_events
-SELECT events.timestamp FROM events ORDER BY events.timestamp Asc LIMIT 1	process_mining_events
-SELECT events.timestamp FROM events ORDER BY events.timestamp Asc LIMIT 1	process_mining_events
-SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_events
-SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_events
-SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_events
-SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_events
-SELECT events.resource FROM events GROUP BY events.resource HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.resource FROM events GROUP BY events.resource HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.resource FROM events GROUP BY events.resource HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.resource FROM events GROUP BY events.resource HAVING Count(*) > 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.cost NOT IN (SELECT events.idevent FROM events WHERE events.cost = 'terminal')	process_mining_events
-SELECT Count(*) FROM events WHERE events.cost = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.cost NOT IN (SELECT events.idevent FROM events WHERE events.cost = 'terminal')	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT Avg(events.cost) FROM events WHERE events.resource = 'terminal'	process_mining_events
-SELECT Avg(events.cost) FROM events	process_mining_events
-SELECT Avg(events.cost) FROM events	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_events
-SELECT events.resource FROM events GROUP BY events.resource HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.resource FROM events GROUP BY events.resource HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.resource FROM events GROUP BY events.resource HAVING Count(*) > 'terminal'	process_mining_events
-SELECT events.resource FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT events.resource FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT events.resource FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT DISTINCT events.resource FROM events WHERE events.activity = 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT * FROM events WHERE events.cost != 'terminal'	process_mining_events
-SELECT events.cost FROM events	process_mining_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT events.idcase FROM cases JOIN events WHERE events.month = 'terminal'	process_mining_cases_events
+SELECT events.idcase FROM cases JOIN events WHERE events.month = 'terminal'	process_mining_cases_events
+SELECT * FROM cases JOIN events WHERE events.month = 'terminal'	process_mining_cases_events
+SELECT Count(DISTINCT events.resource) FROM events	process_mining_cases_events
+SELECT Count(DISTINCT events.resource) FROM events	process_mining_cases_events
+SELECT Count(DISTINCT events.resource) FROM events	process_mining_cases_events
+SELECT Count(*) FROM events	process_mining_cases_events
+SELECT Count(DISTINCT events.resource) FROM events	process_mining_cases_events
+SELECT Count(DISTINCT events.resource) FROM events	process_mining_cases_events
+SELECT Count(DISTINCT events.resource) FROM events	process_mining_cases_events
+SELECT Count(DISTINCT events.resource) FROM events	process_mining_cases_events
+SELECT * FROM events WHERE events.year = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.year = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.year = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.year = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.year = 'terminal'	process_mining_cases_events
+SELECT events.idcase FROM events GROUP BY events.idcase HAVING Count(*) BETWEEN 'terminal' AND 'terminal'	process_mining_cases_events
+SELECT cases.id FROM cases JOIN events GROUP BY events.idcase HAVING Count(*) >= 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events	process_mining_cases_events
+SELECT cases.id FROM cases JOIN events GROUP BY cases.id HAVING Count(*) >= 'terminal'	process_mining_cases_events
+SELECT cases.id FROM cases JOIN events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_cases_events
+SELECT cases.id FROM cases JOIN events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_cases_events
+SELECT cases.id FROM cases JOIN events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_cases_events
+SELECT cases.id FROM cases JOIN events GROUP BY events.idcase HAVING Count(*) > 'terminal'	process_mining_cases_events
+SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT Max(events.cost) FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT Max(events.cost) FROM events	process_mining_cases_events
+SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT DISTINCT * FROM events WHERE events.idcase = 'terminal'	process_mining_cases_events
+SELECT * FROM events WHERE events.idcase = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Max(events.cost) FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT events.cost FROM events ORDER BY events.cost Desc LIMIT 1	process_mining_cases_events
+SELECT Max(events.cost) FROM events	process_mining_cases_events
+SELECT Sum(events.cost) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Sum(events.cost) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Sum(events.cost) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_cases_events
+SELECT * FROM cases JOIN events WHERE events.idcase = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.idcase = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT * FROM cases JOIN events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT * FROM cases JOIN events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT events.idcase FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT * FROM cases JOIN events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT * FROM cases JOIN events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT * FROM cases JOIN events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT events.activity FROM events	process_mining_cases_events
+SELECT DISTINCT events.activity FROM events	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc LIMIT 1	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc LIMIT 1	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc LIMIT 1	process_mining_cases_events
+SELECT Min(events.resource) FROM events	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_cases_events
+SELECT DISTINCT events.resource FROM events ORDER BY events.resource Asc	process_mining_cases_events
+SELECT events.resource FROM events ORDER BY events.resource Asc	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Avg(events.cost) FROM events WHERE events.day = 'terminal'	process_mining_cases_events
+SELECT Avg(events.cost) FROM events	process_mining_cases_events
+SELECT Avg(events.cost) FROM events WHERE events.day = 'terminal'	process_mining_cases_events
+SELECT Avg(events.cost) FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT Avg(events.cost) FROM events	process_mining_cases_events
+SELECT Avg(events.cost) FROM events	process_mining_cases_events
+SELECT Avg(events.cost) FROM events	process_mining_cases_events
+SELECT events.activity FROM events GROUP BY events.activity HAVING Count(*) >= 'terminal'	process_mining_cases_events
+SELECT events.activity FROM events GROUP BY events.activity HAVING Count(*) >= 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT Count(*) FROM events WHERE events.resource = 'terminal'	process_mining_cases_events
+SELECT events.resource FROM events WHERE events.activity = 'terminal'	process_mining_cases_events
+SELECT events.resource FROM events WHERE events.activity = 'terminal'	process_mining_cases_events

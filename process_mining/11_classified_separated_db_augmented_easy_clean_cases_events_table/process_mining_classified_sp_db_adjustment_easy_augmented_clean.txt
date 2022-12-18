@@ -1,0 +1,112 @@
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667	How many closed activities do we have?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-1	How many activities 'closed' do we have?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-2	How many activities 'closed' are there in the event log?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-3	How many occurrences of activity 'closed' are there in the event log?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-4	How many events related to activity 'closed' are there in the event log?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-5	How many times did activity 'closed' run?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-6	How many times did activity 'closed' occur?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-7	How many times does the activity named 'closed' run?
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-8	Report the number of times activity 'closed' was executed.
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-9	Report the number of occurrences of activity 'closed'.
+SELECT count(*) FROM events WHERE activity = 'Closed'	process_mining_cases_events	2667-10	Report the number of occurrences of activity named 'closed'.
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2670	Show the amount of events that have had Peter as resource.
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2670-1	How many times has resource 'Peter' performed an activity?
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2670-2	How many events were executed by resource 'Peter'?
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2670-3	How many events did resource 'Peter' run?
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2670-4	Report the number of times resource 'Peter' was responsible for an activity.
+SELECT count(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2670-5	How many times Peter, as resource, was used?
+SELECT DISTINCT idcase FROM events WHERE year = '2016' AND month = '03'	process_mining_cases_events	2671	Show all cases that occurred in March 2016.
+SELECT DISTINCT idcase FROM events WHERE year = '2016' AND month = '03'	process_mining_cases_events	2671-1	Show all cases that occurred in March of the year 2016.
+SELECT DISTINCT idcase FROM events WHERE year = '2016' AND month = '03'	process_mining_cases_events	2671-2	Show all cases that occurred in month 'March' of the year 2016.
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673	How many different resources are there in the log?
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673-1	How many different resources are there in the event log?
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673-2	How many distinct resources are there in the event log?
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673-3	How many resources are in the event log?
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673-4	How many different resources performed activities?
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673-5	How many different resources appear in the event log?
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673-6	Report how many different resources there are in the event log.
+SELECT COUNT(DISTINCT resource) FROM events	process_mining_cases_events	2673-7	Report how many different resources performed activities.
+SELECT * FROM events WHERE year = '2016'	process_mining_cases_events	2680	What are the events that took place in the year 2016?
+SELECT * FROM events WHERE year = '2016'	process_mining_cases_events	2680-1	What are the events that happened in the year 2016?
+SELECT * FROM events WHERE year = '2016'	process_mining_cases_events	2680-2	What events took place during the year 2016?
+SELECT * FROM events WHERE year = '2016'	process_mining_cases_events	2680-3	List the events whose 'timestamp' refers to the year 2016.
+SELECT * FROM events WHERE year = '2016'	process_mining_cases_events	2680-4	List events occurred in 2016.
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_cases_events	2681	What are the cases with the number of events between 1 and 20?
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_cases_events	2681-1	What are the cases with up to 20 events?
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_cases_events	2681-2	How many cases have up to 20 events associated with them?
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) <= 20	process_mining_cases_events	2681-3	List all cases whose trace has up to 20 events.
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) > 50	process_mining_cases_events	2689	Which cases have more than 50 activities?
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) > 50	process_mining_cases_events	2689-1	Which cases are there more than 50 activities performed?
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) > 50	process_mining_cases_events	2689-2	Which cases are there more than 50 activities carried out?
+SELECT idcase FROM events GROUP BY idcase HAVING count(*) > 50	process_mining_cases_events	2689-3	List all cases that have more than 50 activities.
+SELECT max(cost) FROM events	process_mining_cases_events	2697	What is the largest event cost value found in the log?
+SELECT max(cost) FROM events	process_mining_cases_events	2697-1	What is the largest cost value in the event log?
+SELECT max(cost) FROM events	process_mining_cases_events	2697-2	What is the highest cost value presented in the log?
+SELECT max(cost) FROM events	process_mining_cases_events	2697-3	What is the highest event cost value in the event log?
+SELECT max(cost) FROM events	process_mining_cases_events	2697-4	What is the biggest cost in the event log?
+SELECT max(cost) FROM events	process_mining_cases_events	2697-5	What is the maximum cost in the log?
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_cases_events	2741	Are there any events of 'Closed' activity in the log? If yes, show event data.
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_cases_events	2741-1	Are there any events of activity 'Closed' in the event log? If yes, show event data.
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_cases_events	2741-2	Are there events of activity 'Closed' in the event log? If yes, show the event data associated with the records.
+SELECT * FROM events WHERE activity = 'Closed'	process_mining_cases_events	2741-3	Retrieve event data associated with existing activities 'Closed' in the event log.
+SELECT * FROM events WHERE idcase = 'null'	process_mining_cases_events	2751	Is there Null values on idcase column?
+SELECT * FROM events WHERE idcase = 'null'	process_mining_cases_events	2751-1	Which events has idcase column with null value?
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_cases_events	2752	How many events do they have as a send confirmation receipt activity?
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_cases_events	2752-1	How many events have activity 'send confirmation receipt'?
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_cases_events	2752-2	How many occurrences have activity 'send confirmation receipt'?
+SELECT count(*) FROM events WHERE activity = 'send confirmation receipt'	process_mining_cases_events	2752-3	How many events with activity 'send confirmation receipt'?
+SELECT MAX(cost) FROM events	process_mining_cases_events	2753	What is the highest event cost value among all activities presented in the log?
+SELECT MAX(cost) FROM events	process_mining_cases_events	2753-1	What is the highest event cost value in the log?
+SELECT MAX(cost) FROM events	process_mining_cases_events	2753-2	What is the largest event cost value in the event log?
+SELECT MAX(cost) FROM events	process_mining_cases_events	2753-3	What is the maximum event cost value in the event log?
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'	process_mining_cases_events	2757	What is the total of cost for TVMF77077810579481 resource?
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'	process_mining_cases_events	2757-1	What is the total cost for TVMF77077810579481 resource?
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'	process_mining_cases_events	2757-2	What is the total cost consumed by resource TVMF77077810579481?
+SELECT count(*) FROM events WHERE resource = 'Siebel'	process_mining_cases_events	2767	How many times Siebel, as resource, was used ?
+SELECT count(*) FROM events WHERE resource = 'Siebel'	process_mining_cases_events	2767-1	How many times resource Siebel performed some activity?
+SELECT count(*) FROM events WHERE resource = 'Siebel'	process_mining_cases_events	2767-2	How many occurrences of resource Siebel are in the log?
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_cases_events	2769	How many events has the case declaration 56300?
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_cases_events	2769-1	How many events has the case 'declaration 56300'?
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_cases_events	2769-2	How many events occurred in the case 'declaration 56300'?
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_cases_events	2769-3	What is the size of the trace associated with the case 'declaration 56300'?
+SELECT count(*) FROM events WHERE idcase = 'declaration 56300'	process_mining_cases_events	2769-4	How many events does the 'declaration 56300' case have?
+SELECT count(DISTINCT idcase) FROM events WHERE activity = 'Awaiting Assignment'	process_mining_cases_events	2774	How many cases have the activity status Awaiting Assignment?
+SELECT count(DISTINCT idcase) FROM events WHERE activity = 'Awaiting Assignment'	process_mining_cases_events	2774-1	How many cases appear the activity 'Awaiting Assignment'?
+SELECT count(DISTINCT idcase) FROM events WHERE activity = 'Awaiting Assignment'	process_mining_cases_events	2774-2	How many cases the activity 'Awaiting Assignment' occur?
+SELECT DISTINCT idcase FROM events WHERE resource = '112'	process_mining_cases_events	2779	Report all cases in which resource 112 was used.
+SELECT DISTINCT idcase FROM events WHERE resource = '112'	process_mining_cases_events	2779-1	Which cases the resource '112' was used?
+SELECT DISTINCT idcase FROM events WHERE resource = '112'	process_mining_cases_events	2779-2	Which cases the resource '112' perfomed some activity?
+SELECT DISTINCT idcase FROM events WHERE resource = 'Updated by 974'	process_mining_cases_events	2782	Which cases were updated by resource 974?
+SELECT DISTINCT idcase FROM events WHERE resource = 'Updated by 974'	process_mining_cases_events	2782-1	Which cases that resource was 'updated by 974'?
+SELECT DISTINCT idcase FROM events WHERE resource = 'Updated by 974'	process_mining_cases_events	2782-2	List cases that resource was 'updated by 974'.
+SELECT DISTINCT activity FROM events	process_mining_cases_events	2784	What types of activities exist in the log?
+SELECT DISTINCT activity FROM events	process_mining_cases_events	2784-1	Which different types of activities exist in the log?
+SELECT MIN(resource) FROM events	process_mining_cases_events	2785	Which is the smallest resource?
+SELECT MIN(resource) FROM events	process_mining_cases_events	2785-1	Which is the resource with the smallest value?
+SELECT MIN(resource) FROM events	process_mining_cases_events	2785-2	Which resource has the smallest value?
+SELECT MIN(resource) FROM events	process_mining_cases_events	2785-3	Which is the minimum value for a resource?
+SELECT COUNT(DISTINCT idcase) FROM events WHERE activity = 'In Progress'	process_mining_cases_events	2838	How many cases have activity 'in progress'?
+SELECT COUNT(DISTINCT idcase) FROM events WHERE activity = 'In Progress'	process_mining_cases_events	2838-1	How many cases has the activity 'in progress'?
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_cases_events	2864	What are the resources in alphabetical order?
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_cases_events	2864-1	List all resources alphabetically and without repetition.
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_cases_events	2864-2	List all resources alphabetically and without duplicates.
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_cases_events	2864-3	What resources are recorded in the event log? List in alphabetical order and without repetitions.
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_cases_events	2864-4	List all distinct resources alphabetically.
+SELECT DISTINCT resource FROM events ORDER BY resource	process_mining_cases_events	2864-5	Retrieve, in alphabetical order and without repetitions, all the resources recorded in the log.
+SELECT COUNT(*) FROM events WHERE activity = 'Petição Juntada'	process_mining_cases_events	2886	How many events are associated with the 'Joined Petition' activity?
+SELECT COUNT(*) FROM events WHERE activity = 'Petição Juntada'	process_mining_cases_events	2886-1	How many events has activity 'Joined Petition'?
+SELECT COUNT(*) FROM events WHERE activity = 'Petição Juntada'	process_mining_cases_events	2886-2	How many activities 'Joined Petition' are in the event log?
+SELECT AVG(cost) FROM events	process_mining_cases_events	2887	What is the average event cost of this event log?
+SELECT AVG(cost) FROM events	process_mining_cases_events	2887-1	What is the average cost of this event log?
+SELECT AVG(cost) FROM events	process_mining_cases_events	2887-2	What is the average cost associated with the events in this event log?
+SELECT AVG(cost) FROM events	process_mining_cases_events	2887-3	What is the average cost of running an activity in this event log?
+SELECT AVG(cost) FROM events	process_mining_cases_events	2887-4	What is the average cost of an event?
+SELECT AVG(cost) FROM events	process_mining_cases_events	2887-5	What is the average cost associated with events?
+SELECT AVG(cost) FROM events	process_mining_cases_events	2887-6	What is the average value of costs associated with this business process?
+SELECT activity FROM events GROUP BY activity HAVING COUNT(*) >= 7	process_mining_cases_events	2892	Which activities have at least 7 events?
+SELECT activity FROM events GROUP BY activity HAVING COUNT(*) >= 7	process_mining_cases_events	2892-1	What activities occurred at least seven times?
+SELECT Count(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2895	How many events are tied to resource Peter?
+SELECT Count(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2895-1	How many events have Peter as resource?
+SELECT Count(*) FROM events WHERE resource = 'Peter'	process_mining_cases_events	2895-2	How many events resource Peter was associated?
+SELECT DISTINCT resource FROM events WHERE activity = 'Closed'	process_mining_cases_events	3003	What resources were associated with activity 'closed' in a case?
+SELECT DISTINCT resource FROM events WHERE activity = 'Closed'	process_mining_cases_events	3003-1	What resources worked on a case that have activity 'closed'?
