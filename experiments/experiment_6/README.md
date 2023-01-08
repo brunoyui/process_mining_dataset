@@ -1,4 +1,4 @@
-Utilização do conjunto aumentado e ajustado com declarações classificadas como fácil 161 exemplos
+Utilização do conjunto aumentado e ajustado com declarações classificadas como fácil 168 exemplos
     - /process_mining/8_classified_separated_db_augmented_easy
 
 ## Commands

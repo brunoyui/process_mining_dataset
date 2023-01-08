@@ -1,0 +1,84 @@
+[
+   {
+    "column_names": [
+       [
+          -1,
+          "*"
+       ],
+       [
+          0,
+          "idevent"
+       ],
+       [
+          0,
+          "idcase"
+       ],
+       [
+          0,
+          "activity"
+       ],
+       [
+          0,
+          "resource"
+       ],
+       [
+          0,
+          "timestamp"
+       ],
+       [
+          0,
+          "cost"
+       ]
+    ],
+    "column_names_original": [
+       [
+          -1,
+          "*"
+       ],
+       [
+          0,
+          "idevent"
+       ],
+       [
+          0,
+          "idcase"
+       ],
+       [
+          0,
+          "activity"
+       ],
+       [
+          0,
+          "resource"
+       ],
+       [
+          0,
+          "timestamp"
+       ],
+       [
+          0,
+          "cost"
+       ]
+    ],
+    "column_types": [
+       "text",
+       "number",
+       "text",
+       "text",
+       "text",
+       "text",
+       "number"
+    ],
+    "db_id": "process_mining_events",
+    "foreign_keys": [],
+    "primary_keys": [
+       1
+    ],
+    "table_names": [
+       "events"
+    ],
+    "table_names_original": [
+        "events"
+    ]
+   }
+]

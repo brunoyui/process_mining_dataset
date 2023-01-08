@@ -1,0 +1,168 @@
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE activity = 'closed'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(*) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT COUNT(DISTINCT resource) FROM events
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost = 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE EXTRACT(YEAR FROM timestamp) = 2016
+SELECT * FROM events WHERE EXTRACT(YEAR FROM timestamp) = 2016
+SELECT * FROM events WHERE EXTRACT(YEAR FROM timestamp) = 2016
+SELECT * FROM events WHERE EXTRACT(YEAR FROM timestamp) = 2016
+SELECT * FROM events WHERE EXTRACT(YEAR FROM timestamp) = 2016
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) BETWEEN 1 AND 20
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) <= 20
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) <= 20
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) <= 20
+SELECT COUNT(*) FROM (SELECT idcase FROM events GROUP BY idcase HAVING COUNT(*) <= 20)
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) <= 20
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) <= 20
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) > 50
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) > 50
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) > 50
+SELECT idcase, COUNT(*) FROM events GROUP BY idcase HAVING COUNT(*) > 50
+SELECT MAX(cost) FROM events
+SELECT MAX(cost) FROM events
+SELECT MAX(cost) FROM events
+SELECT MAX(cost) FROM events
+SELECT MAX(cost) FROM events
+SELECT MAX(cost) FROM events
+SELECT COUNT(*) FROM events WHERE end_date = 'null'
+SELECT COUNT(*) FROM events WHERE end_date = 'null'
+SELECT COUNT(*) FROM events WHERE timestamp = 'null'
+SELECT COUNT(*) FROM events WHERE timestamp = 'null'
+SELECT COUNT(*) FROM events WHERE end_date = 'null'
+SELECT COUNT(*) FROM events WHERE end_date = 'null'
+SELECT COUNT(*) FROM events WHERE timestamp = 'null'
+SELECT COUNT(*) FROM events WHERE cost != 'null'
+SELECT COUNT(*) FROM events WHERE cost != 'null'
+SELECT COUNT(*) FROM events WHERE cost != 'null'
+SELECT COUNT(*) FROM events WHERE cost != 'null'
+SELECT COUNT(*) FROM events WHERE cost != 'null'
+SELECT COUNT(*) FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE activity = 'Closed'
+SELECT * FROM events WHERE activity = 'Closed'
+SELECT * FROM events WHERE activity = 'Closed'
+SELECT * FROM events WHERE activity = 'Closed'
+SELECT * FROM events WHERE cost = 'null'
+SELECT * FROM events WHERE cost = 'null'
+SELECT * FROM events WHERE cost = 'null'
+SELECT * FROM events WHERE cost = 'null'
+SELECT COUNT(*) FROM events WHERE idcase = 'null'
+SELECT * FROM events WHERE idcase = 'null';
+SELECT COUNT(*) FROM events WHERE activity = 'send confirmation receipt'
+SELECT COUNT(*) FROM events WHERE activity = 'send confirmation receipt'
+SELECT COUNT(*) FROM events WHERE activity = 'send confirmation receipt'
+SELECT COUNT(*) FROM events WHERE activity = 'send confirmation receipt'
+SELECT cost FROM events WHERE cost != 'null' ORDER BY cost DESC LIMIT 1
+SELECT cost FROM events WHERE cost != 'null' ORDER BY cost DESC LIMIT 1
+SELECT cost FROM events WHERE cost != 'null' ORDER BY cost DESC LIMIT 1
+SELECT cost FROM events WHERE cost != 'null' ORDER BY cost DESC LIMIT 1
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'
+SELECT SUM(cost) FROM events WHERE resource = 'TVMF77077810579481'
+SELECT DISTINCT idcase FROM events WHERE resource = 'null'
+SELECT DISTINCT idcase FROM events WHERE resource = 'null'
+SELECT DISTINCT idcase FROM events WHERE resource = 'null'
+SELECT DISTINCT idcase FROM events WHERE resource = 'null'
+SELECT COUNT(*) FROM events WHERE resource LIKE '%Siebel%'
+SELECT COUNT(*) FROM events WHERE resource LIKE '%Siebel%' AND activity != 'null'
+SELECT COUNT(*) FROM events WHERE resource LIKE '%Siebel%'
+SELECT COUNT(*) FROM events WHERE idcase = '56300'
+SELECT COUNT(*) FROM events WHERE activity LIKE '%declaration 56300%'
+SELECT COUNT(*) FROM events WHERE activity LIKE '%declaration 56300%'
+SELECT COUNT(*) FROM events WHERE idcase LIKE '%declaration 56300%'
+SELECT COUNT(*) FROM events WHERE idcase LIKE '%declaration 56300%'
+SELECT COUNT(*) FROM events WHERE idcase LIKE '%declaration 56300%'
+SELECT COUNT(DISTINCT idcase) FROM events WHERE activity = 'Awaiting Assignment'
+SELECT COUNT(DISTINCT idcase) FROM events WHERE activity = 'Awaiting Assignment'
+SELECT COUNT(DISTINCT idcase) FROM events WHERE activity = 'Awaiting Assignment'
+SELECT DISTINCT idcase FROM events WHERE resource = 112
+SELECT DISTINCT idcase FROM events WHERE resource = 112
+SELECT DISTINCT idcase FROM events WHERE resource = 112
+SELECT * FROM events WHERE resource = 'null'
+SELECT * FROM events WHERE resource = 'null'
+SELECT * FROM events WHERE resource = 'null'
+SELECT * FROM events WHERE resource = 'null'
+SELECT * FROM events WHERE resource = 'null'
+SELECT idevent FROM events WHERE resource = 'null'
+SELECT idcase FROM events WHERE activity = 'updated' AND resource = '974'
+SELECT idcase FROM events WHERE resource = '974' AND activity = 'updated'
+SELECT DISTINCT idcase FROM events WHERE resource = 'updated by 974'
+SELECT DISTINCT idcase FROM events WHERE resource = 'updated by 974'
+SELECT DISTINCT activity FROM events
+SELECT DISTINCT activity FROM events
+SELECT MIN(resource) FROM events
+SELECT MIN(resource) FROM events
+SELECT resource FROM events WHERE cost = (SELECT MIN(cost) FROM events)
+SELECT MIN(resource) FROM events
+SELECT COUNT(*) FROM events WHERE activity = 'in progress'
+SELECT COUNT(*) FROM events WHERE activity = 'in progress';
+SELECT activity FROM events WHERE costevent != 'null'
+SELECT activity FROM events WHERE cost != 'null'
+SELECT activity FROM events WHERE cost != 'null'
+SELECT idcase, MIN(timestamp) FROM events GROUP BY idcase
+SELECT MIN(timestamp) FROM events
+SELECT MIN(timestamp) FROM events WHERE activity='problem'
+SELECT idcase, MIN(timestamp) FROM events GROUP BY idcase
+SELECT idcase, MIN(timestamp) FROM events GROUP BY idcase
+SELECT DISTINCT resource FROM events ORDER BY resource ASC
+SELECT DISTINCT resource FROM events ORDER BY resource ASC
+SELECT DISTINCT resource FROM events ORDER BY resource ASC
+SELECT DISTINCT resource FROM events ORDER BY resource ASC
+SELECT DISTINCT resource FROM events ORDER BY resource ASC
+SELECT DISTINCT resource FROM events ORDER BY resource ASC
+SELECT COUNT(*) FROM events WHERE activity = 'Joined Petition'
+SELECT COUNT(*) FROM events WHERE activity = 'Joined Petition'
+SELECT COUNT(*) FROM events WHERE activity = 'Joined Petition'
+SELECT AVG(cost) FROM events
+SELECT AVG(cost) FROM events
+SELECT AVG(cost) FROM events
+SELECT AVG(cost) FROM events WHERE cost != 'null'
+SELECT AVG(cost) FROM events
+SELECT AVG(cost) FROM events
+SELECT AVG(cost) FROM events
+SELECT activity, COUNT(*) FROM events GROUP BY activity HAVING COUNT(*) >= 7
+SELECT activity, COUNT(*) FROM events GROUP BY activity HAVING COUNT(*) >= 7
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT COUNT(*) FROM events WHERE resource = 'Peter'
+SELECT DISTINCT resource FROM events WHERE activity = 'Closing Case'
+SELECT DISTINCT resource FROM events WHERE activity = 'Closed'
+SELECT DISTINCT resource FROM events WHERE activity = 'Closing incident'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
+SELECT * FROM events WHERE cost != 'null'
