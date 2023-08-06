@@ -1,0 +1,168 @@
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log1 where  log1.activity = "Closed"	process_mining_1
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count( distinct log5.resource) from log5	process_mining_5
+select count( distinct log5.resource) from log5	process_mining_5
+select count( distinct log5.resource) from log5	process_mining_5
+select count( distinct log5.resource) from log5	process_mining_5
+select count( distinct log5.activity) from log5	process_mining_5
+select count( distinct log5.resource) from log5	process_mining_5
+select count( distinct log5.idcase) from log5	process_mining_5
+select count( distinct log5.resource) from log5	process_mining_5
+select count( distinct log5.resource) from log5	process_mining_5
+select count( distinct log5.idcase) from log5	process_mining_5
+select count( distinct log5.resource) from log5	process_mining_5
+select distinct log6.costevent from log6 where  log6.costevent != "null"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent != "null"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent != "null"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent != "null"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent != "null"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent != "null"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent = "Informed"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent = "Informed"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent = "Informed"	process_mining_6
+select distinct log6.costevent from log6 where  log6.costevent = "0"	process_mining_6
+select * from log1 where  log1.startdatetime like "2016%"	process_mining_1
+select * from log1 where  log1.startdatetime like "2016%"	process_mining_1
+select * from log1 where  log1.startdatetime like "2016%"	process_mining_1
+select * from log1 where  log1.startdatetime like "2016%"	process_mining_1
+select * from log1 where  log1.startdatetime like "2016%"	process_mining_1
+select log1.idcase from log1  group by log1.idcase having  count(*) between 1 and 20	process_mining_1
+select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	process_mining_1
+select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	process_mining_1
+select log1.idcase from log1  group by log1.idcase having  count(*) between 1 and 20	process_mining_1
+sql placeholder	process_mining_1
+select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	process_mining_1
+select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	process_mining_1
+select log7.idcase from log7  group by log7.idcase having  count(*) > 50	process_mining_7
+select log7.idcase from log7  group by log7.idcase having  count(*) > 50	process_mining_7
+select log7.idcase from log7  group by log7.idcase having  count(*) > 50	process_mining_7
+select log7.idcase from log7  group by log7.idcase having  count(*) > 50	process_mining_7
+select max(log8.costevent) from log8	process_mining_8
+select log8.costevent from log8   order by log8.costevent desc limit 1	process_mining_8
+select max(log8.costevent) from log8	process_mining_8
+select max(log8.costevent) from log8	process_mining_8
+select log8.costevent from log8   order by log8.costevent desc limit 1	process_mining_8
+select max(log8.costevent) from log8	process_mining_8
+select count(*) from log1 where  log1.enddatetime = "null"	process_mining_1
+select count(*) from log1 where  log1.enddatetime = "null"	process_mining_1
+select count(*) from log1 where  log1.startdatetime = "null"	process_mining_1
+select count(*) from log1 where  log1.startdatetime = "null"	process_mining_1
+select count(*) from log1 where  log1.enddatetime = "null"	process_mining_1
+select count(*) from log1 where  log1.enddatetime = "null"	process_mining_1
+select count(*) from log1 where  log1.startdatetime = "null"	process_mining_1
+select count(*) from log3 where  log3.costevent = "null"	process_mining_3
+select count(*) from log3 where  log3.costevent = "1"	process_mining_3
+select count(*) from log3 where  log3.costevent != "null"	process_mining_3
+select count(*) from log3 where  log3.costevent = "Informed"	process_mining_3
+select count(*) from log3 where  log3.costevent = "Informed"	process_mining_3
+select count(*) from log3 where  log3.costevent != "null"	process_mining_3
+select * from log6 where  log6.activity = "Closed"	process_mining_6
+select * from log6 where  log6.activity = "Closed"	process_mining_6
+select * from log6 where  log6.activity = "Closed"	process_mining_6
+select log6.idevent from log6 where  log6.activity = "Closed"	process_mining_6
+select log2.activity from log2 where  log2.costevent = "null"	process_mining_2
+select log2.activity from log2 where  log2.costevent = "null"	process_mining_2
+select log2.activity from log2 where  log2.idevent not in (select log2.idevent from log2  )	process_mining_2
+select log2.activity from log2 where  log2.costevent = "null"	process_mining_2
+select log3.idcase from log3 where  log3.idcase = "null"	process_mining_3
+select * from log3 where  log3.idcase = "null"	process_mining_3
+select count(*) from log7 where  log7.activity = "send confirmation receipt"	process_mining_7
+select count(*) from log7 where  log7.activity = "send confirmation receipt"	process_mining_7
+select count(*) from log7 where  log7.activity = "send confirmation receipt"	process_mining_7
+select count(*) from log7 where  log7.activity = "send confirmation receipt"	process_mining_7
+select max(log8.costevent) from log8	process_mining_8
+select max(log8.costevent) from log8	process_mining_8
+select log8.costevent from log8   order by log8.costevent desc limit 1	process_mining_8
+select max(log8.costevent) from log8	process_mining_8
+select sum(log2.costevent) from log2 where  log2.resource = "TVMF77077810579481"	process_mining_2
+select sum(log2.costevent) from log2 where  log2.resource = "TVMF77077810579481"	process_mining_2
+select sum(log2.costevent) , log2.resource from log2  group by log2.resource	process_mining_2
+select log8.idcase from log8 where  log8.resource not in (select log8.resource from log8  )	process_mining_8
+select log8.idcase from log8   except select log8.idcase from log8	process_mining_8
+select log8.idcase from log8 where  log8.resource = "null"	process_mining_8
+select log8.idcase from log8 where  log8.resource not in (select log8.resource from log8  )	process_mining_8
+select count(*) from log4 where  log4.resource = "Siebel"	process_mining_4
+select count(*) from log4 where  log4.resource = "Siebel"	process_mining_4
+select count(*) from log4 where  log4.resource = "Siebel"	process_mining_4
+select count(*) from log8 where  log8.idcase = "56300"	process_mining_8
+select count(*) from log8 where  log8.idcase = "declaration 56300"	process_mining_8
+select count(*) from log8 where  log8.idcase = "declaration 56300"	process_mining_8
+select count(*) from log8 where  log8.idcase = "declaration 56300"	process_mining_8
+select log8.activity from log8 where  log8.idcase = "declaration 56300"	process_mining_8
+select count(*) from log8 where  log8.idcase = "declaration 56300"	process_mining_8
+select count(*) from log6 where  log6.activity = "Awaiting Assignment"	process_mining_6
+select count(*) from log6 where  log6.activity = "Awaiting Assignment"	process_mining_6
+select count(*) from log6 where  log6.activity = "Awaiting Assignment"	process_mining_6
+select log3.idcase from log3 where  log3.resource = 112	process_mining_3
+select distinct log3.idcase from log3 where  log3.resource = "112"	process_mining_3
+select distinct log3.idcase from log3 where  log3.resource = 112	process_mining_3
+select * from log3 where  log3.resource = "null"	process_mining_3
+select * from log3 where  log3.resource = "null" or log3.resource = "null"	process_mining_3
+select log3.idevent from log3   except select log3.idevent from log3	process_mining_3
+select log3.idevent from log3   except select log3.idevent from log3	process_mining_3
+select log3.idevent from log3 where  log3.idevent not in (select log3.idevent from log3  )	process_mining_3
+select log3.idevent from log3 where  log3.idevent not in (select log3.idevent from log3  )	process_mining_3
+select log1.idcase from log1 where  log1.resource = "974"	process_mining_1
+select log1.idcase from log1 where  log1.resource = "Updated by 974"	process_mining_1
+select log1.idcase from log1 where  log1.resource = "Updated by 974"	process_mining_1
+select log1.idcase from log1 where  log1.resource = "974"   intersect select log1.idcase from log1 where  log1.resource = "88"	process_mining_1
+select distinct log4.activity from log4	process_mining_4
+select distinct log4.activity from log4	process_mining_4
+select log3.resource from log3   order by log3.resource asc limit 1	process_mining_3
+select log3.resource from log3   order by log3.resource asc limit 1	process_mining_3
+select log3.resource from log3   order by log3.resource asc limit 1	process_mining_3
+select min(log3.resource) from log3	process_mining_3
+select count(*) from log6 where  log6.activity = "In Progress"	process_mining_6
+select count(*) from log6 where  log6.activity = "In Progress"	process_mining_6
+select log8.activity from log8 where  log8.costevent != "null"	process_mining_8
+select log8.activity from log8 where  log8.costevent != "null"	process_mining_8
+select log8.activity , log8.costevent from log8 where  log8.costevent = "null"	process_mining_8
+select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	process_mining_5
+select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	process_mining_5
+select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	process_mining_5
+select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	process_mining_5
+select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	process_mining_5
+select log5.resource from log5   order by log5.resource asc	process_mining_5
+select log5.resource from log5   order by log5.resource asc	process_mining_5
+select log5.resource from log5   order by log5.resource asc	process_mining_5
+select log5.resource from log5   order by log5.resource desc	process_mining_5
+select distinct log5.resource from log5   order by log5.resource asc	process_mining_5
+select log5.resource from log5   order by log5.resource desc	process_mining_5
+select count(*) from log2 where  log2.activity = "Joined Petition"	process_mining_2
+select count(*) from log2 where  log2.activity = "Joined Petition"	process_mining_2
+select count(*) from log2 where  log2.activity = "Joined Petition"	process_mining_2
+select avg(log2.costevent) from log2	process_mining_2
+select avg(log2.costevent) from log2	process_mining_2
+select avg(log2.costevent) from log2	process_mining_2
+select avg(log2.costevent) from log2	process_mining_2
+select avg(log2.costevent) from log2	process_mining_2
+select avg(log2.costevent) from log2	process_mining_2
+select avg(log2.costevent) from log2	process_mining_2
+select log1.activity from log1  group by log1.activity having  count(*) >= 7	process_mining_1
+select log1.activity from log1  group by log1.activity having  count(*) >= 7	process_mining_1
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select count(*) from log6 where  log6.resource = "Peter"	process_mining_6
+select log6.resource from log6	process_mining_6
+select log6.resource from log6	process_mining_6
+select distinct log6.resource from log6	process_mining_6
+select distinct log2.costevent from log2 where  log2.costevent != "null"	process_mining_2
+select log2.costevent from log2 where  log2.costevent != "null"	process_mining_2
+select distinct log2.costevent from log2 where  log2.costevent = "1"	process_mining_2
