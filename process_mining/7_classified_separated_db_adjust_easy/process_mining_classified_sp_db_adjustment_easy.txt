@@ -3,7 +3,7 @@ SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	process_mining_6	2670	Show th
 SELECT COUNT(DISTINCT resource) FROM log5	process_mining_5	2673	How many different resources are there in the log?
 SELECT * FROM log6 WHERE costevent != 'null'	process_mining_6	2677	What are the events where the event cost is not null?
 SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	process_mining_1	2680	What are the events that happened in the year 2016?
-SELECT idcase FROM log3 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_3	2681	What are the incidents with the number of events between 1 and 20?
+SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	process_mining_1	2681	What are the incidents with the number of events between 1 and 20?
 SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	process_mining_7	2689	Which cases have more than 50 activities?
 SELECT max(costevent) FROM log8	process_mining_8	2697	What is the largest event cost value found in the log?
 SELECT count(*) FROM log1 WHERE enddatetime = 'null'	process_mining_1	2710	select event count with no end date
