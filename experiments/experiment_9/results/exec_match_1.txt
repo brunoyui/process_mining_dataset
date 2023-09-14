@@ -22,7 +22,7 @@ question_id	question	predicted	gold	hardness	exec_score
 2673-1	How many different resources are there in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
 2673-2	How many distinct resources are there in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
 2673-3	How many resources are in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
-2673-4	How many different people performed activities?	select count( distinct log5.activity) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-4	How many different people performed activities?	select count( distinct log5.activity) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	0	
 2673-5	How many different resources performed activities?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
 2673-6	How many different people appear in the event log?	select count( distinct log5.idcase) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
 2673-7	How many different resources appear in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
@@ -108,10 +108,10 @@ question_id	question	predicted	gold	hardness	exec_score
 2769-3	How many events occurred in the case 'declaration 56300'?	select count(*) from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	1	
 2769-4	What is the size of the trace associated with the case 'declaration 56300'?	select log8.activity from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	0	
 2769-5	How many events does the 'declaration 56300' case have?	select count(*) from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	1	
-2774	How many cases have the activity status Awaiting Assignment?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
-2774-1	How many cases appear the activity 'Awaiting Assignment'?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
-2774-2	How many cases the activity 'Awaiting Assignment' occur?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
-2779	Report all cases in which resource 112 was used.	select log3.idcase from log3 where  log3.resource = 112	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
+2774	How many cases have the activity status Awaiting Assignment?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	0	
+2774-1	How many cases appear the activity 'Awaiting Assignment'?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	0	
+2774-2	How many cases the activity 'Awaiting Assignment' occur?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	0	
+2779	Report all cases in which resource 112 was used.	select log3.idcase from log3 where  log3.resource = 112	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	0	
 2779-1	Which cases the resource '112' was used?	select distinct log3.idcase from log3 where  log3.resource = "112"	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
 2779-2	Which cases the resource '112' perfomed some activity?	select distinct log3.idcase from log3 where  log3.resource = 112	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
 2780	List events that does not have a resource associated	select * from log3 where  log3.resource = "null"	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
@@ -121,8 +121,8 @@ question_id	question	predicted	gold	hardness	exec_score
 2780-4	What are the events that no resources were associated with?	select log3.idevent from log3 where  log3.idevent not in (select log3.idevent from log3  )	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
 2780-5	Retrieve event identifiers for which no resources have been associated.	select log3.idevent from log3 where  log3.idevent not in (select log3.idevent from log3  )	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
 2782	Which incidents were updated by resource 974?	select log1.idcase from log1 where  log1.resource = "974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
-2782-1	Which incidents that resource was 'updated by 974'?	select log1.idcase from log1 where  log1.resource = "Updated by 974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	1	
-2782-2	List cases that resource was 'updated by 974'.	select log1.idcase from log1 where  log1.resource = "Updated by 974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	1	
+2782-1	Which incidents that resource was 'updated by 974'?	select log1.idcase from log1 where  log1.resource = "Updated by 974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
+2782-2	List cases that resource was 'updated by 974'.	select log1.idcase from log1 where  log1.resource = "Updated by 974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
 2782-3	Which cases were updated by resource 974?	select log1.idcase from log1 where  log1.resource = "974"   intersect select log1.idcase from log1 where  log1.resource = "88"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
 2784	What types of activities exist in the log?	select distinct log4.activity from log4	SELECT DISTINCT activity FROM log4	easy	1	
 2784-1	Which different types of activities exist in the log?	select distinct log4.activity from log4	SELECT DISTINCT activity FROM log4	easy	1	
@@ -130,19 +130,19 @@ question_id	question	predicted	gold	hardness	exec_score
 2785-1	Which is the resource with the smallest value?	select log3.resource from log3   order by log3.resource asc limit 1	SELECT MIN(resource) FROM log3	easy	1	
 2785-2	Which resource has the smallest value?	select log3.resource from log3   order by log3.resource asc limit 1	SELECT MIN(resource) FROM log3	easy	1	
 2785-3	Which is the minimum value for a resource?	select min(log3.resource) from log3	SELECT MIN(resource) FROM log3	easy	1	
-2838	How many cases have activity 'in progress'?	select count(*) from log6 where  log6.activity = "In Progress"	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	1	
-2838-1	How many cases has the activity 'in progress'?	select count(*) from log6 where  log6.activity = "In Progress"	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	1	
-2853	What are activities whose costevent is not null?	select log8.activity from log8 where  log8.costevent != "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	1	
-2853-1	What activities whose cost is non-null?	select log8.activity from log8 where  log8.costevent != "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	1	
+2838	How many cases have activity 'in progress'?	select count(*) from log6 where  log6.activity = "In Progress"	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	0	
+2838-1	How many cases has the activity 'in progress'?	select count(*) from log6 where  log6.activity = "In Progress"	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	0	
+2853	What are activities whose costevent is not null?	select log8.activity from log8 where  log8.costevent != "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	0	
+2853-1	What activities whose cost is non-null?	select log8.activity from log8 where  log8.costevent != "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	0	
 2853-2	List activities with cost information.	select log8.activity , log8.costevent from log8 where  log8.costevent = "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	0	
 2863	When was the oldest problem?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
 2863-1	When the oldest problem occur?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
 2863-2	What was the timestamp of the oldest problem?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
 2863-3	What was the oldest case?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
 2863-4	When the oldest case occur?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
-2864	What are the resources in alphabetical order?	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
-2864-1	List all resources alphabetically and without repetition.	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
-2864-2	List all resources alphabetically and without duplicates.	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
+2864	What are the resources in alphabetical order?	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
+2864-1	List all resources alphabetically and without repetition.	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
+2864-2	List all resources alphabetically and without duplicates.	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
 2864-3	What resources are recorded in the event log? List in alphabetical order and without repetitions.	select log5.resource from log5   order by log5.resource desc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
 2864-4	List all distinct resources alphabetically.	select distinct log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
 2864-5	Retrieve, in alphabetical order and without repetitions, all the resources recorded in the log.	select log5.resource from log5   order by log5.resource desc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
@@ -170,4 +170,4 @@ question_id	question	predicted	gold	hardness	exec_score
                      easy                 medium               hard                 extra                all                 
 count                168                  0                    0                    0                    168                 
 =====================   EXECUTION ACCURACY     =====================
-execution            0.857                0.000                0.000                0.000                0.857               
+execution            0.774                0.000                0.000                0.000                0.774               
