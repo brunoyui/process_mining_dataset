@@ -1,0 +1,173 @@
+question_id	question	predicted	gold	hardness	exec_score	
+2667	How many closed activities do we have?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-1	How many activities 'closed' do we have?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-2	How many activities 'closed' are there in the event log?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-3	How many occurrences of activity 'closed' are there in the event log?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-4	How many events related to activity 'closed' are there in the event log?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-5	How many times did activity 'closed' run?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-6	How many times did activity 'closed' occur?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-7	How many times does the activity named 'closed' run?	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-8	Report the number of times activity 'closed' was executed.	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-9	Report the number of occurrences of activity 'closed'.	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2667-10	Report the number of occurrences of activity named 'closed'.	select count(*) from log1 where  log1.activity = "Closed"	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	1	
+2670	Show the amount of events that have had Peter as resource.	select count(*) from log6 where  log6.resource = "Peter"	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2670-1	How many times has resource 'Peter' performed an activity?	select count(*) from log6 where  log6.resource = "Peter"	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2670-2	How many events were executed by resource 'Peter'?	select count(*) from log6 where  log6.resource = "Peter"	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2670-3	How many times has employee 'Peter' performed an activity?	select count(*) from log6 where  log6.resource = "Peter"	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2670-4	How many events did employee 'Peter' run?	select count(*) from log6 where  log6.resource = "Peter"	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2670-5	Report the number of times resource 'Peter' was responsible for an activity.	select count(*) from log6 where  log6.resource = "Peter"	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2670-6	Report the number of times employee 'Peter' was responsible for an activity.	select count(*) from log6 where  log6.resource = "Peter"	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2670-7	How many times Peter, as resource, was used?	select count(*) from log6 where  log6.resource = "Peter"	SELECT count(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2673	How many different resources are there in the log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-1	How many different resources are there in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-2	How many distinct resources are there in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-3	How many resources are in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-4	How many different people performed activities?	select count( distinct log5.activity) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-5	How many different resources performed activities?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-6	How many different people appear in the event log?	select count( distinct log5.idcase) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-7	How many different resources appear in the event log?	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-8	Report how many different resources there are in the event log.	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-9	Report how many different people appear in the event log.	select count( distinct log5.idcase) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2673-10	Report how many different resources performed activities.	select count( distinct log5.resource) from log5	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2677	What are the events where the event cost is not null?	select distinct log6.costevent from log6 where  log6.costevent != "null"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-1	What are the events where cost is not null?	select distinct log6.costevent from log6 where  log6.costevent != "null"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-2	Which events have a non-null cost?	select distinct log6.costevent from log6 where  log6.costevent != "null"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-3	List the events that have a non-null cost.	select distinct log6.costevent from log6 where  log6.costevent != "null"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-4	Which events have a cost other than non-null?	select distinct log6.costevent from log6 where  log6.costevent != "null"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-5	List the events that have a cost other than null.	select distinct log6.costevent from log6 where  log6.costevent != "null"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-6	Which events have an informed cost?	select distinct log6.costevent from log6 where  log6.costevent = "Informed"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-7	What are the events for which there is an informed cost?	select distinct log6.costevent from log6 where  log6.costevent = "Informed"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-8	List the events that have an informed cost.	select distinct log6.costevent from log6 where  log6.costevent = "Informed"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2677-9	List the events for which there is a reported cost.	select distinct log6.costevent from log6 where  log6.costevent = "0"	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2680	What are the events that took place in the year 2016?	select * from log1 where  log1.startdatetime like "2016%"	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	0	
+2680-1	What are the events that happened in the year 2016?	select * from log1 where  log1.startdatetime like "2016%"	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	0	
+2680-2	What events took place during the year 2016?	select * from log1 where  log1.startdatetime like "2016%"	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	0	
+2680-3	List the events whose 'timestamp' refers to the year 2016.	select * from log1 where  log1.startdatetime like "2016%"	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	0	
+2680-4	List events with 'timestamp' in 2016.	select * from log1 where  log1.startdatetime like "2016%"	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	0	
+2681	What are the incidents with the number of events between 1 and 20?	select log1.idcase from log1  group by log1.idcase having  count(*) between 1 and 20	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) BETWEEN 1 AND 20	easy	1	
+2681-1	What are the incidents with up to 20 events?	select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	1	
+2681-2	What are the incidents with up to 20 events?	select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	1	
+2681-3	What are the cases with up to 20 events?	select log1.idcase from log1  group by log1.idcase having  count(*) between 1 and 20	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	1	
+2681-4	How many incidents have up to 20 events associated with them?	select count(*) from log1 where  log1.idevent >= 20	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	0	
+2681-5	List all incidents whose trace has up to 20 events.	select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	1	
+2681-6	List all cases whose trace has up to 20 events.	select log1.idcase from log1  group by log1.idcase having  count(*) <= 20	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	1	
+2689	Which cases have more than 50 activities?	select log7.idcase from log7  group by log7.idcase having  count(*) > 50	SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	easy	1	
+2689-1	Which cases are there more than 50 activities performed?	select log7.idcase from log7  group by log7.idcase having  count(*) > 50	SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	easy	1	
+2689-2	Which cases are there more than 50 activities carried out?	select log7.idcase from log7  group by log7.idcase having  count(*) > 50	SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	easy	1	
+2689-3	List all cases that have more than 50 activities.	select log7.idcase from log7  group by log7.idcase having  count(*) > 50	SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	easy	1	
+2697	What is the largest event cost value found in the log?	select max(log8.costevent) from log8	SELECT max(costevent) FROM log8	easy	1	
+2697-1	What is the largest cost value in the event log?	select log8.costevent from log8   order by log8.costevent desc limit 1	SELECT max(costevent) FROM log8	easy	1	
+2697-2	What is the highest cost value presented in the log?	select max(log8.costevent) from log8	SELECT max(costevent) FROM log8	easy	1	
+2697-3	What is the highest event cost value in the event log?	select max(log8.costevent) from log8	SELECT max(costevent) FROM log8	easy	1	
+2697-4	What is the biggest cost in the event log?	select log8.costevent from log8   order by log8.costevent desc limit 1	SELECT max(costevent) FROM log8	easy	1	
+2697-5	What is the maximum cost in the log?	select max(log8.costevent) from log8	SELECT max(costevent) FROM log8	easy	1	
+2710	select event count with no end date	select count(*) from log1 where  log1.enddatetime = "null"	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2710-1	How many events without end date?	select count(*) from log1 where  log1.enddatetime = "null"	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2710-2	How many events without timestamp?	select count(*) from log1 where  log1.startdatetime = "null"	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2710-3	How many events has timestamp null?	select count(*) from log1 where  log1.startdatetime = "null"	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2710-4	How many events has end date null?	select count(*) from log1 where  log1.enddatetime = "null"	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2710-5	How many events does not have end date?	select count(*) from log1 where  log1.enddatetime = "null"	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2710-6	How many events does not have timestamp?	select count(*) from log1 where  log1.startdatetime = "null"	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2716	Counting requests with event cost information	select count(*) from log3 where  log3.costevent = "null"	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	1	
+2716-1	How many requests with cost information?	select count(*) from log3 where  log3.costevent = "1"	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	1	
+2716-2	How many events have a non-null cost?	select count(*) from log3 where  log3.costevent != "null"	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	1	
+2716-3	How many events have an informed cost?	select count(*) from log3 where  log3.costevent = "Informed"	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	1	
+2716-4	How many events for which there is an informed cost?	select count(*) from log3 where  log3.costevent = "Informed"	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	1	
+2716-5	How many events have a cost other than non-null?	select count(*) from log3 where  log3.costevent != "null"	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	1	
+2741	Are there any records of 'Closed' activity in the log? If yes, show event data.	select * from log6 where  log6.activity = "Closed"	SELECT * FROM log6 WHERE activity = 'Closed'	easy	1	
+2741-1	Are there any records of activity 'Closed' in the event log? If yes, show event data.	select * from log6 where  log6.activity = "Closed"	SELECT * FROM log6 WHERE activity = 'Closed'	easy	1	
+2741-2	Are there records of activity 'Closed' in the event log? If yes, show the event data associated with the records	select * from log6 where  log6.activity = "Closed"	SELECT * FROM log6 WHERE activity = 'Closed'	easy	1	
+2741-3	Retrieve event data associated with existing activities 'Closed' in the event log.	select log6.idevent from log6 where  log6.activity = "Closed"	SELECT * FROM log6 WHERE activity = 'Closed'	easy	0	
+2747	Which activities have the costevent null?	select log2.activity from log2 where  log2.costevent = "null"	SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	easy	1	
+2747-1	Which activities have the cost null?	select log2.activity from log2 where  log2.costevent = "null"	SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	easy	1	
+2747-2	Which activities does not have cost information?	select log2.activity from log2 where  log2.idevent not in (select log2.idevent from log2  )	SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	easy	1	
+2747-3	List activities that contains cost with null value.	select log2.activity from log2 where  log2.costevent = "null"	SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	easy	1	
+2751	Is there Null values on idcase column?	select log3.idcase from log3 where  log3.idcase = "null"	SELECT * FROM log3 WHERE idcase = 'null'	easy	1	
+2751-1	Which events has idcase column with null value?	select * from log3 where  log3.idcase = "null"	SELECT * FROM log3 WHERE idcase = 'null'	easy	1	
+2752	How many records do they have as a send confirmation receipt activity?	select count(*) from log7 where  log7.activity = "send confirmation receipt"	SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	easy	1	
+2752-1	How many records have activity 'send confirmation receipt'?	select count(*) from log7 where  log7.activity = "send confirmation receipt"	SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	easy	1	
+2752-2	How many occurrences have activity 'send confirmation receipt'?	select count(*) from log7 where  log7.activity = "send confirmation receipt"	SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	easy	1	
+2752-3	How many events with activity 'send confirmation receipt'?	select count(*) from log7 where  log7.activity = "send confirmation receipt"	SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	easy	1	
+2753	What is the highest event cost value among all activities presented in the log?	select max(log8.costevent) from log8	SELECT MAX(costevent) FROM log8	easy	1	
+2753-1	What is the highest event cost value in the log?	select max(log8.costevent) from log8	SELECT MAX(costevent) FROM log8	easy	1	
+2753-2	What is the largest event cost value in the event log?	select log8.costevent from log8   order by log8.costevent desc limit 1	SELECT MAX(costevent) FROM log8	easy	1	
+2753-3	What is the maximum event cost value in the event log?	select max(log8.costevent) from log8	SELECT MAX(costevent) FROM log8	easy	1	
+2757	What is the total of costevent for TVMF77077810579481 resource?	select sum(log2.costevent) from log2 where  log2.resource = "TVMF77077810579481"	SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	easy	1	
+2757-1	What is the total cost for TVMF77077810579481 resource?	select sum(log2.costevent) from log2 where  log2.resource = "TVMF77077810579481"	SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	easy	1	
+2757-2	What is the total cost consumed by resource TVMF77077810579481?	select sum(log2.costevent) , log2.resource from log2  group by log2.resource	SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	easy	0	
+2762	Which cases does not have a resource?	select log8.idcase from log8 where  log8.resource not in (select log8.resource from log8  )	SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	easy	1	
+2762-1	Which cases without a associated resource?	select log8.idcase from log8   except select log8.idcase from log8	SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	easy	1	
+2762-2	Which cases with a null resource?	select log8.idcase from log8 where  log8.resource = "null"	SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	easy	1	
+2762-3	Which cases missing a resource?	select log8.idcase from log8 where  log8.resource not in (select log8.resource from log8  )	SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	easy	1	
+2767	How many times Siebel, as resource, was used ?	select count(*) from log4 where  log4.resource = "Siebel"	SELECT count(*) FROM log4 WHERE resource = 'Siebel'	easy	1	
+2767-1	How many times Siebel performed some activity?	select count(*) from log4 where  log4.resource = "Siebel"	SELECT count(*) FROM log4 WHERE resource = 'Siebel'	easy	1	
+2767-2	How many occurrences of Siebel are in the log?	select count(*) from log4 where  log4.resource = "Siebel"	SELECT count(*) FROM log4 WHERE resource = 'Siebel'	easy	1	
+2769	How many events has the case declaration 56300?	select count(*) from log8 where  log8.idcase = "56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	0	
+2769-1	How many events has the case 'declaration 56300'?	select count(*) from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	1	
+2769-2	How many events has 'declaration 56300'?	select count(*) from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	1	
+2769-3	How many events occurred in the case 'declaration 56300'?	select count(*) from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	1	
+2769-4	What is the size of the trace associated with the case 'declaration 56300'?	select log8.activity from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	0	
+2769-5	How many events does the 'declaration 56300' case have?	select count(*) from log8 where  log8.idcase = "declaration 56300"	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	1	
+2774	How many cases have the activity status Awaiting Assignment?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
+2774-1	How many cases appear the activity 'Awaiting Assignment'?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
+2774-2	How many cases the activity 'Awaiting Assignment' occur?	select count(*) from log6 where  log6.activity = "Awaiting Assignment"	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
+2779	Report all cases in which resource 112 was used.	select log3.idcase from log3 where  log3.resource = 112	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
+2779-1	Which cases the resource '112' was used?	select distinct log3.idcase from log3 where  log3.resource = "112"	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
+2779-2	Which cases the resource '112' perfomed some activity?	select distinct log3.idcase from log3 where  log3.resource = 112	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
+2780	List events that does not have a resource associated	select * from log3 where  log3.resource = "null"	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
+2780-1	List the events in which resource usage was not used or reported.	select * from log3 where  log3.resource = "null" or log3.resource = "null"	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
+2780-2	List all events that are not associated with resources.	select log3.idevent from log3   except select log3.idevent from log3	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
+2780-3	What are the events that are not associated with resources?	select log3.idevent from log3   except select log3.idevent from log3	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
+2780-4	What are the events that no resources were associated with?	select log3.idevent from log3 where  log3.idevent not in (select log3.idevent from log3  )	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
+2780-5	Retrieve event identifiers for which no resources have been associated.	select log3.idevent from log3 where  log3.idevent not in (select log3.idevent from log3  )	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
+2782	Which incidents were updated by resource 974?	select log1.idcase from log1 where  log1.resource = "974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
+2782-1	Which incidents that resource was 'updated by 974'?	select log1.idcase from log1 where  log1.resource = "Updated by 974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	1	
+2782-2	List cases that resource was 'updated by 974'.	select log1.idcase from log1 where  log1.resource = "Updated by 974"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	1	
+2782-3	Which cases were updated by resource 974?	select log1.idcase from log1 where  log1.resource = "974"   intersect select log1.idcase from log1 where  log1.resource = "88"	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
+2784	What types of activities exist in the log?	select distinct log4.activity from log4	SELECT DISTINCT activity FROM log4	easy	1	
+2784-1	Which different types of activities exist in the log?	select distinct log4.activity from log4	SELECT DISTINCT activity FROM log4	easy	1	
+2785	Which is the smallest resource?	select log3.resource from log3   order by log3.resource asc limit 1	SELECT MIN(resource) FROM log3	easy	1	
+2785-1	Which is the resource with the smallest value?	select log3.resource from log3   order by log3.resource asc limit 1	SELECT MIN(resource) FROM log3	easy	1	
+2785-2	Which resource has the smallest value?	select log3.resource from log3   order by log3.resource asc limit 1	SELECT MIN(resource) FROM log3	easy	1	
+2785-3	Which is the minimum value for a resource?	select min(log3.resource) from log3	SELECT MIN(resource) FROM log3	easy	1	
+2838	How many cases have activity 'in progress'?	select count(*) from log6 where  log6.activity = "In Progress"	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	1	
+2838-1	How many cases has the activity 'in progress'?	select count(*) from log6 where  log6.activity = "In Progress"	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	1	
+2853	What are activities whose costevent is not null?	select log8.activity from log8 where  log8.costevent != "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	1	
+2853-1	What activities whose cost is non-null?	select log8.activity from log8 where  log8.costevent != "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	1	
+2853-2	List activities with cost information.	select log8.activity , log8.costevent from log8 where  log8.costevent = "null"	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	0	
+2863	When was the oldest problem?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
+2863-1	When the oldest problem occur?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
+2863-2	What was the timestamp of the oldest problem?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
+2863-3	What was the oldest case?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
+2863-4	When the oldest case occur?	select log5.startdatetime from log5   order by log5.startdatetime asc limit 1	SELECT MIN(startdatetime) FROM log5	easy	1	
+2864	What are the resources in alphabetical order?	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
+2864-1	List all resources alphabetically and without repetition.	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
+2864-2	List all resources alphabetically and without duplicates.	select log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
+2864-3	What resources are recorded in the event log? List in alphabetical order and without repetitions.	select log5.resource from log5   order by log5.resource desc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
+2864-4	List all distinct resources alphabetically.	select distinct log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
+2864-5	Retrieve, in alphabetical order and without repetitions, all the resources recorded in the log.	select log5.resource from log5   order by log5.resource desc	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
+2886	How many events are associated with the 'Joined Petition' activity?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	easy	0	
+2886-1	How many events has activity 'Joined Petition'?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	easy	0	
+2886-2	How many activities 'Joined Petition' are in the event log?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	easy	0	
+2887	What is the average event cost of this event log?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	easy	1	
+2887-1	What is the average cost of this event log?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	easy	1	
+2887-2	What is the average cost associated with the events in this event log?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	easy	1	
+2887-3	What is the average cost of running an activity in this event log?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	easy	1	
+2887-4	What is the average cost of an event?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	easy	1	
+2887-5	What is the average cost associated with events?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	easy	1	
+2887-6	What is the average value of costs associated with this business process?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	easy	1	
+2892	Which activities have at least 7 events?	select log1.activity from log1  group by log1.activity having  count(*) >= 7	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	easy	1	
+2892-1	What activities occurred at least seven times?	select log1.activity from log1  group by log1.activity having  count(*) >= 7	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	easy	1	
+2895	How many events are tied to Peter?	select count(*) from log6 where  log6.resource = "Peter"	SELECT Count(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2895-1	How many events have Peter as resource?	select count(*) from log6 where  log6.resource = "Peter"	SELECT Count(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2895-2	How many events Peter was associated?	select count(*) from log6 where  log6.resource = "Peter"	SELECT Count(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+3003	What resources were associated with closing an case?	select log6.resource from log6	SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	easy	0	
+3003-1	What resources were associated with closing an incident?	select log6.resource from log6	SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	easy	0	
+3003-2	What resources worked on closing an incident?	select distinct log6.resource from log6	SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	easy	0	
+3007	Select all rows where the cost of the event is not null.	select distinct log2.costevent from log2 where  log2.costevent != "null"	SELECT * FROM log2 WHERE costevent != 'null'	easy	0	
+3007-1	Report the events where cost information is non-null value.	select log2.costevent from log2 where  log2.costevent != "null"	SELECT * FROM log2 WHERE costevent != 'null'	easy	0	
+3007-2	Which events has cost information?	select distinct log2.costevent from log2 where  log2.costevent = "1"	SELECT * FROM log2 WHERE costevent != 'null'	easy	0	
+                     easy                 medium               hard                 extra                all                 
+count                168                  0                    0                    0                    168                 
+=====================   EXECUTION ACCURACY     =====================
+execution            0.857                0.000                0.000                0.000                0.857               

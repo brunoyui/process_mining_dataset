@@ -1,0 +1,75 @@
+question_id	question	predicted	gold	hardness	exact_match	select_match_gold	select_match_pred	select_match	select_match (no_agg)_gold	select_match (no_agg)_pred	select_match (no_agg)	where_match_gold	where_match_pred	where_match	where_match (no op)_gold	where_match (no op)_pred	where_match (no op)	group (NO HAVING)_gold	group (NO HAVING)_pred	group (NO HAVING)	group_gold	group_pred	group	order_gold	order_pred	order	and_or_gold	and_or_pred	and_or	IUEN_gold	IUEN_pred	IUEN	keywords_gold	keywords_pred	keywords	
+2667	How many closed activities do we have?	SELECT COUNT(*) FROM log1 WHERE activity = 'closed';	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2670	Show the amount of events that have had Peter as resource	SELECT COUNT(DISTINCT idevent) FROM log6 WHERE resource = 'Peter';	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2673	How many different resources are there in the log?	SELECT COUNT(DISTINCT resource) AS resource_count FROM log5;	SELECT COUNT(DISTINCT resource) FROM log5	easy	NOK	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
+2677	What are the events where the event cost is not null?	SELECT idevent FROM log6 WHERE costevent IS NOT NULL;	SELECT * FROM log6 WHERE costevent != 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2680	What are the events that happened in the year 2016?	SELECT idevent, activity FROM log1 WHERE strftime('%Y', startdatetime) = '2016';	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2681	What are the incidents with the number of events between 1 and 20?	SELECT idevent, COUNT(*) as event_count FROM log1 GROUP BY idevent HAVING event_count BETWEEN 1 AND 20;	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	NOK	1	0	ND	1	0	ND	0	0	NA	0	0	NA	1	0	ND	1	0	ND	0	0	NA	1	1	OK	0	0	NA	2	0	ND	
+2689	Which cases have more than 50 activities?	SELECT idcase FROM log7 GROUP BY idcase HAVING COUNT(activity) > 50;	SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	easy	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	1	1	OK	1	1	NOK	0	0	NA	1	1	OK	0	0	NA	2	2	OK	
+2697	What is the largest event cost value found in the log?	SELECT MAX(costevent) FROM log8;	SELECT max(costevent) FROM log8	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
+2710	select event count with no end date	SELECT COUNT(idevent) FROM log1 WHERE enddatetime IS NULL;	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2716	Counting requests with event cost information	SELECT COUNT(*) FROM log3 WHERE costevent IS NOT NULL;	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2741	Are there any records of Closed activity in the log? If yes, show event data.	SELECT * FROM log6 WHERE activity = 'Closed';	SELECT * FROM log6 WHERE activity = 'Closed'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2747	Which activities have the costevent null?	SELECT activity FROM log2 WHERE costevent IS NULL;	SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2751	Is there Null values on idcase column?	SELECT COUNT(*) FROM log3 WHERE idcase IS NULL;	SELECT * FROM log3 WHERE idcase = 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2752	How many records do they have as a send confirmation receipt activity?	SELECT COUNT(*) FROM log7 WHERE activity = 'send confirmation receipt';	SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2753	What is the highest event cost value among all activities presented in the log?	SELECT MAX(costevent) FROM log8;	SELECT MAX(costevent) FROM log8	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
+2757	What is the total of costevent for TVMF77077810579481 resource?	SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481';	SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2762	Which cases do not have an resource?	SELECT idcase FROM log8 WHERE resource IS NULL	SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2767	How many times Siebel, as resource, was used ?	SELECT COUNT(*) FROM log4 WHERE resource = 'Siebel';	SELECT count(*) FROM log4 WHERE resource = 'Siebel'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2769	How many events has the case declaration 56300	SELECT COUNT(idevent) FROM log8 WHERE idcase = 56300;	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2774	How many cases have the activity status Awaiting Assignment?	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment';	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2779	Report all cases in which resource 112 was used	SELECT idcase FROM log3 WHERE resource = 112;	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2780	List all events that are not associated with resources	SELECT idevent FROM log3 WHERE resource IS NULL;	SELECT * FROM log3 WHERE resource = 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2782	Which incidents were updated by resource 974?	SELECT idcase FROM log1 WHERE resource = 974;	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2784	What types of activities exist in the log?	SELECT DISTINCT activity FROM log4;	SELECT DISTINCT activity FROM log4	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
+2785	Which is the smallest resource?	SELECT resource FROM log3 ORDER BY costevent LIMIT 1;	SELECT MIN(resource) FROM log3	easy	NOK	1	1	NOK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	1	NA	1	1	OK	0	0	NA	0	3	NA	
+2838	How many cases have activity 'in progress'?	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'in progress';	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2853	What are activities whose costevent is not null?	SELECT activity FROM log8 WHERE costevent IS NOT NULL;	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+2863	When was the oldest problem?	SELECT MIN(startdatetime) FROM log5;	SELECT MIN(startdatetime) FROM log5	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
+2864	What are the resources in alphabetical order?	SELECT resource FROM log5 ORDER BY resource ASC;	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	1	1	OK	0	0	NA	2	2	OK	
+2886	How many events are associated with the 'Joined Petition' activity?	SELECT COUNT(idevent) FROM log2 WHERE activity = 'Joined Petition';	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	easy	NOK	1	1	NOK	1	1	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+2887	What is the average event cost of this event log?	SELECT AVG(costevent) FROM log2;	SELECT AVG(costevent) FROM log2	easy	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	0	0	NA	
+2892	Which activities have at least 7 events?	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(idevent) >= 7;	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	easy	NOK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	1	1	OK	1	1	NOK	0	0	NA	1	1	OK	0	0	NA	2	2	OK	
+2895	How many events are tied to Peter?	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter';	SELECT Count(*) FROM log6 WHERE resource = 'Peter'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+3003	What resources were associated with closing an case?	SELECT resource FROM log6 WHERE activity = 'closing'	SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	easy	OK	1	1	OK	1	1	OK	1	1	OK	1	1	OK	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	1	OK	
+3007	Select all rows where the cost of the event is not null	SELECT costevent, idevent, idcase, activity FROM log2 WHERE costevent IS NOT NULL;	SELECT * FROM log2 WHERE costevent != 'null'	easy	NOK	1	0	ND	1	0	ND	1	0	ND	1	0	ND	0	0	NA	0	0	NA	0	0	NA	1	1	OK	0	0	NA	1	0	ND	
+                     easy                 medium               hard                 extra                all                 
+count                35                   0                    0                    0                    35                  
+
+====================== EXACT MATCHING ACCURACY =====================
+exact match          0.486                0.000                0.000                0.000                0.486               
+
+---------------------PARTIAL MATCHING ACCURACY----------------------
+select               0.826                0.000                0.000                0.000                0.826               
+select(no AGG)       0.870                0.000                0.000                0.000                0.870               
+where                1.000                0.000                0.000                0.000                1.000               
+where(no OP)         1.000                0.000                0.000                0.000                1.000               
+group(no Having)     1.000                0.000                0.000                0.000                1.000               
+group                0.000                0.000                0.000                0.000                0.000               
+order                0.500                0.000                0.000                0.000                0.500               
+and/or               1.000                0.000                0.000                0.000                1.000               
+IUEN                 0.000                0.000                0.000                0.000                0.000               
+keywords             0.944                0.000                0.000                0.000                0.944               
+---------------------- PARTIAL MATCHING RECALL ----------------------
+select               0.543                0.000                0.000                0.000                0.543               
+select(no AGG)       0.571                0.000                0.000                0.000                0.571               
+where                0.583                0.000                0.000                0.000                0.583               
+where(no OP)         0.583                0.000                0.000                0.000                0.583               
+group(no Having)     0.667                0.000                0.000                0.000                0.667               
+group                0.000                0.000                0.000                0.000                0.000               
+order                1.000                0.000                0.000                0.000                1.000               
+and/or               1.000                0.000                0.000                0.000                1.000               
+IUEN                 0.000                0.000                0.000                0.000                0.000               
+keywords             0.607                0.000                0.000                0.000                0.607               
+---------------------- PARTIAL MATCHING F1 --------------------------
+select               0.655                0.000                0.000                0.000                0.655               
+select(no AGG)       0.690                0.000                0.000                0.000                0.690               
+where                0.737                0.000                0.000                0.000                0.737               
+where(no OP)         0.737                0.000                0.000                0.000                0.737               
+group(no Having)     0.800                0.000                0.000                0.000                0.800               
+group                1.000                0.000                0.000                0.000                1.000               
+order                0.667                0.000                0.000                0.000                0.667               
+and/or               1.000                0.000                0.000                0.000                1.000               
+IUEN                 1.000                0.000                0.000                0.000                1.000               
+keywords             0.739                0.000                0.000                0.000                0.739

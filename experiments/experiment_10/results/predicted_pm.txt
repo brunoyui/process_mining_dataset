@@ -1,0 +1,35 @@
+SELECT COUNT(*) FROM log1 WHERE activity = 'closed'	process_mining_1
+SELECT COUNT(DISTINCT idevent) FROM log6 WHERE resource = 'Peter'	process_mining_6
+SELECT COUNT(DISTINCT resource) AS resource_count FROM log5	process_mining_5
+SELECT idevent FROM log6 WHERE costevent IS NOT NULL	process_mining_6
+SELECT idevent, activity FROM log1 WHERE strftime('%Y', startdatetime) = '2016'	process_mining_1
+SELECT idevent, COUNT(*) as event_count FROM log1 GROUP BY idevent HAVING event_count BETWEEN 1 AND 20	process_mining_1
+SELECT idcase FROM log7 GROUP BY idcase HAVING COUNT(activity) > 50	process_mining_7
+SELECT MAX(costevent) FROM log8	process_mining_8
+SELECT COUNT(idevent) FROM log1 WHERE enddatetime IS NULL	process_mining_1
+SELECT COUNT(*) FROM log3 WHERE costevent IS NOT NULL	process_mining_3
+SELECT * FROM log6 WHERE activity = 'Closed'	process_mining_6
+SELECT activity FROM log2 WHERE costevent IS NULL	process_mining_2
+SELECT COUNT(*) FROM log3 WHERE idcase IS NULL	process_mining_3
+SELECT COUNT(*) FROM log7 WHERE activity = 'send confirmation receipt'	process_mining_7
+SELECT MAX(costevent) FROM log8	process_mining_8
+SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	process_mining_2
+SELECT idcase FROM log8 WHERE resource IS NULL	process_mining_8
+SELECT COUNT(*) FROM log4 WHERE resource = 'Siebel'	process_mining_4
+SELECT COUNT(idevent) FROM log8 WHERE idcase = 56300	process_mining_8
+SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	process_mining_6
+SELECT idcase FROM log3 WHERE resource = 112	process_mining_3
+SELECT idevent FROM log3 WHERE resource IS NULL	process_mining_3
+SELECT idcase FROM log1 WHERE resource = 974	process_mining_1
+SELECT DISTINCT activity FROM log4	process_mining_4
+SELECT resource FROM log3 ORDER BY costevent LIMIT 1	process_mining_3
+SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'in progress'	process_mining_6
+SELECT activity FROM log8 WHERE costevent IS NOT NULL	process_mining_8
+SELECT MIN(startdatetime) FROM log5	process_mining_5
+SELECT resource FROM log5 ORDER BY resource ASC	process_mining_5
+SELECT COUNT(idevent) FROM log2 WHERE activity = 'Joined Petition'	process_mining_2
+SELECT AVG(costevent) FROM log2	process_mining_2
+SELECT activity FROM log1 GROUP BY activity HAVING COUNT(idevent) >= 7	process_mining_1
+SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	process_mining_6
+SELECT resource FROM log6 WHERE activity = 'closing'	process_mining_6
+SELECT costevent, idevent, idcase, activity FROM log2 WHERE costevent IS NOT NULL	process_mining_2

@@ -1,0 +1,40 @@
+question_id	question	predicted	gold	hardness	exec_score	
+2667	How many closed activities do we have?	SELECT COUNT(*) FROM log1 WHERE activity = 'closed';	SELECT count(*) FROM log1 WHERE activity = 'Closed'	easy	0	
+2670	Show the amount of events that have had Peter as resource	SELECT COUNT(DISTINCT idevent) FROM log6 WHERE resource = 'Peter';	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+2673	How many different resources are there in the log?	SELECT COUNT(DISTINCT resource) AS resource_count FROM log5;	SELECT COUNT(DISTINCT resource) FROM log5	easy	1	
+2677	What are the events where the event cost is not null?	SELECT idevent FROM log6 WHERE costevent IS NOT NULL;	SELECT * FROM log6 WHERE costevent != 'null'	easy	1	
+2680	What are the events that happened in the year 2016?	SELECT idevent, activity FROM log1 WHERE strftime('%Y', startdatetime) = '2016';	SELECT * FROM log1 WHERE enddatetime BETWEEN '2016-01-01' AND '2017-01-31'	easy	0	
+2681	What are the incidents with the number of events between 1 and 20?	SELECT idevent, COUNT(*) as event_count FROM log1 GROUP BY idevent HAVING event_count BETWEEN 1 AND 20;	SELECT idcase FROM log1 GROUP BY idcase HAVING count(*) <= 20	easy	0	
+2689	Which cases have more than 50 activities?	SELECT idcase FROM log7 GROUP BY idcase HAVING COUNT(activity) > 50;	SELECT idcase FROM log7 GROUP BY idcase HAVING count(*) > 50	easy	1	
+2697	What is the largest event cost value found in the log?	SELECT MAX(costevent) FROM log8;	SELECT max(costevent) FROM log8	easy	1	
+2710	select event count with no end date	SELECT COUNT(idevent) FROM log1 WHERE enddatetime IS NULL;	SELECT count(*) FROM log1 WHERE enddatetime = 'null'	easy	1	
+2716	Counting requests with event cost information	SELECT COUNT(*) FROM log3 WHERE costevent IS NOT NULL;	SELECT count(*) FROM log3 WHERE costevent != 'null'	easy	1	
+2741	Are there any records of Closed activity in the log? If yes, show event data.	SELECT * FROM log6 WHERE activity = 'Closed';	SELECT * FROM log6 WHERE activity = 'Closed'	easy	1	
+2747	Which activities have the costevent null?	SELECT activity FROM log2 WHERE costevent IS NULL;	SELECT DISTINCT activity FROM log2 WHERE costevent = 'null'	easy	0	
+2751	Is there Null values on idcase column?	SELECT COUNT(*) FROM log3 WHERE idcase IS NULL;	SELECT * FROM log3 WHERE idcase = 'null'	easy	0	
+2752	How many records do they have as a send confirmation receipt activity?	SELECT COUNT(*) FROM log7 WHERE activity = 'send confirmation receipt';	SELECT count(*) FROM log7 WHERE activity = 'send confirmation receipt'	easy	1	
+2753	What is the highest event cost value among all activities presented in the log?	SELECT MAX(costevent) FROM log8;	SELECT MAX(costevent) FROM log8	easy	1	
+2757	What is the total of costevent for TVMF77077810579481 resource?	SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481';	SELECT SUM(costevent) FROM log2 WHERE resource = 'TVMF77077810579481'	easy	1	
+2762	Which cases do not have an resource?	SELECT idcase FROM log8 WHERE resource IS NULL	SELECT DISTINCT idcase FROM log8 WHERE resource = 'null'	easy	1	
+2767	How many times Siebel, as resource, was used ?	SELECT COUNT(*) FROM log4 WHERE resource = 'Siebel';	SELECT count(*) FROM log4 WHERE resource = 'Siebel'	easy	1	
+2769	How many events has the case declaration 56300	SELECT COUNT(idevent) FROM log8 WHERE idcase = 56300;	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	0	
+2774	How many cases have the activity status Awaiting Assignment?	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment';	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
+2779	Report all cases in which resource 112 was used	SELECT idcase FROM log3 WHERE resource = 112;	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
+2780	List all events that are not associated with resources	SELECT idevent FROM log3 WHERE resource IS NULL;	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
+2782	Which incidents were updated by resource 974?	SELECT idcase FROM log1 WHERE resource = 974;	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
+2784	What types of activities exist in the log?	SELECT DISTINCT activity FROM log4;	SELECT DISTINCT activity FROM log4	easy	1	
+2785	Which is the smallest resource?	SELECT resource FROM log3 ORDER BY costevent LIMIT 1;	SELECT MIN(resource) FROM log3	easy	0	
+2838	How many cases have activity 'in progress'?	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'in progress';	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	0	
+2853	What are activities whose costevent is not null?	SELECT activity FROM log8 WHERE costevent IS NOT NULL;	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	1	
+2863	When was the oldest problem?	SELECT MIN(startdatetime) FROM log5;	SELECT MIN(startdatetime) FROM log5	easy	1	
+2864	What are the resources in alphabetical order?	SELECT resource FROM log5 ORDER BY resource ASC;	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
+2886	How many events are associated with the 'Joined Petition' activity?	SELECT COUNT(idevent) FROM log2 WHERE activity = 'Joined Petition';	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	easy	0	
+2887	What is the average event cost of this event log?	SELECT AVG(costevent) FROM log2;	SELECT AVG(costevent) FROM log2	easy	1	
+2892	Which activities have at least 7 events?	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(idevent) >= 7;	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	easy	1	
+2895	How many events are tied to Peter?	SELECT COUNT(*) FROM log6 WHERE resource = 'Peter';	SELECT Count(*) FROM log6 WHERE resource = 'Peter'	easy	1	
+3003	What resources were associated with closing an case?	SELECT resource FROM log6 WHERE activity = 'closing'	SELECT DISTINCT resource FROM log6 WHERE activity = 'Closed'	easy	0	
+3007	Select all rows where the cost of the event is not null	SELECT costevent, idevent, idcase, activity FROM log2 WHERE costevent IS NOT NULL;	SELECT * FROM log2 WHERE costevent != 'null'	easy	0	
+                     easy                 medium               hard                 extra                all                 
+count                35                   0                    0                    0                    35                  
+=====================   EXECUTION ACCURACY     =====================
+execution            0.657                0.000                0.000                0.000                0.657               
