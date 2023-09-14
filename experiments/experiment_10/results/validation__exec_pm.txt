@@ -19,15 +19,15 @@ question_id	question	predicted	gold	hardness	exec_score
 2767	How many times Siebel, as resource, was used ?	SELECT COUNT(*) FROM log4 WHERE resource = 'Siebel';	SELECT count(*) FROM log4 WHERE resource = 'Siebel'	easy	1	
 2769	How many events has the case declaration 56300	SELECT COUNT(idevent) FROM log8 WHERE idcase = 56300;	SELECT count(*) FROM log8 WHERE idcase = 'declaration 56300'	easy	0	
 2774	How many cases have the activity status Awaiting Assignment?	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment';	SELECT count(DISTINCT idcase) FROM log6 WHERE activity = 'Awaiting Assignment'	easy	1	
-2779	Report all cases in which resource 112 was used	SELECT idcase FROM log3 WHERE resource = 112;	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	1	
+2779	Report all cases in which resource 112 was used	SELECT idcase FROM log3 WHERE resource = 112;	SELECT DISTINCT idcase FROM log3 WHERE resource = '112'	easy	0	
 2780	List all events that are not associated with resources	SELECT idevent FROM log3 WHERE resource IS NULL;	SELECT * FROM log3 WHERE resource = 'null'	easy	1	
 2782	Which incidents were updated by resource 974?	SELECT idcase FROM log1 WHERE resource = 974;	SELECT DISTINCT idcase FROM log1 WHERE resource = 'Updated by 974'	easy	0	
 2784	What types of activities exist in the log?	SELECT DISTINCT activity FROM log4;	SELECT DISTINCT activity FROM log4	easy	1	
 2785	Which is the smallest resource?	SELECT resource FROM log3 ORDER BY costevent LIMIT 1;	SELECT MIN(resource) FROM log3	easy	0	
 2838	How many cases have activity 'in progress'?	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'in progress';	SELECT COUNT(DISTINCT idcase) FROM log6 WHERE activity = 'In Progress'	easy	0	
-2853	What are activities whose costevent is not null?	SELECT activity FROM log8 WHERE costevent IS NOT NULL;	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	1	
+2853	What are activities whose costevent is not null?	SELECT activity FROM log8 WHERE costevent IS NOT NULL;	SELECT DISTINCT activity FROM log8 WHERE costevent != 'null'	easy	0	
 2863	When was the oldest problem?	SELECT MIN(startdatetime) FROM log5;	SELECT MIN(startdatetime) FROM log5	easy	1	
-2864	What are the resources in alphabetical order?	SELECT resource FROM log5 ORDER BY resource ASC;	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	1	
+2864	What are the resources in alphabetical order?	SELECT resource FROM log5 ORDER BY resource ASC;	SELECT DISTINCT resource FROM log5 ORDER BY resource	easy	0	
 2886	How many events are associated with the 'Joined Petition' activity?	SELECT COUNT(idevent) FROM log2 WHERE activity = 'Joined Petition';	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	easy	0	
 2887	What is the average event cost of this event log?	SELECT AVG(costevent) FROM log2;	SELECT AVG(costevent) FROM log2	easy	1	
 2892	Which activities have at least 7 events?	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(idevent) >= 7;	SELECT activity FROM log1 GROUP BY activity HAVING COUNT(*) >= 7	easy	1	
@@ -37,4 +37,4 @@ question_id	question	predicted	gold	hardness	exec_score
                      easy                 medium               hard                 extra                all                 
 count                35                   0                    0                    0                    35                  
 =====================   EXECUTION ACCURACY     =====================
-execution            0.657                0.000                0.000                0.000                0.657               
+execution            0.571                0.000                0.000                0.000                0.571               
