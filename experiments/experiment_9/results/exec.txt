@@ -145,9 +145,9 @@ List all resources alphabetically and without duplicates.	select log5.resource f
 What resources are recorded in the event log? List in alphabetical order and without repetitions.	select log5.resource from log5   order by log5.resource desc	SELECT DISTINCT resource FROM log5 ORDER BY resource	0
 List all distinct resources alphabetically.	select distinct log5.resource from log5   order by log5.resource asc	SELECT DISTINCT resource FROM log5 ORDER BY resource	1
 Retrieve, in alphabetical order and without repetitions, all the resources recorded in the log.	select log5.resource from log5   order by log5.resource desc	SELECT DISTINCT resource FROM log5 ORDER BY resource	0
-How many events are associated with the 'Joined Petition' activity?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'    0
+How many events are associated with the 'Joined Petition' activity?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	0
 How many events has activity 'Joined Petition'?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	0
-How many activities 'Joined Petition' are in the event log?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'    0
+How many activities 'Joined Petition' are in the event log?	select count(*) from log2 where  log2.activity = "Joined Petition"	SELECT COUNT(*) FROM log2 WHERE activity = 'Petição Juntada'	0
 What is the average event cost of this event log?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	1
 What is the average cost of this event log?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	1
 What is the average cost associated with the events in this event log?	select avg(log2.costevent) from log2	SELECT AVG(costevent) FROM log2	1
