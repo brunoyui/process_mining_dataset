@@ -70,9 +70,7 @@
          "text"
       ],
       "db_id": "events_log",
-      "foreign_keys": [
-         []
-      ],
+      "foreign_keys": [],
       "primary_keys": [
          1
       ],
